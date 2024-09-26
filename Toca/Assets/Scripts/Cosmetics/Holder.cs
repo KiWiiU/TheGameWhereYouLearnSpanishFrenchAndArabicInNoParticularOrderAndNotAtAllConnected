@@ -1,17 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Holder : MonoBehaviour
 {
-    public string name;
+    public string Name;
     public int money, Sprogress, Fprogress, Aprogress;
     public Vector4 color;
-    public Dictionary<UnlockableItem.Hair, bool> hairLock = new Dictionary<UnlockableItem.Hair, bool>();
-    public Dictionary<UnlockableItem.Shoe, bool> shoeLock = new Dictionary<UnlockableItem.Shoe, bool>();
-    public Dictionary<UnlockableItem.Shirt, bool> shirtLock = new Dictionary<UnlockableItem.Shirt, bool>();
-    public Dictionary<UnlockableItem.Face, bool> faceLock = new Dictionary<UnlockableItem.Face, bool>();
-    public Dictionary<UnlockableItem.Pants, bool> pantsLock = new Dictionary<UnlockableItem.Pants, bool>();
-    public Dictionary<UnlockableItem.Hat, bool> hatLock = new Dictionary<UnlockableItem.Hat, bool>();
-    public Dictionary<UnlockableItem.Pet, bool> petLock = new Dictionary<UnlockableItem.Pet, bool>();
+    public UnlockableItem bald;
+    public UnityEngine.UI.Image image;
+    [SerializeField] public Dictionary<UnlockableItem, bool> unlockedItems = new();
+
+
+
+    //testing stuff
+    public void Start() {
+        unlockedItems.Add(bald, true);
+    }
+
+    public void btnPress() {
+        Debug.Log(unlockedItems[bald]);
+
+        image.sprite = bald.Sprite; // magnifique
+    }
 }

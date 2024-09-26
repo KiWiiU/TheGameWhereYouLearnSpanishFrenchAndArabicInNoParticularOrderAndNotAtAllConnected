@@ -2,36 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnlockableItem : MonoBehaviour
+[CreateAssetMenu(fileName = "Cosmetic", menuName = "Create Cosmetic")]
+public class UnlockableItem : ScriptableObject
 {
-    public enum Hair
-    {
-        Bald,
+    [SerializeField] string _name;
 
-        // Work in progress
-    }
-    public enum Shoe
-    {
+    [SerializeField] Sprite sprite;
+    [SerializeField] double cost;
+    [SerializeField] CosmeticType type;
 
-    }
-    public enum Shirt
-    {
+    public string Name {get {return _name;} }
+    // public Sprite Sprite {get;}
+    public double Cost {get {return cost;}}
 
-    }
-    public enum Pants
-    {
+    public Sprite Sprite {get {return sprite;}}
+    public CosmeticType Type {get {return type;}}
+}
 
-    }
-    public enum Hat
-    {
-
-    }
-    public enum Pet
-    {
-
-    }
-    public enum Face
-    {
-
-    }
+public enum CosmeticType { // can use this to determine in a script where to put the sprite on player's body
+    Hair, Face, Shirt, Pants, Shoes, Hat, Pet
 }
