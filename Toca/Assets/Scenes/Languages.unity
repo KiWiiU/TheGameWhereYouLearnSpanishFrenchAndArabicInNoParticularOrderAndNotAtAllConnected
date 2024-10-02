@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -286,7 +286,7 @@ RectTransform:
   m_GameObject: {fileID: 192238678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 696163261}
@@ -295,8 +295,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 252.53, y: -27.35035}
+  m_SizeDelta: {x: 527.0289, y: 102.2371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192238680
 MonoBehaviour:
@@ -341,7 +341,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 192238681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1605094090}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lessons
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192238681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +431,7 @@ RectTransform:
   m_GameObject: {fileID: 198139311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1338831832}
@@ -415,8 +439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 108}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 7.0671, y: 110}
+  m_SizeDelta: {x: 658.7863, y: 170.3952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198139313
 MonoBehaviour:
@@ -465,8 +489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -527,6 +551,7 @@ GameObject:
   - component: {fileID: 344905278}
   - component: {fileID: 344905277}
   - component: {fileID: 344905276}
+  - component: {fileID: 344905279}
   m_Layer: 5
   m_Name: CharacterCreator
   m_TagString: Untagged
@@ -543,7 +568,7 @@ RectTransform:
   m_GameObject: {fileID: 344905274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1952555625}
@@ -552,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0182, y: -80}
-  m_SizeDelta: {x: 211.078, y: 30}
+  m_AnchoredPosition: {x: 7.0888, y: -153.52934}
+  m_SizeDelta: {x: 695.2764, y: 102.2371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344905276
 MonoBehaviour:
@@ -599,10 +624,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 00a5bed30de1e61469a62ba7590e42a1, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 344905279}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -649,6 +674,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344905274}
   m_CullTransparentMesh: 1
+--- !u!114 &344905279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344905274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a5bed30de1e61469a62ba7590e42a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &597899807
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +714,7 @@ RectTransform:
   m_GameObject: {fileID: 597899807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 111926685}
@@ -686,8 +723,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 8.2587, y: -27.35035}
+  m_SizeDelta: {x: 527.0289, y: 102.2371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597899809
 MonoBehaviour:
@@ -732,7 +769,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597899810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1605094090}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: SwapScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lessons
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597899810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,7 +1076,7 @@ RectTransform:
   m_GameObject: {fileID: 821879366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1338831832}
@@ -1035,8 +1084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 7.0671, y: -153.52934}
+  m_SizeDelta: {x: 329.3931, y: 340.7905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821879368
 MonoBehaviour:
@@ -1343,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1498,7 +1547,7 @@ RectTransform:
   m_GameObject: {fileID: 1515195367}
   m_LocalRotation: {x: -0.0670399, y: -0, z: -0, w: 0.99775034}
   m_LocalPosition: {x: 0, y: 0, z: 22}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1307868244}
@@ -1507,8 +1556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -7.688, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -162}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 7.0671, y: -282.87036}
+  m_SizeDelta: {x: 527.0289, y: 102.2371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515195369
 MonoBehaviour:
@@ -1616,6 +1665,7 @@ GameObject:
   - component: {fileID: 1605094089}
   - component: {fileID: 1605094088}
   - component: {fileID: 1605094087}
+  - component: {fileID: 1605094090}
   m_Layer: 5
   m_Name: S
   m_TagString: Untagged
@@ -1632,7 +1682,7 @@ RectTransform:
   m_GameObject: {fileID: 1605094085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36175, y: 0.46283, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2128471725}
@@ -1641,8 +1691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -244.36, y: -27.35035}
+  m_SizeDelta: {x: 527.0289, y: 102.2371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605094087
 MonoBehaviour:
@@ -1688,16 +1738,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 00a5bed30de1e61469a62ba7590e42a1, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1605094090}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: SwapScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Spanish
+          m_StringArgument: Lessons
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1605094088
@@ -1738,6 +1788,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605094085}
   m_CullTransparentMesh: 1
+--- !u!114 &1605094090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605094085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a5bed30de1e61469a62ba7590e42a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1952555624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,14 +1967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11b47cf89bc9bf4db75cc0ddb19b9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  money: 0
-  Sprogress: 0
-  Fprogress: 0
-  Aprogress: 0
-  color: {x: 0, y: 0, z: 0, w: 0}
-  bald: {fileID: 11400000, guid: e07c745f1cfca3a4a8445fd6ebfc9dbf, type: 2}
-  image: {fileID: 821879368}
 --- !u!65 &2123785093
 BoxCollider:
   m_ObjectHideFlags: 0
