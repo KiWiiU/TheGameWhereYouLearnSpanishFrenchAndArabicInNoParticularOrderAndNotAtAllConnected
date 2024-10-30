@@ -12,7 +12,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
 
     public Animator animator;
-
+    private bool typingText;
+    private string currentSentence;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +35,9 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
+        currentSentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(Type(sentence));
+        StartCoroutine(Type());
     }
 
     void EndDialogue() {
@@ -44,18 +45,24 @@ public class DialogueManager : MonoBehaviour
     }
     public void Update() {
         if(Input.GetKeyDown(KeyCode.Return)) {
-            DisplayNextSentence();    
+            if(typingText) { // skip dialogue if still typing
+                StopAllCoroutines();
+                dialogueText.text = currentSentence;
+                typingText = false;
+            } else {
+                DisplayNextSentence();
+            }    
         }
     }
 
-    IEnumerator Type(string sentence) {
+    IEnumerator Type() {
+        typingText = true;
         dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray()) {
+        foreach(char letter in currentSentence.ToCharArray()) {
             dialogueText.text += letter;
-            if(letter.Equals(" ")) //doesnt lag with spaces
-                yield return null;
-            else
+            if(!letter.Equals(" "))
                 yield return new WaitForSeconds(0.1f);
         }
+        typingText = false;
     }
 }
