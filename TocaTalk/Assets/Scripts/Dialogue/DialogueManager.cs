@@ -4,15 +4,20 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
+
+
     public TMP_Text dialogueText;
     public Image avatar;
     private Queue<string> sentences;
 
     public Animator animator;
     private bool typingText;
+    public bool isOpen;
     private string currentSentence;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue) {
         animator.SetBool("isOpen", true);
+        isOpen = true;
         sentences.Clear();
         foreach(string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -42,6 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue() {
        animator.SetBool("isOpen", false);
+       isOpen = false;
     }
     public void Update() {
         if(Input.GetKeyDown(KeyCode.Return)) {

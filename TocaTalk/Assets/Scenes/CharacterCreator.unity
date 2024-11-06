@@ -3042,6 +3042,7 @@ GameObject:
   - component: {fileID: 754275601}
   - component: {fileID: 754275600}
   - component: {fileID: 754275603}
+  - component: {fileID: 754275604}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -3230,7 +3231,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11b47cf89bc9bf4db75cc0ddb19b9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+--- !u!114 &754275604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754275598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd166249347436a4fb3c76baef044761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  field: {fileID: 754275600}
 --- !u!1 &754537532
 GameObject:
   m_ObjectHideFlags: 0
@@ -7465,7 +7478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1590251421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 754275604}
+        m_TargetAssemblyTypeName: RandomNameGenerator, Assembly-CSharp
+        m_MethodName: Generate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1590251421
 MonoBehaviour:
   m_ObjectHideFlags: 0
