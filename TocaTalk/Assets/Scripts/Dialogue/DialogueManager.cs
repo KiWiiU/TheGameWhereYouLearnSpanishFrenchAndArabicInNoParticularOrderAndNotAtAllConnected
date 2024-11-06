@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Image avatar;
     private Queue<string> sentences;
+    private Dialogue currentDialogue;
 
     public Animator animator;
     private bool typingText;
@@ -31,8 +32,8 @@ public class DialogueManager : MonoBehaviour
         foreach(string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
         }
-        nameText.text = dialogue.name;
-        avatar.sprite = dialogue.avatar;
+        currentDialogue = dialogue;
+        
         DisplayNextSentence();
     }
 
@@ -41,6 +42,8 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        nameText.text = currentDialogue.npc.name;
+        avatar.sprite = currentDialogue.npc.Sprite;
         currentSentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(Type());

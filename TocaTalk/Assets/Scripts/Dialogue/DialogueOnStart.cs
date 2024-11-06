@@ -12,7 +12,7 @@ public class DialogueOnStart : MonoBehaviour
     void Update() {
         if(Input.anyKeyDown && !isTriggered) {
             isTriggered = true;
-            GetComponent<DialogueTrigger>().TriggerDialogue();
+            GetComponent<DialogueLink>().TriggerDialogue();
         }
     }
 }
