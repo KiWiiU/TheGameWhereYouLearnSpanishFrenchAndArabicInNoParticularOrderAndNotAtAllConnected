@@ -13,9 +13,10 @@ public class DialogueManager : MonoBehaviour
 
     public TMP_Text dialogueText;
     public Image avatar;
+    private Queue<CharacterDialogue> dialogues;
     private Queue<string> sentences;
-    private Dialogue currentDialogue;
-
+    private CharacterDialogue currentDialogue;
+    public event Action OnDialogueEnd;
     public Animator animator;
     private bool typingText;
     public bool isOpen;
@@ -23,25 +24,40 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dialogues = new();
         sentences = new();
     }
     public void StartDialogue(Dialogue dialogue) {
         animator.SetBool("isOpen", true);
         isOpen = true;
+        dialogues.Clear();
         sentences.Clear();
-        foreach(string sentence in dialogue.sentences) {
+        foreach(CharacterDialogue a in dialogue.dialogues) {
+            dialogues.Enqueue(a);
+        }
+        currentDialogue = dialogues.Dequeue();
+        
+        // Load the first character's sentences
+        foreach(string sentence in currentDialogue.sentences) {
             sentences.Enqueue(sentence);
         }
-        currentDialogue = dialogue;
         
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
         if(sentences.Count == 0) {
-            EndDialogue();
-            return;
+            if(dialogues.Count == 0) {
+                EndDialogue();
+                return;
+            }
+            // Load next character's dialogue
+            currentDialogue = dialogues.Dequeue();
+            foreach(string sentence in currentDialogue.sentences) {
+                sentences.Enqueue(sentence);
+            }
         }
+        
         nameText.text = currentDialogue.npc.name;
         avatar.sprite = currentDialogue.npc.Sprite;
         currentSentence = sentences.Dequeue();
@@ -52,6 +68,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() {
        animator.SetBool("isOpen", false);
        isOpen = false;
+       OnDialogueEnd?.Invoke();
     }
     public void Update() {
         if(Input.GetKeyDown(KeyCode.Return)) {

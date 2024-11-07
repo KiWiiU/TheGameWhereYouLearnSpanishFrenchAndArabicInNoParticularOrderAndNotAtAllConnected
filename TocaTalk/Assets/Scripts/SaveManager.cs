@@ -8,7 +8,7 @@ using TMPro;
 public class SaveManager : MonoBehaviour
 {
     public TMP_InputField TMP_Input;
-    void Start()
+    void Awake()
     {
         float r, g, b;
         // Reads in the save file

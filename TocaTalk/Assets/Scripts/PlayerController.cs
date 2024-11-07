@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float walkSpeed;
     public void FixedUpdate() {
-        if(!GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>().isOpen) { // cant move if dialogue is open
+        // cant move if dialogue is open
+        if(!GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>().isOpen) { 
             GetComponent<Rigidbody2D>().velocity = new Vector2(
                 Input.GetAxisRaw("Horizontal") * walkSpeed,
                 Input.GetAxisRaw("Vertical") * walkSpeed
