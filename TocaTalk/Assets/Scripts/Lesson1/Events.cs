@@ -7,13 +7,18 @@ public class Events : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public QuizManager quizManager;
-    public Question question;
+    public Question[] questions;
+    private bool startQuiz;
     void Start()
     {
+        startQuiz = false;
         dialogueManager.OnDialogueEnd += OnDialogueEnd;
     }
 
     private void OnDialogueEnd() {
-        quizManager.StartQuiz(question);
+        if(!startQuiz) {
+            startQuiz = true;
+            quizManager.StartQuiz(questions);
+        }
     }
 }

@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     public event Action OnDialogueEnd;
     public Animator animator;
     private bool typingText;
-    public bool isOpen;
+    private bool isOpen;
     private string currentSentence;
     // Start is called before the first frame update
     void Start()
@@ -27,15 +27,17 @@ public class DialogueManager : MonoBehaviour
         dialogues = new();
         sentences = new();
     }
-    public void StartDialogue(Dialogue dialogue) {
+
+    public bool IsOpen {get {return isOpen;}}
+    public void StartDialogue(CharacterDialogue[] dialogues) {
         animator.SetBool("isOpen", true);
         isOpen = true;
-        dialogues.Clear();
+        this.dialogues.Clear();
         sentences.Clear();
-        foreach(CharacterDialogue a in dialogue.dialogues) {
-            dialogues.Enqueue(a);
+        foreach(CharacterDialogue a in dialogues) {
+            this.dialogues.Enqueue(a);
         }
-        currentDialogue = dialogues.Dequeue();
+        currentDialogue = this.dialogues.Dequeue();
         
         // Load the first character's sentences
         foreach(string sentence in currentDialogue.sentences) {
@@ -58,8 +60,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
-        nameText.text = currentDialogue.npc.name;
-        avatar.sprite = currentDialogue.npc.Sprite;
+        nameText.text = currentDialogue.npc.npc.Name;
+        avatar.sprite = currentDialogue.npc.npc.Sprite;
         currentSentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(Type());

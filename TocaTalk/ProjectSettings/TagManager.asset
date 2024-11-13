@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dialogue
   - Bound
+  - Quiz
   layers:
   - Default
   - TransparentFX
