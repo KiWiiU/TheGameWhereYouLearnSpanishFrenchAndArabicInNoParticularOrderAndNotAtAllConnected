@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class QuizManager : MonoBehaviour
     private bool isOpen;
     public Animator animator;
     private int numCorrect;
+    public event Action OnQuizEnd;
     private Question currentQuestion;
 
     public bool IsOpen {get {return isOpen;}}
@@ -52,6 +54,7 @@ public class QuizManager : MonoBehaviour
         else {
             isOpen = false;
             animator.SetBool("isOpen", false);
+            OnQuizEnd?.Invoke();
         }
         UpdateUI();
     }

@@ -13,6 +13,14 @@ public class Events : MonoBehaviour
     {
         startQuiz = false;
         dialogueManager.OnDialogueEnd += OnDialogueEnd;
+        quizManager.OnQuizEnd += OnQuizEnd;
+    }
+
+    private void OnQuizEnd() {
+        Debug.Log("Finished lesson.");
+        Holder.progress(1);
+
+        gameObject.GetComponent<SceneSwap>().SwapScene("Lessons");
     }
 
     private void OnDialogueEnd() {

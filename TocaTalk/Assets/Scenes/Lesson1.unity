@@ -3505,6 +3505,8 @@ GameObject:
   - component: {fileID: 1662897348}
   - component: {fileID: 1662897347}
   - component: {fileID: 1662897350}
+  - component: {fileID: 1662897351}
+  - component: {fileID: 1662897352}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3605,6 +3607,30 @@ MonoBehaviour:
     - three
     - four
     correctAnswer: 3
+--- !u!114 &1662897351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662897346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a5bed30de1e61469a62ba7590e42a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1662897352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662897346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946ddcc0fba455b4bba27b304ac43f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700767263
 GameObject:
   m_ObjectHideFlags: 0

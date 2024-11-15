@@ -23,4 +23,10 @@ public class RandomNameGenerator : MonoBehaviour
         field.text = names[Random.Range(0, names.Length)];
         Holder.Name = field.text;
     }
+
+    public void Start() {
+        
+        field.interactable = true;
+        field.text = Holder.Name;
+    }
 }

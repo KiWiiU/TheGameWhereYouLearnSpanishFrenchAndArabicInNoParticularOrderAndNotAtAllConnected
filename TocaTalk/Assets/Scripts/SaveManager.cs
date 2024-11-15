@@ -7,7 +7,6 @@ using TMPro;
 
 public class SaveManager : MonoBehaviour
 {
-    public TMP_InputField TMP_Input;
     void Awake()
     {
         float r, g, b;
@@ -29,9 +28,6 @@ public class SaveManager : MonoBehaviour
                 Holder.color = new Color(r, g, b, 1f);
             }
         }
-
-        TMP_Input.interactable = true;
-        TMP_Input.text = Holder.Name;
     }
 
     public static void Save()

@@ -14,4 +14,35 @@ public class Holder : MonoBehaviour
         Name = n;
     }
 
+    public void setCurrentLanguage(int language) {
+        currentLanguage = language;
+    }
+
+    // Lesson = current lesson
+    public static void progress(int lesson) {
+        if(getProgress() == lesson-1) //so you progress linearly (can't do lesson 1 and unlock every single lesson)
+            switch(currentLanguage) {
+                case 0 : 
+                    Sprogress += 1;
+                    break;
+                case 1 :
+                    Fprogress += 1;
+                    break;
+                case 2 : 
+                    Aprogress += 1;
+                    break;
+            }
+    }
+
+    public static int getProgress() {
+        switch(currentLanguage) {
+            case 0 : 
+                return Sprogress;
+            case 1 :
+                return Fprogress;
+            case 2 : 
+                return Aprogress;
+        }
+        return -1;
+    }
 }
