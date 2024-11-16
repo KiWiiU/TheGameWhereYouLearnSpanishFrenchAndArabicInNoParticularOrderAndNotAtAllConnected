@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
                 Holder.Sprogress = int.Parse(reader.ReadLine());
                 Holder.Fprogress = int.Parse(reader.ReadLine());
                 Holder.Aprogress = int.Parse(reader.ReadLine());
+                Holder.currentLanguage = int.Parse(reader.ReadLine());
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
@@ -39,6 +40,7 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.Sprogress);
             writer.WriteLine(Holder.Fprogress);
             writer.WriteLine(Holder.Aprogress);
+            writer.WriteLine(Holder.currentLanguage);
             writer.WriteLine(Holder.color.r);
             writer.WriteLine(Holder.color.g);
             writer.WriteLine(Holder.color.b);

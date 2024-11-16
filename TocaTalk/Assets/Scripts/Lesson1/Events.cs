@@ -17,9 +17,7 @@ public class Events : MonoBehaviour
     }
 
     private void OnQuizEnd() {
-        Debug.Log("Finished lesson.");
         Holder.progress(1);
-
         gameObject.GetComponent<SceneSwap>().SwapScene("Lessons");
     }
 

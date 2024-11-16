@@ -44,9 +44,6 @@ public class QuizManager : MonoBehaviour
     public void AnswerQuiz(int answer) {
         if(answer == currentQuestion.correctAnswer) {
             numCorrect++;
-            Debug.Log("Correct");
-        } else {
-            Debug.Log("Wrong");
         }
         if(questions.Count > 0) {
             currentQuestion = questions.Dequeue();
