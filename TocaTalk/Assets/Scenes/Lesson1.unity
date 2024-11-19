@@ -3664,6 +3664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
+  pet: {fileID: 11400000, guid: 84a31f333dc5fcf46bc4fabb291b05ad, type: 2}
 --- !u!212 &1700767265
 SpriteRenderer:
   m_ObjectHideFlags: 0
