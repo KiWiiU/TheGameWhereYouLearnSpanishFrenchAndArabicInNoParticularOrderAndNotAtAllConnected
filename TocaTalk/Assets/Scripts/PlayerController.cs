@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mono.Cecil.Cil;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,16 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public Pet pet;
     private GameObject petObject;
-     private Queue<Vector3> positionHistory = new Queue<Vector3>();
-    private float recordInterval = 0.05f;
-    private float timeSinceLastRecord = 0f;
-    private int maxPositions = 10;
-    private bool isOnRightSide = true;
-    private bool isOnTopSide = true;
-    private Vector2 currentOffset = new Vector2(2f, -1f);
-    private Vector2 targetOffset = new Vector2(2f, -1f);
-
+    private Stack<Vector3> positionHistory;
+    private static float petDelay = 0.3f;
+    private float timeSinceLastRecord;
     public void Start() {
+        positionHistory  = new Stack<Vector3>();
+        timeSinceLastRecord = 0f;
         petObject = new GameObject("Pet");
         petObject.transform.SetParent(transform);
         petObject.transform.position = transform.position;
@@ -44,40 +41,48 @@ public class PlayerController : MonoBehaviour
     }
 
     private void movePet() {
-        // Record player position
         timeSinceLastRecord += Time.deltaTime;
-        if (timeSinceLastRecord >= recordInterval) {
-            // Update side based on player's horizontal movement
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-            float verticalInput = Input.GetAxisRaw("Vertical");
-            if (horizontalInput != 0) {
-                isOnRightSide = horizontalInput < 0;
-                // Update target offset instead of immediate position change
-                targetOffset.x = isOnRightSide ? 2f : -2f;
+        // Check if the player has moved and enough time has passed since the last record
+        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) {
+            if(timeSinceLastRecord >= petDelay) {
+                Vector3 position = transform.position;
+                if(!dialogueManager.IsOpen && !quizManager.IsOpen) {
+                    if(Input.GetAxisRaw("Horizontal") > 0) {
+                        position += new Vector3(-2.5f, -1f, 0f);
+                    }
+                    else if (Input.GetAxisRaw("Horizontal") < 0) {
+                        position += new Vector3(2.5f, -1f, 0f);
+                    }
+                    if(Input.GetAxisRaw("Vertical") > 0) {
+                        position += new Vector3(0f, -2f, 0f);
+                    }
+                    else if(Input.GetAxisRaw("Vertical") < 0) {
+                        position += new Vector3(0f, 1f, 0f);
+                    }
+                }
+                // Maintain a maximum length of the stack for position history
+                if(positionHistory.Count >= 3) {
+                    positionHistory.Pop(); // Remove the oldest position
+                }
+                positionHistory.Push(position);
+                timeSinceLastRecord = 0f; // Reset the timer after recording
             }
-            if (verticalInput != 0) {
-                isOnTopSide = verticalInput > 0;
-                // Update target offset instead of immediate position change
-                targetOffset.y = isOnTopSide ? -1f : 1f;
-            }
-
-            // Smoothly interpolate the current offset
-            currentOffset = Vector2.Lerp(currentOffset, targetOffset, 3f * Time.deltaTime);
-
-            // Use the interpolated offset for position
-            Vector3 position = transform.position + new Vector3(currentOffset.x, currentOffset.y, 0f);
-            
-            positionHistory.Enqueue(position);
-            if (positionHistory.Count > maxPositions) {
-                positionHistory.Dequeue();
-            }
-            timeSinceLastRecord = 0f;
         }
 
-        // Move pet to the oldest recorded position
-        if (positionHistory.Count > 0) {
+        // Move the pet towards the last recorded position if available
+        if(positionHistory.Count > 0) {
             Vector3 targetPosition = positionHistory.Peek();
-            petObject.transform.position = Vector3.Lerp(petObject.transform.position, targetPosition, 5f * Time.deltaTime);
+            // Only move the pet if the target position is significantly different
+            if (Vector3.Distance(petObject.transform.position, targetPosition) > 1f) {
+                petObject.transform.position = Vector3.Lerp(petObject.transform.position, targetPosition, Time.deltaTime * walkSpeed / 3f);
+            }
+        }
+
+        // Have pet behind / in front of player
+        if(petObject.transform.position.y >= transform.position.y) {
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        } else {
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 }
