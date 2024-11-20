@@ -49,10 +49,16 @@ public class QuizManager : MonoBehaviour
             currentQuestion = questions.Dequeue();
         }
         else {
-            isOpen = false;
-            animator.SetBool("isOpen", false);
-            OnQuizEnd?.Invoke();
+            StopAllCoroutines();
+            StartCoroutine(StopQuiz());
         }
         UpdateUI();
+    }
+
+    private IEnumerator StopQuiz() {
+        isOpen = false;
+        animator.SetBool("isOpen", false);
+        yield return new WaitForSeconds(1f);
+        OnQuizEnd?.Invoke();
     }
 }

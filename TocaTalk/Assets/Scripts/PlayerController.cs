@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate() {
         // cant move if dialogue or quiz is open
         if(!dialogueManager.IsOpen && !quizManager.IsOpen) { 
-            GetComponent<Rigidbody2D>().velocity = new Vector2(
+            Vector2 targetVelocity = new Vector2(
                 Input.GetAxisRaw("Horizontal") * walkSpeed,
                 Input.GetAxisRaw("Vertical") * walkSpeed
             );
+            GetComponent<Rigidbody2D>().velocity = Vector2.Lerp(GetComponent<Rigidbody2D>().velocity, targetVelocity, Time.deltaTime * 20f);
         }
         else GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         movePet();
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Have pet behind / in front of player
-        if(petObject.transform.position.y >= transform.position.y) {
+        if(petObject.transform.position.y+0.5f >= transform.position.y) {
             petObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
         } else {
             petObject.GetComponent<SpriteRenderer>().sortingOrder = 2;

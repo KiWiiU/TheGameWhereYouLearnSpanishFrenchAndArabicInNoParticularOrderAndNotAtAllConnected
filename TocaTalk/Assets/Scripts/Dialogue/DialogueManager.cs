@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour
        OnDialogueEnd?.Invoke();
     }
     public void Update() {
-        if(Input.GetKeyDown(KeyCode.Return)) {
+        if(Input.GetKeyDown(KeyCode.Return) && isOpen) {
             if(typingText) { // skip dialogue if still typing
                 StopAllCoroutines();
                 dialogueText.text = currentSentence;

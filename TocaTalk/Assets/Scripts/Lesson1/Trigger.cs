@@ -6,7 +6,7 @@ public class Trigger : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player") {
-            GameObject.FindWithTag("Dialogue").GetComponent<DialogueTrigger>().TriggerDialogue();
+            GameObject.FindWithTag("GameController").GetComponent<Events>().Trigger();
             Destroy(this);
         }
     }
