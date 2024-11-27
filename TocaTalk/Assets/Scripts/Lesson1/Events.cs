@@ -22,28 +22,28 @@ public class Events : MonoBehaviour
     }
 
     private void OnQuizEnd() {
-        Trigger();
+        TriggerEvent();
     }
 
     private void OnDialogueEnd() {
-        Trigger();
+        TriggerEvent();
     }
 
-    public void Trigger() {
+    public void TriggerEvent() {
         switch(++currentEvent) {
-            case 1 : {
+            case 1 : { // Trigger first dialogue
                 dialogueObj.GetComponent<DialogueTrigger>().TriggerDialogue();
                 break;
             }
-            case 2 : {
+            case 2 : { // Trigger quiz
                 quizManager.StartQuiz(questions);
                 break;
             }
-            case 3 : {
+            case 3 : { // Trigger dialogue after quiz, ending dialogue
                 dialogueObj.GetComponent<DialogueManager>().StartDialogue(secondDialogue);
                 break;
             }
-            case 4 : {
+            case 4 : { // End lesson
                 Holder.progress(1);
                 GetComponent<SceneSwap>().SwapScene("Lessons");
                 break;

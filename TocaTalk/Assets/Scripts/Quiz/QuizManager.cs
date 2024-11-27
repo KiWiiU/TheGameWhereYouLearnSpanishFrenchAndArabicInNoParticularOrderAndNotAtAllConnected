@@ -59,6 +59,7 @@ public class QuizManager : MonoBehaviour
         isOpen = false;
         animator.SetBool("isOpen", false);
         yield return new WaitForSeconds(1f);
+        obj.GetComponent<Canvas>().enabled = false;
         OnQuizEnd?.Invoke();
     }
 }
