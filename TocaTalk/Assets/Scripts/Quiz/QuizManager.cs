@@ -12,11 +12,13 @@ public class QuizManager : MonoBehaviour
     private bool isOpen;
     public Animator animator;
     private int numCorrect; // number of questions the player got correct
+    private int numQuestions;
     public event Action OnQuizEnd; // event to trigger when quiz ends
     private Question currentQuestion;
 
     public bool IsOpen {get {return isOpen;}}
     public int NumCorrect {get {return numCorrect;}}
+    public int NumQuestions {get {return numQuestions;}}
     public void Start() {
         questions = new();
         isOpen = false;
@@ -29,6 +31,7 @@ public class QuizManager : MonoBehaviour
             this.questions.Enqueue(q);
         }
         currentQuestion = this.questions.Dequeue();
+        numQuestions = questions.Length;
         obj.GetComponent<Canvas>().enabled = true;
         UpdateUI();
     }
@@ -45,6 +48,10 @@ public class QuizManager : MonoBehaviour
     public void AnswerQuiz(int answer) {
         if(answer == currentQuestion.correctAnswer) {
             numCorrect++;
+            Debug.Log("Correct!");
+        }
+        else {
+            Debug.Log("Incorrect!");
         }
         if(questions.Count > 0) {
             currentQuestion = questions.Dequeue();

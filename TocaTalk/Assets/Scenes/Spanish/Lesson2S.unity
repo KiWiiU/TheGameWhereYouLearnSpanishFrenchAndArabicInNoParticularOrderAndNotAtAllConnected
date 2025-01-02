@@ -1175,7 +1175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548429312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.276861, y: 0.36984998, z: -9}
+  m_LocalPosition: {x: 8.286598, y: 0.36984998, z: -9}
   m_LocalScale: {x: 1.394, y: 1.5757, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3578,35 +3578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1789974715}
   quizManager: {fileID: 1763108766}
-  questions:
-  - question: Are you (one) ?
-    answers:
-    - one
-    - two
-    - three
-    - four
-    correctAnswer: 0
-  - question: Are you (two) ?
-    answers:
-    - three
-    - one
-    - two
-    - five
-    correctAnswer: 2
-  - question: Are you (three) ?
-    answers:
-    - one
-    - two
-    - three
-    - four
-    correctAnswer: 2
-  - question: Are you (four) ?
-    answers:
-    - one
-    - two
-    - three
-    - four
-    correctAnswer: 3
+  questions: []
   secondDialogue:
   - sentences:
     - Wow! I am that old!

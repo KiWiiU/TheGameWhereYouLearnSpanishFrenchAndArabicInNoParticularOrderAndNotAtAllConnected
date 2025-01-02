@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +21,11 @@ public class LockLevels : MonoBehaviour
 
    public void startLevel(int level) {
     if(level-1 <= Holder.getProgress()) {
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene("Lesson" + level);
+        string lesson = "Lesson" + level;
+        if(Holder.currentLanguage == 0) lesson += "S";
+        else if(Holder.currentLanguage == 1) lesson += "F";
+        else if(Holder.currentLanguage == 2) lesson += "A";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene(lesson);
     }
    }
 }
