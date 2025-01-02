@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject obj; // Quiz parent game object
     private Queue<Question> questions;
     private bool isOpen;
     public Animator animator;
-    private int numCorrect;
-    public event Action OnQuizEnd;
+    private int numCorrect; // number of questions the player got correct
+    public event Action OnQuizEnd; // event to trigger when quiz ends
     private Question currentQuestion;
 
     public bool IsOpen {get {return isOpen;}}
@@ -56,6 +57,8 @@ public class QuizManager : MonoBehaviour
     }
 
     private IEnumerator StopQuiz() {
+        if(!isOpen) yield return null;
+        EventSystem.current.SetSelectedGameObject(null); //deselect the buttons so the enter key does not activate the button after it closes
         isOpen = false;
         animator.SetBool("isOpen", false);
         yield return new WaitForSeconds(1f);

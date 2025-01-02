@@ -18,7 +18,7 @@ public class RandomNameGenerator : MonoBehaviour
             "Edward", "Itachi", "Peter", "Zoro",
             "Timothy", "Adam", "Stephen", "Eric",
             "Jason", "Jeffrey", "Gregory", "Scott",
-            "Patrick"
+            "Patrick", "Samuel", "Larry", "Justin",
         };
         field.text = names[Random.Range(0, names.Length)];
         Holder.Name = field.text;
