@@ -22,6 +22,7 @@ public class Events : MonoBehaviour
     }
 
     private void OnQuizEnd() {
+        Debug.Log("Player has finished quiz. ");
         TriggerEvent();
     }
 
