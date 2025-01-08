@@ -13,8 +13,13 @@ public class Events : MonoBehaviour
 
     public CharacterDialogue[] secondDialogue;
     private GameObject dialogueObj;
+
+    private int playerScore;
+    private int totalScore;
     public void Start()
     {
+        playerScore = 0;
+        totalScore = 0;
         currentEvent = 0;
         dialogueManager.OnDialogueEnd += OnDialogueEnd;
         quizManager.OnQuizEnd += OnQuizEnd;
@@ -23,6 +28,8 @@ public class Events : MonoBehaviour
 
     private void OnQuizEnd() {
         Debug.Log("Player has finished quiz. ");
+        playerScore += quizManager.NumCorrect;
+        totalScore += quizManager.NumQuestions;
         TriggerEvent();
     }
 
@@ -45,10 +52,14 @@ public class Events : MonoBehaviour
                 break;
             }
             case 4 : { // End lesson
-                Holder.progress(1);
+                if((double)playerScore/totalScore >= .8)
+                    Holder.progress(1);
+                else
+                    Debug.Log("Player has failed the lesson.");
                 GetComponent<SceneSwap>().SwapScene("Lessons");
                 break;
             }
         }
     }
+
 }
