@@ -15,7 +15,12 @@ public class PlayerController : MonoBehaviour
     private Stack<Vector3> positionHistory;
     private static float petDelay = 0.3f;
     private float timeSinceLastRecord;
+
     public void Start() {
+        // set player's skin color
+        GetComponent<SpriteRenderer>().color = Holder.color;
+        
+        // initialize pet (position history for it to follow, create the pet object)
         positionHistory  = new Stack<Vector3>();
         timeSinceLastRecord = 0f;
         petObject = new GameObject("Pet");
@@ -24,7 +29,10 @@ public class PlayerController : MonoBehaviour
         SpriteRenderer spriteRenderer = petObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = pet.Sprite;
         spriteRenderer.sortingLayerName = "Player";
-        petObject.transform.localScale = transform.localScale / 2f;
+        // clifford the big red dog
+        petObject.transform.localScale = transform.localScale / 175f;
+
+
         dialogueManager = GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>();
         quizManager = GameObject.FindWithTag("Quiz").GetComponent<QuizManager>();
     }
@@ -35,6 +43,7 @@ public class PlayerController : MonoBehaviour
                 Input.GetAxisRaw("Horizontal") * walkSpeed,
                 Input.GetAxisRaw("Vertical") * walkSpeed
             );
+            // smooth the player's movement so it isnt choppy
             GetComponent<Rigidbody2D>().velocity = Vector2.Lerp(GetComponent<Rigidbody2D>().velocity, targetVelocity, Time.deltaTime * 20f);
         }
         else GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -61,7 +70,7 @@ public class PlayerController : MonoBehaviour
                         position += new Vector3(0f, 1f, 0f);
                     }
                 }
-                // Maintain a maximum length of the stack for position history
+                // Maintain a maximum length of the stack for position history so it doesnt use too much memory
                 if(positionHistory.Count >= 3) {
                     positionHistory.Pop(); // Remove the oldest position
                 }
@@ -81,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
         // Have pet behind / in front of player
         if(petObject.transform.position.y+0.5f >= transform.position.y) {
-            petObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = -2;
         } else {
             petObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
