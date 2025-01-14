@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TheLerper : MonoBehaviour
 {
-    public Image image;
+    public SpriteRenderer image;
 
     public Gradient gradient;
     public void Start()
