@@ -7,6 +7,12 @@ public class Holder : MonoBehaviour
 {
     public static string Name;
     public static int Money, Sprogress, Fprogress, Aprogress, currentLanguage;
+    public static UnlockableItem currentHeadCosmetic;
+    public static UnlockableItem currentAccessoryCosmetic;
+    public static UnlockableItem currentFaceCosmetic;
+    public static UnlockableItem currentPantsCosmetic;
+    public static UnlockableItem currentShirtCosmetic;
+    public static UnlockableItem currentShoesCosmetic;
     public static Color color;
     [SerializeField] public Dictionary<UnlockableItem, bool> unlockedItems = new();
     public void NameIt(string n)
@@ -45,4 +51,6 @@ public class Holder : MonoBehaviour
         }
         return -1;
     }
+
+    
 }

@@ -11,8 +11,10 @@ public class SaveManager : MonoBehaviour
     {
         float r, g, b;
         // Reads in the save file
-        if (!File.Exists("Assets/SaveFile.txt"))
+        if (!File.Exists("Assets/SaveFile.txt")) {
             File.Create("Assets/SaveFile.txt").Close();
+            Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/0");
+        }
         using(StreamReader reader = new StreamReader("Assets/SaveFile.txt"))
         {
             if (!reader.EndOfStream)
@@ -27,6 +29,12 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.color = new Color(r, g, b, 1f);
+                Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                // Holder.currentAccessoryCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                // Holder.currentFaceCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                // Holder.currentPantsCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                // Holder.currentShirtCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                // Holder.currentShoesCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
             }
         }
     }
@@ -44,6 +52,12 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.color.r);
             writer.WriteLine(Holder.color.g);
             writer.WriteLine(Holder.color.b);
+            writer.WriteLine((int)Holder.currentHeadCosmetic.Type);
+            // writer.WriteLine((int)Holder.currentAccessoryCosmetic.Type);
+            // writer.WriteLine((int)Holder.currentFaceCosmetic.Type);
+            // writer.WriteLine((int)Holder.currentPantsCosmetic.Type);
+            // writer.WriteLine((int)Holder.currentShirtCosmetic.Type);
+            // writer.WriteLine((int)Holder.currentShoesCosmetic.Type);
         }
     }
 }
