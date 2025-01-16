@@ -20,9 +20,9 @@ public class UnlockableItem : ScriptableObject
 
     public enum CosmeticType {
         // Head
-        Bald,
-        AllMight,
-        Banana,
+        Bald, // 0
+        AllMight, // 1
+        Banana, // 2
         Beanie,
         Beret,
         Bob,
@@ -35,7 +35,7 @@ public class UnlockableItem : ScriptableObject
         HeadScarf2,
         Kufi,
         Jessie,
-        Lick,
+        Lick, // 15
         Long,
         Messy, // 17
         Miku,
@@ -51,17 +51,49 @@ public class UnlockableItem : ScriptableObject
         Toad,
         Todoroki,
         TopHat,
-        Witch,
+        Witch, // 31
+        Short, // 32
 
         // Face
-        Clean,
+        Clean, // 33
         Beard,
         Goatee,
-        Handlebar,
         Mustache,
-        Sideburns,
+        Sideburns, // 37
 
         // Pants
+
+        Sweatpants, // 38
+        Jeans,
+        Shorts,
+        Skirt, // 41
+
+        // Shirts
+
+        Hoodie, // 42
+        LongSleeve,
+        Pijamas,
+        Pullover,
+        Robe,
+        Striped,
+        TShirt,
+        HalfShirt, // 49
+
+        // Shoes
+
+        Boots, // 50
+        Heels,
+        Sandals,
+        Sneakers, // 53
+
+        // Accessories
+
+        Bowtie, // 54
+        Glasses,
+        Headphones,
+        Scarf,
+        Scarf2,
+        Sunglasses,
 
     }
     

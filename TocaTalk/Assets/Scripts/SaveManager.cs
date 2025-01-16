@@ -29,12 +29,12 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.color = new Color(r, g, b, 1f);
-                Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
-                // Holder.currentAccessoryCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
-                // Holder.currentFaceCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
-                // Holder.currentPantsCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
-                // Holder.currentShirtCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
-                // Holder.currentShoesCosmetic = (UnlockableItem)Resources.Load("Cosmetics/" + int.Parse(reader.ReadLine()));
+                Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Head/" + reader.ReadLine());
+                Holder.currentFaceCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Face/" + reader.ReadLine());
+                Holder.currentPantsCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Pants/" + reader.ReadLine());
+                Holder.currentShirtCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Shirt/" + reader.ReadLine());
+                Holder.currentShoesCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Shoes/" + reader.ReadLine());
+                Holder.currentAccessoryCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Accessory/" + reader.ReadLine());
             }
         }
     }
@@ -52,12 +52,12 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.color.r);
             writer.WriteLine(Holder.color.g);
             writer.WriteLine(Holder.color.b);
-            writer.WriteLine((int)Holder.currentHeadCosmetic.Type);
-            // writer.WriteLine((int)Holder.currentAccessoryCosmetic.Type);
-            // writer.WriteLine((int)Holder.currentFaceCosmetic.Type);
-            // writer.WriteLine((int)Holder.currentPantsCosmetic.Type);
-            // writer.WriteLine((int)Holder.currentShirtCosmetic.Type);
-            // writer.WriteLine((int)Holder.currentShoesCosmetic.Type);
+            writer.WriteLine(Holder.currentHeadCosmetic.Type);
+            writer.WriteLine(Holder.currentFaceCosmetic.Type);
+            writer.WriteLine(Holder.currentPantsCosmetic.Type);
+            writer.WriteLine(Holder.currentShirtCosmetic.Type);
+            writer.WriteLine(Holder.currentShoesCosmetic.Type);
+            writer.WriteLine(Holder.currentAccessoryCosmetic.Type);
         }
     }
 }

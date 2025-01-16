@@ -4,7 +4,12 @@ Scott
 0
 0
 0
-0.6751543
-0.4252188
-0.2396479
-29
+0.7270824
+0.4796208
+0.2916235
+Bald
+Clean
+Sweatpants
+Striped
+Sneakers
+Sunglasses

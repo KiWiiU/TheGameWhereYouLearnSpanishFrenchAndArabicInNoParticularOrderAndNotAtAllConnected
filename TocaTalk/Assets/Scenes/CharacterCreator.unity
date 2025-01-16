@@ -520,15 +520,27 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Beard
       m_Image: {fileID: 0}
-    - m_Text: Mustache 1
+    - m_Text: Goatee
       m_Image: {fileID: 0}
-    - m_Text: Mustache 2
+    - m_Text: Mustache
       m_Image: {fileID: 0}
     - m_Text: Sideburns
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1522613842}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: setFace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &211652775
 MonoBehaviour:
@@ -1812,7 +1824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: T-Shirt
+  m_text: Hoodie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2158,7 +2170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sneakers
+  m_text: Boots
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2327,19 +2339,33 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: None
+    - m_Text: Bowtie
       m_Image: {fileID: 0}
-    - m_Text: Beanie
+    - m_Text: Glasses
       m_Image: {fileID: 0}
-    - m_Text: Cap
+    - m_Text: Headphones
       m_Image: {fileID: 0}
-    - m_Text: Top hat
+    - m_Text: Scarf
       m_Image: {fileID: 0}
-    - m_Text: Party hat
+    - m_Text: Scarf Alt.
+      m_Image: {fileID: 0}
+    - m_Text: Sunglasses
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1522613842}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: setAccessory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &573707507
 MonoBehaviour:
@@ -5085,19 +5111,29 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Pants
-      m_Image: {fileID: 0}
-    - m_Text: Shorts
-      m_Image: {fileID: 0}
     - m_Text: Sweatpants
-      m_Image: {fileID: 0}
-    - m_Text: Skirt
       m_Image: {fileID: 0}
     - m_Text: Jeans
       m_Image: {fileID: 0}
+    - m_Text: Shorts
+      m_Image: {fileID: 0}
+    - m_Text: Skirt
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1522613842}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: setPants
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1139453904
 MonoBehaviour:
@@ -5854,19 +5890,37 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: T-Shirt
-      m_Image: {fileID: 0}
-    - m_Text: Long Sleeve
-      m_Image: {fileID: 0}
     - m_Text: Hoodie
       m_Image: {fileID: 0}
-    - m_Text: Tank top
+    - m_Text: Sleeves
       m_Image: {fileID: 0}
-    - m_Text: Sweatshirt
+    - m_Text: Pijamas
+      m_Image: {fileID: 0}
+    - m_Text: Pullover
+      m_Image: {fileID: 0}
+    - m_Text: Robe
+      m_Image: {fileID: 0}
+    - m_Text: Striped
+      m_Image: {fileID: 0}
+    - m_Text: T-Shirt
+      m_Image: {fileID: 0}
+    - m_Text: Half Shirt
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1522613842}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: setShirt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1321100826
 MonoBehaviour:
@@ -6559,19 +6613,29 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Boots
+      m_Image: {fileID: 0}
+    - m_Text: Heels
+      m_Image: {fileID: 0}
+    - m_Text: Sandals
+      m_Image: {fileID: 0}
     - m_Text: Sneakers
-      m_Image: {fileID: 0}
-    - m_Text: Flip-Flops
-      m_Image: {fileID: 0}
-    - m_Text: Cowboy Boots
-      m_Image: {fileID: 0}
-    - m_Text: Hightops
-      m_Image: {fileID: 0}
-    - m_Text: Normal Boots
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1522613842}
+        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
+        m_MethodName: setShoes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1505116361
 MonoBehaviour:
@@ -6907,10 +6971,10 @@ MonoBehaviour:
   menu:
   - {fileID: 2106095419}
   - {fileID: 211652774}
-  - {fileID: 1321100825}
   - {fileID: 1139453903}
-  - {fileID: 573707506}
+  - {fileID: 1321100825}
   - {fileID: 1505116360}
+  - {fileID: 573707506}
 --- !u!1 &1524019149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,7 +7244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: None
+  m_text: Bowtie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7893,7 +7957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pants
+  m_text: Sweatpants
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9540,7 +9604,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: Bald
       m_Image: {fileID: 0}
-    - m_Text: AllMight
+    - m_Text: All Might
       m_Image: {fileID: 0}
     - m_Text: Banana
       m_Image: {fileID: 21300000, guid: fb4ce65da24a9ec4fa1b1dc14fcb2a11, type: 3}
@@ -9596,11 +9660,13 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Toad
       m_Image: {fileID: 0}
-    - m_Text: Todoroki (First name)
+    - m_Text: Shoto Todoroki
       m_Image: {fileID: 0}
     - m_Text: Top Hat
       m_Image: {fileID: 0}
     - m_Text: Witch
+      m_Image: {fileID: 0}
+    - m_Text: Short
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

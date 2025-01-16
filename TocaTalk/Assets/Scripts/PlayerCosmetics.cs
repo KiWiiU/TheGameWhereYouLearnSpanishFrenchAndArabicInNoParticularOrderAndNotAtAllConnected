@@ -8,6 +8,11 @@ public class PlayerCosmetics : MonoBehaviour
     void Start()
     {
         SetHeadCosmetic();
+        SetFaceCosmetic();
+        SetPantsCosmetic();
+        SetShoesCosmetic();
+        SetShirtCosmetic();
+        SetAccessoryCosmetic();
     }
 
     // Update is called once per frame
@@ -33,17 +38,17 @@ public class PlayerCosmetics : MonoBehaviour
     }
     public void SetShoesCosmetic() {
         if(Holder.currentShoesCosmetic != null) {
-            transform.Find("Pants").GetComponent<SpriteRenderer>().sprite = Holder.currentShoesCosmetic.Front;
+            transform.Find("Shoes").GetComponent<SpriteRenderer>().sprite = Holder.currentShoesCosmetic.Front;
         }
     }
     public void SetShirtCosmetic() {
         if(Holder.currentShirtCosmetic != null) {
-            transform.Find("Pants").GetComponent<SpriteRenderer>().sprite = Holder.currentShirtCosmetic.Front;
+            transform.Find("Shirt").GetComponent<SpriteRenderer>().sprite = Holder.currentShirtCosmetic.Front;
         }
     }
     public void SetAccessoryCosmetic() {
-        if(Holder.currentShoesCosmetic != null) {
-            transform.Find("Pants").GetComponent<SpriteRenderer>().sprite = Holder.currentAccessoryCosmetic.Front;
+        if(Holder.currentAccessoryCosmetic != null) {
+            transform.Find("Accessory").GetComponent<SpriteRenderer>().sprite = Holder.currentAccessoryCosmetic.Front;
         }
     }
 }
