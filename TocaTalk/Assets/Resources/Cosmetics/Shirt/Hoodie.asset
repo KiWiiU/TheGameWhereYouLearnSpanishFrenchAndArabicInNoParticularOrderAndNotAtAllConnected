@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a3d9f47ef039504c9de7c3c6c8eafca, type: 3}
+  m_Script: {fileID: 11500000, guid: 97b4c3b5aaf1f5a4391e7881bfab6426, type: 3}
   m_Name: Hoodie
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: 95568f396d73ced468d76cb5bbda3174, type: 3}
   back: {fileID: 21300000, guid: 95568f396d73ced468d76cb5bbda3174, type: 3}
   cost: 0
-  type: 42
+  shirtType: 0

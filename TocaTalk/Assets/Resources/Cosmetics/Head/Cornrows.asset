@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a3d9f47ef039504c9de7c3c6c8eafca, type: 3}
+  m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Cornrows
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: ac97973d8a186f143b9c62d9465cf0b1, type: 3}

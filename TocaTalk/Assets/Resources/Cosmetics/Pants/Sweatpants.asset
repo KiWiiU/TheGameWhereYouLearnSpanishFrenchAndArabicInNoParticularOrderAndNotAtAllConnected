@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a3d9f47ef039504c9de7c3c6c8eafca, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a6e95690625ea242a5e221a2f8be2b0, type: 3}
   m_Name: Sweatpants
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: 18c0d79afff36e44c8c10b716f18badc, type: 3}
   back: {fileID: 21300000, guid: 18c0d79afff36e44c8c10b716f18badc, type: 3}
   cost: 0
-  type: 38
+  pantsType: 0

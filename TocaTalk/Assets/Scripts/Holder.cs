@@ -7,14 +7,14 @@ public class Holder : MonoBehaviour
 {
     public static string Name;
     public static int Money, Sprogress, Fprogress, Aprogress, currentLanguage;
-    public static UnlockableItem currentHeadCosmetic;
-    public static UnlockableItem currentAccessoryCosmetic;
-    public static UnlockableItem currentFaceCosmetic;
-    public static UnlockableItem currentPantsCosmetic;
-    public static UnlockableItem currentShirtCosmetic;
-    public static UnlockableItem currentShoesCosmetic;
+    public static CosmeticItem currentHeadCosmetic;
+    public static CosmeticItem currentAccessoryCosmetic;
+    public static CosmeticItem currentFaceCosmetic;
+    public static CosmeticItem currentPantsCosmetic;
+    public static CosmeticItem currentShirtCosmetic;
+    public static CosmeticItem currentShoesCosmetic;
     public static Color color;
-    [SerializeField] public Dictionary<UnlockableItem, bool> unlockedItems = new();
+    [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)
     {
         Name = n;

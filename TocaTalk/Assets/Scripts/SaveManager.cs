@@ -13,7 +13,7 @@ public class SaveManager : MonoBehaviour
         // Reads in the save file
         if (!File.Exists("Assets/SaveFile.txt")) {
             File.Create("Assets/SaveFile.txt").Close();
-            Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/0");
+            Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
         }
         using(StreamReader reader = new StreamReader("Assets/SaveFile.txt"))
         {
@@ -29,12 +29,12 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.color = new Color(r, g, b, 1f);
-                Holder.currentHeadCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Head/" + reader.ReadLine());
-                Holder.currentFaceCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Face/" + reader.ReadLine());
-                Holder.currentPantsCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Pants/" + reader.ReadLine());
-                Holder.currentShirtCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Shirt/" + reader.ReadLine());
-                Holder.currentShoesCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Shoes/" + reader.ReadLine());
-                Holder.currentAccessoryCosmetic = (UnlockableItem)Resources.Load("Cosmetics/Accessory/" + reader.ReadLine());
+                Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Head/" + reader.ReadLine());
+                Holder.currentFaceCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Face/" + reader.ReadLine());
+                Holder.currentPantsCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Pants/" + reader.ReadLine());
+                Holder.currentShirtCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Shirt/" + reader.ReadLine());
+                Holder.currentShoesCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Shoes/" + reader.ReadLine());
+                Holder.currentAccessoryCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Accessory/" + reader.ReadLine());
             }
         }
     }
@@ -52,12 +52,12 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.color.r);
             writer.WriteLine(Holder.color.g);
             writer.WriteLine(Holder.color.b);
-            writer.WriteLine(Holder.currentHeadCosmetic.Type);
-            writer.WriteLine(Holder.currentFaceCosmetic.Type);
-            writer.WriteLine(Holder.currentPantsCosmetic.Type);
-            writer.WriteLine(Holder.currentShirtCosmetic.Type);
-            writer.WriteLine(Holder.currentShoesCosmetic.Type);
-            writer.WriteLine(Holder.currentAccessoryCosmetic.Type);
+            writer.WriteLine(Holder.currentHeadCosmetic.name);
+            writer.WriteLine(Holder.currentFaceCosmetic.name);
+            writer.WriteLine(Holder.currentPantsCosmetic.name);
+            writer.WriteLine(Holder.currentShirtCosmetic.name);
+            writer.WriteLine(Holder.currentShoesCosmetic.name);
+            writer.WriteLine(Holder.currentAccessoryCosmetic.name);
         }
     }
 }

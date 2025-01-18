@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 211652776}
   - component: {fileID: 211652775}
   - component: {fileID: 211652774}
+  - component: {fileID: 211652777}
   m_Layer: 5
   m_Name: Face
   m_TagString: Untagged
@@ -524,14 +525,12 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Mustache
       m_Image: {fileID: 0}
-    - m_Text: Sideburns
-      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setFace
+      - m_Target: {fileID: 211652777}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetFaceCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -580,6 +579,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211652772}
   m_CullTransparentMesh: 1
+--- !u!114 &211652777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211652772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 4147c45f695eefc438f27c3e44ef42e4, type: 2}
+  - {fileID: 11400000, guid: 924aa28525bd39347a136969aca140b2, type: 2}
+  - {fileID: 11400000, guid: 2558fdae072c9c249814352c8d4c4bce, type: 2}
+  - {fileID: 11400000, guid: 8ccf8cfcd7cb92e4ea104cc6aed31fe2, type: 2}
+  - {fileID: 11400000, guid: 74f126b4bba12a94eb92fc87be1d2ea8, type: 2}
 --- !u!1 &267700328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1523,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1570,7 +1587,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &469283660
@@ -1826,8 +1843,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hoodie
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2035,10 +2052,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bald
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2172,8 +2189,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Boots
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2259,6 +2276,7 @@ GameObject:
   - component: {fileID: 573707508}
   - component: {fileID: 573707507}
   - component: {fileID: 573707506}
+  - component: {fileID: 573707509}
   m_Layer: 5
   m_Name: Accessories
   m_TagString: Untagged
@@ -2339,6 +2357,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: None
+      m_Image: {fileID: 0}
     - m_Text: Bowtie
       m_Image: {fileID: 0}
     - m_Text: Glasses
@@ -2354,9 +2374,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setAccessory
+      - m_Target: {fileID: 573707509}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetAccessoryCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2405,6 +2425,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573707504}
   m_CullTransparentMesh: 1
+--- !u!114 &573707509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573707504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 629c83df9b8df2f4c89581248cf4b170, type: 2}
+  - {fileID: 11400000, guid: ddd1712c4750a0a4ca57fa365d9dae9c, type: 2}
+  - {fileID: 11400000, guid: 5b6e813108da35140adb10b5bfc8bb84, type: 2}
+  - {fileID: 11400000, guid: 957cefc7b422a524e9db2a5e01f5627d, type: 2}
+  - {fileID: 11400000, guid: 6b7627d20c21f824ba90ff598eff7f75, type: 2}
+  - {fileID: 11400000, guid: 7b52da816386d084b939c0fadcfcecf4, type: 2}
+  - {fileID: 11400000, guid: 6e765282dd0484741af94b47451ca961, type: 2}
 --- !u!1 &579544022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,7 +2868,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2892,7 +2932,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &620887247
@@ -3223,7 +3263,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3519,7 +3559,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3583,7 +3623,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &784052328
@@ -4944,7 +4984,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5008,7 +5048,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1121857818
@@ -5031,6 +5071,7 @@ GameObject:
   - component: {fileID: 1139453905}
   - component: {fileID: 1139453904}
   - component: {fileID: 1139453903}
+  - component: {fileID: 1139453906}
   m_Layer: 5
   m_Name: Pants
   m_TagString: Untagged
@@ -5122,9 +5163,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setPants
+      - m_Target: {fileID: 1139453906}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetPantsCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5173,6 +5214,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139453901}
   m_CullTransparentMesh: 1
+--- !u!114 &1139453906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139453901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 13f051a5aae1c534c8373caa2432e8e1, type: 2}
+  - {fileID: 11400000, guid: 79cd99ec7d76ecb458d11afb57d6516c, type: 2}
+  - {fileID: 11400000, guid: f9f165425207fc34690d8fd3a385b8a3, type: 2}
+  - {fileID: 11400000, guid: 3c15b1c700beca94ca10d24e98d8dc70, type: 2}
 --- !u!1 &1140877150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,7 +5418,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5424,7 +5482,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1149980237
@@ -5647,8 +5705,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: None
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5810,6 +5868,7 @@ GameObject:
   - component: {fileID: 1321100827}
   - component: {fileID: 1321100826}
   - component: {fileID: 1321100825}
+  - component: {fileID: 1321100828}
   m_Layer: 5
   m_Name: Shirt
   m_TagString: Untagged
@@ -5838,7 +5897,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -276, y: -146}
-  m_SizeDelta: {x: 114.4731, y: 32.03308}
+  m_SizeDelta: {x: 121.4, y: 32.03308}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321100825
 MonoBehaviour:
@@ -5909,9 +5968,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setShirt
+      - m_Target: {fileID: 1321100828}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetShirtCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5960,6 +6019,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321100823}
   m_CullTransparentMesh: 1
+--- !u!114 &1321100828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321100823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 4f8b79ede28ce5c4eb3a9788f993e101, type: 2}
+  - {fileID: 11400000, guid: 2cd445b291ed9ce439c71e61123804d9, type: 2}
+  - {fileID: 11400000, guid: 1c90058797d4e9e42a4a092b4c3ccac5, type: 2}
+  - {fileID: 11400000, guid: 795db2bced740b84589a9ef94dd021f8, type: 2}
+  - {fileID: 11400000, guid: 5d8107e39bf375246b18b90a79bb113f, type: 2}
+  - {fileID: 11400000, guid: 4a2fbaba0716a7a40859a151e2592204, type: 2}
+  - {fileID: 11400000, guid: ef3ec663fa82c2a4b8de4a521c975c0d, type: 2}
+  - {fileID: 11400000, guid: a51034b525f43084b969d33df2c7bb42, type: 2}
 --- !u!1 &1365274990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6533,6 +6613,7 @@ GameObject:
   - component: {fileID: 1505116362}
   - component: {fileID: 1505116361}
   - component: {fileID: 1505116360}
+  - component: {fileID: 1505116363}
   m_Layer: 5
   m_Name: Shoes
   m_TagString: Untagged
@@ -6624,9 +6705,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setShoes
+      - m_Target: {fileID: 1505116363}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetShoesCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6675,6 +6756,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505116358}
   m_CullTransparentMesh: 1
+--- !u!114 &1505116363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505116358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 0cc065d34978dee49b9068aff1fc40ac, type: 2}
+  - {fileID: 11400000, guid: 66f805449c864d147a0882ea0c932777, type: 2}
+  - {fileID: 11400000, guid: 380620e905700eb48aec684eaa230db9, type: 2}
+  - {fileID: 11400000, guid: 196be44f2b2672c4f956dd53e826bfc8, type: 2}
 --- !u!1 &1521026970
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,7 +6909,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6875,7 +6973,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1522061333
@@ -6897,7 +6995,6 @@ GameObject:
   - component: {fileID: 1522613841}
   - component: {fileID: 1522613840}
   - component: {fileID: 1522613839}
-  - component: {fileID: 1522613842}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -6955,26 +7052,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1522613842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522613838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65624753c2caba4285e499013c60a6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 8552199304899436077}
-  menu:
-  - {fileID: 2106095419}
-  - {fileID: 211652774}
-  - {fileID: 1139453903}
-  - {fileID: 1321100825}
-  - {fileID: 1505116360}
-  - {fileID: 573707506}
 --- !u!1 &1524019149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7035,8 +7112,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Your Name\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7244,10 +7321,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bowtie
+  m_text: None
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7959,8 +8036,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sweatpants
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9522,6 +9599,7 @@ GameObject:
   - component: {fileID: 2106095421}
   - component: {fileID: 2106095420}
   - component: {fileID: 2106095419}
+  - component: {fileID: 2106095422}
   m_Layer: 5
   m_Name: Head
   m_TagString: Untagged
@@ -9601,79 +9679,13 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Bald
-      m_Image: {fileID: 0}
-    - m_Text: All Might
-      m_Image: {fileID: 0}
-    - m_Text: Banana
-      m_Image: {fileID: 21300000, guid: fb4ce65da24a9ec4fa1b1dc14fcb2a11, type: 3}
-    - m_Text: Beanie
-      m_Image: {fileID: 0}
-    - m_Text: Beret
-      m_Image: {fileID: 0}
-    - m_Text: Bob
-      m_Image: {fileID: 0}
-    - m_Text: Cap
-      m_Image: {fileID: 0}
-    - m_Text: Cap Alternate
-      m_Image: {fileID: 0}
-    - m_Text: Cornrows
-      m_Image: {fileID: 0}
-    - m_Text: Deku
-      m_Image: {fileID: 0}
-    - m_Text: Flowy
-      m_Image: {fileID: 0}
-    - m_Text: Head Scarf
-      m_Image: {fileID: 0}
-    - m_Text: Head Scarf Alt.
-      m_Image: {fileID: 0}
-    - m_Text: Kufi
-      m_Image: {fileID: 0}
-    - m_Text: Jessie
-      m_Image: {fileID: 0}
-    - m_Text: Lick
-      m_Image: {fileID: 0}
-    - m_Text: Long
-      m_Image: {fileID: 0}
-    - m_Text: Messy
-      m_Image: {fileID: 0}
-    - m_Text: Miku
-      m_Image: {fileID: 0}
-    - m_Text: Mushroom
-      m_Image: {fileID: 0}
-    - m_Text: Ponytail
-      m_Image: {fileID: 0}
-    - m_Text: Rick Sanchez
-      m_Image: {fileID: 0}
-    - m_Text: Sailor Moon
-      m_Image: {fileID: 0}
-    - m_Text: Shade Hat
-      m_Image: {fileID: 0}
-    - m_Text: Side Swept
-      m_Image: {fileID: 0}
-    - m_Text: Smurf
-      m_Image: {fileID: 0}
-    - m_Text: Sombrero
-      m_Image: {fileID: 0}
-    - m_Text: Doctor Stone
-      m_Image: {fileID: 0}
-    - m_Text: Toad
-      m_Image: {fileID: 0}
-    - m_Text: Shoto Todoroki
-      m_Image: {fileID: 0}
-    - m_Text: Top Hat
-      m_Image: {fileID: 0}
-    - m_Text: Witch
-      m_Image: {fileID: 0}
-    - m_Text: Short
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522613842}
-        m_TargetAssemblyTypeName: CharacterCustomizer, Assembly-CSharp
-        m_MethodName: setHead
+      - m_Target: {fileID: 2106095422}
+        m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
+        m_MethodName: SetHeadCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9722,6 +9734,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106095417}
   m_CullTransparentMesh: 1
+--- !u!114 &2106095422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106095417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ee0917ffa01e34d988b120881d4250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cosmeticItems:
+  - {fileID: 11400000, guid: 30b6ea67b9154884682b5f4c80d63e8d, type: 2}
+  - {fileID: 11400000, guid: 353e25166d9ab544cb55526152c28645, type: 2}
+  - {fileID: 11400000, guid: 3b5cf8d99558b6142bc074b9e3245f41, type: 2}
+  - {fileID: 11400000, guid: 160ff990b4096c84db8888ef0eea2f2e, type: 2}
+  - {fileID: 11400000, guid: 394f092ffed91cf4f91cea37568cf12c, type: 2}
+  - {fileID: 11400000, guid: 9291042c371d4dd4c8ffd67f012f76f5, type: 2}
+  - {fileID: 11400000, guid: 65269586b8b6adb4fa366c0536e18135, type: 2}
+  - {fileID: 11400000, guid: 558fb20a1096aa34891eb6d9194953c6, type: 2}
+  - {fileID: 11400000, guid: 847ecb4c383e73e4ea6f3e4b6b13ce00, type: 2}
+  - {fileID: 11400000, guid: e9bcb19bb7f4f0246ad0a39a7e8de0e6, type: 2}
+  - {fileID: 11400000, guid: 6da3310ff02b4d04c9d59ddcf3e10dc7, type: 2}
+  - {fileID: 11400000, guid: f470610b65737974db3b9924543ae900, type: 2}
+  - {fileID: 11400000, guid: 2b0239787ce47ad40a00bc3492fe0f98, type: 2}
+  - {fileID: 11400000, guid: 6ebc04baa72d46b4f8737bc1a671aef3, type: 2}
+  - {fileID: 11400000, guid: b018c12c46a16164d8984c8e73440aa0, type: 2}
+  - {fileID: 11400000, guid: 7b876701335c0c443a64f36abd6e1276, type: 2}
+  - {fileID: 11400000, guid: afe4c01e8f6df5a4980a389a03b0459c, type: 2}
+  - {fileID: 11400000, guid: fda616363dd108a49a7e032e52f3e847, type: 2}
+  - {fileID: 11400000, guid: c12f10fa17507ca4eb2c89e6d0febed3, type: 2}
+  - {fileID: 11400000, guid: 60bfa31faf8311f48b90e9ae80b3ddb3, type: 2}
+  - {fileID: 11400000, guid: 8c644ec94582ad3459b791bb245f013a, type: 2}
+  - {fileID: 11400000, guid: 05cc254dfb4cd2443b99b3eb0c049f04, type: 2}
+  - {fileID: 11400000, guid: 7939ab36117fbe64db6dc1b5c71f27eb, type: 2}
+  - {fileID: 11400000, guid: 848c5df60480305458f0c6fc6eb9e97c, type: 2}
+  - {fileID: 11400000, guid: 857c7779373804a4fa08cbf321a1550b, type: 2}
+  - {fileID: 11400000, guid: 1cfe7caf1aca119468d5a9e257e6243a, type: 2}
+  - {fileID: 11400000, guid: 0c0702b792be2174eab68f9b16c65819, type: 2}
+  - {fileID: 11400000, guid: 672fd26b76132224ba86e8e08fedfb65, type: 2}
+  - {fileID: 11400000, guid: 86aca0ad7eb1e3743bac1a19b27ffb7f, type: 2}
+  - {fileID: 11400000, guid: e5ab6328a06a8e94db62f2f5cd7e52e1, type: 2}
+  - {fileID: 11400000, guid: a2674a2466cacf5449a965a98b704f16, type: 2}
+  - {fileID: 11400000, guid: d1ea3a1dd11537c4f90c914c9f2ff93a, type: 2}
+  - {fileID: 11400000, guid: c26e095f274c3524b8abf0f9a868ea60, type: 2}
 --- !u!1 &2133907487
 GameObject:
   m_ObjectHideFlags: 0
@@ -10380,7 +10438,7 @@ SpriteRenderer:
   m_SortingLayerID: 544606731
   m_SortingLayer: 2
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 684b3e2549eb23d4e90472e8b2253e50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57ccc365fd6c6744ead9c05ad41c5528, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
