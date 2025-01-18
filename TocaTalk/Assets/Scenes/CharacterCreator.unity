@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -4089,8 +4089,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Your Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6032,11 +6032,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cosmeticItems:
+  - {fileID: 11400000, guid: 5d8107e39bf375246b18b90a79bb113f, type: 2}
   - {fileID: 11400000, guid: 4f8b79ede28ce5c4eb3a9788f993e101, type: 2}
   - {fileID: 11400000, guid: 2cd445b291ed9ce439c71e61123804d9, type: 2}
   - {fileID: 11400000, guid: 1c90058797d4e9e42a4a092b4c3ccac5, type: 2}
   - {fileID: 11400000, guid: 795db2bced740b84589a9ef94dd021f8, type: 2}
-  - {fileID: 11400000, guid: 5d8107e39bf375246b18b90a79bb113f, type: 2}
   - {fileID: 11400000, guid: 4a2fbaba0716a7a40859a151e2592204, type: 2}
   - {fileID: 11400000, guid: ef3ec663fa82c2a4b8de4a521c975c0d, type: 2}
   - {fileID: 11400000, guid: a51034b525f43084b969d33df2c7bb42, type: 2}
@@ -9762,10 +9762,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b0239787ce47ad40a00bc3492fe0f98, type: 2}
   - {fileID: 11400000, guid: 6ebc04baa72d46b4f8737bc1a671aef3, type: 2}
   - {fileID: 11400000, guid: b018c12c46a16164d8984c8e73440aa0, type: 2}
-  - {fileID: 11400000, guid: 7b876701335c0c443a64f36abd6e1276, type: 2}
   - {fileID: 11400000, guid: afe4c01e8f6df5a4980a389a03b0459c, type: 2}
   - {fileID: 11400000, guid: fda616363dd108a49a7e032e52f3e847, type: 2}
   - {fileID: 11400000, guid: c12f10fa17507ca4eb2c89e6d0febed3, type: 2}
+  - {fileID: 11400000, guid: 7b876701335c0c443a64f36abd6e1276, type: 2}
   - {fileID: 11400000, guid: 60bfa31faf8311f48b90e9ae80b3ddb3, type: 2}
   - {fileID: 11400000, guid: 8c644ec94582ad3459b791bb245f013a, type: 2}
   - {fileID: 11400000, guid: 05cc254dfb4cd2443b99b3eb0c049f04, type: 2}
