@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public void Start() {
         // set player's skin color
-        GetComponent<SpriteRenderer>().color = Holder.color;
+        GetComponent<SpriteRenderer>().color = Holder.skinColor;
         
         // initialize pet (position history for it to follow, create the pet object)
         positionHistory  = new Stack<Vector3>();

@@ -13,12 +13,17 @@ public class PlayerCosmetics : MonoBehaviour
         SetShoesCosmetic();
         SetShirtCosmetic();
         SetAccessoryCosmetic();
+        SetPlayerColors();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void SetPlayerColors() {
+        // Indeces of children need to be correct
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Holder.currentHeadColor;
+        transform.GetChild(1).GetComponent<SpriteRenderer>().color = Holder.currentFaceColor;
+        transform.GetChild(2).GetComponent<SpriteRenderer>().color = Holder.currentAccessoryColor;
+        transform.GetChild(3).GetComponent<SpriteRenderer>().color = Holder.currentPantsColor;
+        transform.GetChild(4).GetComponent<SpriteRenderer>().color = Holder.currentShirtColor;
+        transform.GetChild(5).GetComponent<SpriteRenderer>().color = Holder.currentShoesColor;
     }
 
     public void SetHeadCosmetic() {

@@ -15,73 +15,66 @@ public class CosmeticDropdown : MonoBehaviour
         dropdown.options.Clear();
         //add all the items in the list to the dropdown
         foreach (var item in cosmeticItems) {
-            if(!item.GetName.Equals(""))
+            if(item.GetName != null && !item.GetName.Equals(""))
                 dropdown.options.Add(new TMPro.TMP_Dropdown.OptionData() { text = item.GetName });
             else // use custom name if custom name isn't set
                 dropdown.options.Add(new TMPro.TMP_Dropdown.OptionData() { text = item.name });
         }
 
-        //set default value for dropdown
+        // set default value for dropdown
         if(cosmeticItems[0] is HeadCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentHeadCosmetic)) {
                     dropdown.value = i;
                     break;
-                } else {
-                    dropdown.value = 0;
-                    SetHeadCosmetic(0);
                 }
             }
+            if(dropdown.value == 0)
+                SetHeadCosmetic(0);
         } else if(cosmeticItems[0] is PantsCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentPantsCosmetic)) {
                     dropdown.value = i;
                     break;
-                }else {
-                    dropdown.value = 0;
-                    SetPantsCosmetic(0);
                 }
             }
+            if(dropdown.value == 0)
+                SetPantsCosmetic(0);
         } else if(cosmeticItems[0] is ShirtCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentShirtCosmetic)) {
                     dropdown.value = i;
                     break;
-                }else {
-                    dropdown.value = 0;
-                    SetShirtCosmetic(0);
                 }
-            }
+            } if(dropdown.value == 0)
+                SetShirtCosmetic(0);
         } else if(cosmeticItems[0] is ShoeCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentShoesCosmetic)) {
                     dropdown.value = i;
                     break;
-                }else {
-                    dropdown.value = 0;
-                    SetShoesCosmetic(0);
                 }
             }
+            if(dropdown.value == 0)
+                SetShoesCosmetic(0);
         } else if(cosmeticItems[0] is FaceCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentFaceCosmetic)) {
                     dropdown.value = i;
                     break;
-                }else {
-                    dropdown.value = 0;
-                    SetFaceCosmetic(0);
                 }
             }
+            if(dropdown.value == 0)
+                SetFaceCosmetic(0);
         } else if(cosmeticItems[0] is AccessoryCosmetic) {
             for(int i = 0; i < cosmeticItems.Count;i++) {
                 if(cosmeticItems[i].Equals(Holder.currentAccessoryCosmetic)) {
                     dropdown.value = i;
                     break;
-                }else {
-                    dropdown.value = 0;
-                    SetAccessoryCosmetic(0);
                 }
             }
+            if(dropdown.value == 0)
+                SetAccessoryCosmetic(0);
         }
 
         dropdown.RefreshShownValue();

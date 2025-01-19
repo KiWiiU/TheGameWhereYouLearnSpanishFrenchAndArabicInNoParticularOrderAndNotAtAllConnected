@@ -8,12 +8,18 @@ public class Holder : MonoBehaviour
     public static string Name;
     public static int Money, Sprogress, Fprogress, Aprogress, currentLanguage;
     public static CosmeticItem currentHeadCosmetic;
+    public static Color currentHeadColor;
     public static CosmeticItem currentAccessoryCosmetic;
+    public static Color currentAccessoryColor;
     public static CosmeticItem currentFaceCosmetic;
+    public static Color currentFaceColor;
     public static CosmeticItem currentPantsCosmetic;
+    public static Color currentPantsColor;
     public static CosmeticItem currentShirtCosmetic;
+    public static Color currentShirtColor;
     public static CosmeticItem currentShoesCosmetic;
-    public static Color color;
+    public static Color currentShoesColor;
+    public static Color skinColor;
     [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)
     {

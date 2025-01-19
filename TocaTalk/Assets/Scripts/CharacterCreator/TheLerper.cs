@@ -10,12 +10,12 @@ public class TheLerper : MonoBehaviour
     public Gradient gradient;
     public void Start()
     {
-        if(Holder.color.Equals(new Color(0,0,0,0.0f))) {
+        if(Holder.skinColor.Equals(new Color(0,0,0,0.0f))) {
             image.color = gradient.Evaluate(0);
             GetComponent<Slider>().value = 0;
         }
         else {
-            image.color = Holder.color;
+            image.color = Holder.skinColor;
             GetComponent<Slider>().value = FindGradientPosition(image.color, gradient);
         }
     }
@@ -44,6 +44,6 @@ public class TheLerper : MonoBehaviour
     {
         Color color = gradient.Evaluate(c);
         image.color = color;
-        Holder.color = color;
+        Holder.skinColor = color;
     }
 }
