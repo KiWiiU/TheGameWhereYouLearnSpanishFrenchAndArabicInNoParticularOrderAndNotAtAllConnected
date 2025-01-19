@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640b28cc69e754c43b8e90a9daff5093, type: 3}
   m_Name: Goatee
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 20956f0597ddf5649a720ddd0dfcd974, type: 3}
   back: {fileID: 0}
   cost: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4c3b5aaf1f5a4391e7881bfab6426, type: 3}
   m_Name: TShirt
   m_EditorClassIdentifier: 
+  Name: T-Shirt
   front: {fileID: 21300000, guid: 0f5a3b7efe291b1408df9670ae015999, type: 3}
   back: {fileID: 21300000, guid: 0f5a3b7efe291b1408df9670ae015999, type: 3}
   cost: 0

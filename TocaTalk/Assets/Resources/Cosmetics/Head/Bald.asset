@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Bald
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 0}
   back: {fileID: 0}
   cost: 0

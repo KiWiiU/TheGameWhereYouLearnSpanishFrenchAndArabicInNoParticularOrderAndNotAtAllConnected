@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Lick
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 986c2005118a2094a90f8db1daf97e79, type: 3}
   back: {fileID: 21300000, guid: 64ce24ba8483cf74f82100746d2658a2, type: 3}
   cost: 0

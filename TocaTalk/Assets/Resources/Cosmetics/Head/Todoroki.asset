@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Todoroki
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: e5ec6a2546ee6d546a124df75cb6809d, type: 3}
   back: {fileID: 21300000, guid: 9c7cf7aa09d4bd343bdd1329bb7edac9, type: 3}
   cost: 0

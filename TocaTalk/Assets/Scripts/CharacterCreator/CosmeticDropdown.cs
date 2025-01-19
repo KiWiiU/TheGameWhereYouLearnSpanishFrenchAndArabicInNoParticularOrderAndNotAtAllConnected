@@ -15,7 +15,10 @@ public class CosmeticDropdown : MonoBehaviour
         dropdown.options.Clear();
         //add all the items in the list to the dropdown
         foreach (var item in cosmeticItems) {
-            dropdown.options.Add(new TMPro.TMP_Dropdown.OptionData() { text = item.name });
+            if(!item.GetName.Equals(""))
+                dropdown.options.Add(new TMPro.TMP_Dropdown.OptionData() { text = item.GetName });
+            else // use custom name if custom name isn't set
+                dropdown.options.Add(new TMPro.TMP_Dropdown.OptionData() { text = item.name });
         }
 
         //set default value for dropdown
@@ -80,6 +83,8 @@ public class CosmeticDropdown : MonoBehaviour
                 }
             }
         }
+
+        dropdown.RefreshShownValue();
     }
 
     public void SetHeadCosmetic(int index) {

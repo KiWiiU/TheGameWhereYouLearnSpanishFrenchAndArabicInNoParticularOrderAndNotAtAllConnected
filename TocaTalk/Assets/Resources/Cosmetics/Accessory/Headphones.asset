@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99680b95fbe2112469685d6c5d26a904, type: 3}
   m_Name: Headphones
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: f61edea7d6e79a145b6dbbfda13db610, type: 3}
   back: {fileID: 21300000, guid: f61edea7d6e79a145b6dbbfda13db610, type: 3}
   cost: 0

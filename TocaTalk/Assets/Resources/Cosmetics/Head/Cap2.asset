@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Cap2
   m_EditorClassIdentifier: 
+  Name: Cap Alt.
   front: {fileID: 21300000, guid: 33f5e0270988edd46961968e25635da6, type: 3}
   back: {fileID: 21300000, guid: dfb65035fed93cb449d220eddfb94a6b, type: 3}
   cost: 0

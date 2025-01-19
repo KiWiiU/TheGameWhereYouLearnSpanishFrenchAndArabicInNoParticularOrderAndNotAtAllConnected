@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Miku
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: cacba1fa1eb491e46a030f95baefd011, type: 3}
   back: {fileID: 21300000, guid: d446c447b34cbc64b80f58543fdd94ae, type: 3}
   cost: 0

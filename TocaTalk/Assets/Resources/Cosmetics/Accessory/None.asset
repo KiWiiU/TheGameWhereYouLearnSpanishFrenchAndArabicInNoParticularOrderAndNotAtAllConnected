@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99680b95fbe2112469685d6c5d26a904, type: 3}
   m_Name: None
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 0}
   back: {fileID: 0}
   cost: 0

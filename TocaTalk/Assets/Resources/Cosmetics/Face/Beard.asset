@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640b28cc69e754c43b8e90a9daff5093, type: 3}
   m_Name: Beard
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: bebf0515ea405274aa395527ed2f10f4, type: 3}
   back: {fileID: 0}
   cost: 0

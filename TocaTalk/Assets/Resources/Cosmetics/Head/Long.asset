@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Long
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: fa98cdd34cc415f4595b9d41a79d09da, type: 3}
   back: {fileID: 21300000, guid: 3317a731ea1321d45b87d27b5bc5e950, type: 3}
   cost: 0

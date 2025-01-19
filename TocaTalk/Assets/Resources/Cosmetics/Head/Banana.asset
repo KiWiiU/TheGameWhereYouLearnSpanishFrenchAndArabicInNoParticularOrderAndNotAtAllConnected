@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 3ccd27982c22ed343895cc95dc86678e, type: 3}
   back: {fileID: 21300000, guid: 7a8b743aa224abe4cb4040825258f112, type: 3}
   cost: 0

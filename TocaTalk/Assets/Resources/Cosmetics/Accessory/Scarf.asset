@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99680b95fbe2112469685d6c5d26a904, type: 3}
   m_Name: Scarf
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: e5c2411ac3d21364f96f077d81b5b37f, type: 3}
   back: {fileID: 21300000, guid: e5c2411ac3d21364f96f077d81b5b37f, type: 3}
   cost: 0

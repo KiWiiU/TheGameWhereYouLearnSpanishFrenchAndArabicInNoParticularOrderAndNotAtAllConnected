@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Deku
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 6cd81c43acb4d704b86148999a716315, type: 3}
   back: {fileID: 21300000, guid: 0efd42be6a82589479d46892da79c3ad, type: 3}
   cost: 0

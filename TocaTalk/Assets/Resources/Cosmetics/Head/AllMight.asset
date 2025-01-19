@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: AllMight
   m_EditorClassIdentifier: 
+  Name: All Might
   front: {fileID: 21300000, guid: 87b0bd478424516448d6b2e55110a754, type: 3}
   back: {fileID: 21300000, guid: 87b0bd478424516448d6b2e55110a754, type: 3}
   cost: 0

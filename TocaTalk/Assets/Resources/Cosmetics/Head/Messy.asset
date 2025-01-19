@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Messy
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 8080eaf00cff80840a07628eaa519b5b, type: 3}
   back: {fileID: 21300000, guid: 6fecfa1411dd97040bc69a6852305447, type: 3}
   cost: 0
