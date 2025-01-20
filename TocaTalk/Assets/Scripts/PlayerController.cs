@@ -29,8 +29,9 @@ public class PlayerController : MonoBehaviour
         SpriteRenderer spriteRenderer = petObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = pet.Sprite;
         spriteRenderer.sortingLayerName = "Player";
+        spriteRenderer.sortingOrder = -100;
         // clifford the big red dog
-        petObject.transform.localScale = transform.localScale / 175f;
+        petObject.transform.localScale = transform.localScale / 200f;
 
 
         dialogueManager = GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>();
@@ -90,9 +91,9 @@ public class PlayerController : MonoBehaviour
 
         // Have pet behind / in front of player
         if(petObject.transform.position.y+0.5f >= transform.position.y) {
-            petObject.GetComponent<SpriteRenderer>().sortingOrder = -2;
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = -100;
         } else {
-            petObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = 100;
         }
     }
 }
