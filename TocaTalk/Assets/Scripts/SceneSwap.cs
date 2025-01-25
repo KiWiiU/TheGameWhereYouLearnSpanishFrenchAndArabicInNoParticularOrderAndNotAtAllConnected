@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SceneSwap : MonoBehaviour
 {
+
+    // extremely difficult to understand
     public void SwapScene (string s)
     {
         SaveManager.Save();

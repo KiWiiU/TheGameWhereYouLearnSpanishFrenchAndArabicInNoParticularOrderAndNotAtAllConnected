@@ -7,6 +7,8 @@ public class LockLevels : MonoBehaviour
 {
    public Sprite unlocked;
    public Sprite locked;
+
+   // Lock/Unlock all the levels based on progress
    public void Start() {
         int progress = Holder.getProgress();
         for(int i = 0; i < transform.childCount;i++) {
@@ -19,6 +21,8 @@ public class LockLevels : MonoBehaviour
         }
    }
 
+
+    // level = which lesson #, uses currentLanguage to decide which scene to go to
    public void startLevel(int level) {
     if(level-1 <= Holder.getProgress()) {
         string lesson = "Lesson" + level;

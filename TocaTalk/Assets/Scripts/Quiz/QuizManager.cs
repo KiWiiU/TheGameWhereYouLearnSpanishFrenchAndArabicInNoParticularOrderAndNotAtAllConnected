@@ -16,6 +16,8 @@ public class QuizManager : MonoBehaviour
     public event Action OnQuizEnd; // event to trigger when quiz ends
     private Question currentQuestion;
 
+        // Same structure as the DialogueManager
+
     public bool IsOpen {get {return isOpen;}}
     public int NumCorrect {get {return numCorrect;}}
     public int NumQuestions {get {return numQuestions;}}
@@ -64,7 +66,7 @@ public class QuizManager : MonoBehaviour
     }
 
     private IEnumerator StopQuiz() {
-        if(!isOpen) yield return null;
+        if(!isOpen) yield return null; // wait until the quiz is closed to continue
         EventSystem.current.SetSelectedGameObject(null); //deselect the buttons so the enter key does not activate the button after it closes
         isOpen = false;
         animator.SetBool("isOpen", false);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCosmetics : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Set cosmetics when scene launched
     void Start()
     {
         SetHeadCosmetic();
@@ -17,7 +17,7 @@ public class PlayerCosmetics : MonoBehaviour
     }
 
     public void SetPlayerColors() {
-        // Indeces of children need to be correct
+        // Indeces of children need to be correct (head, face, accessory, pants, shirt, shoes)
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Holder.currentHeadColor;
         transform.GetChild(1).GetComponent<SpriteRenderer>().color = Holder.currentFaceColor;
         transform.GetChild(2).GetComponent<SpriteRenderer>().color = Holder.currentAccessoryColor;

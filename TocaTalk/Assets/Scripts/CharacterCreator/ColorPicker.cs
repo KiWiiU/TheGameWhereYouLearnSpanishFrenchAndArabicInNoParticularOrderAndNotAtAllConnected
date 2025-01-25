@@ -19,7 +19,8 @@ public class ColorPicker : MonoBehaviour
 
     public void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCosmetics>();
-
+        
+        // set the cosmetic colors to the current slider values
         switch(cosmeticType) {
             case 0:
                 transform.GetChild(0).GetComponent<Slider>().SetValueWithoutNotify(Holder.currentHeadColor.r);

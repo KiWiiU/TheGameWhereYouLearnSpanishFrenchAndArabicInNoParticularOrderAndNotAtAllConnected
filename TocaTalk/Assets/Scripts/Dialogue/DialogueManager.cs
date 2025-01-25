@@ -29,6 +29,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     public bool IsOpen {get {return isOpen;}}
+
+    // dialogues is an array of dialogues that characters have in order
     public void StartDialogue(CharacterDialogue[] dialogues) {
         animator.SetBool("isOpen", true);
         isOpen = true;

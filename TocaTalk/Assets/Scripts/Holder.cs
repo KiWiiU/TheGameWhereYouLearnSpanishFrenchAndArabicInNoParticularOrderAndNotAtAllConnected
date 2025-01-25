@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+// Basically "holds" all the data for the player
 public class Holder : MonoBehaviour
 {
     public static string Name;
@@ -32,7 +33,7 @@ public class Holder : MonoBehaviour
 
     // Lesson = current lesson
     public static void progress(int lesson) {
-        if(getProgress() == lesson-1) //so you progress linearly (can't do lesson 1 and unlock every single lesson)
+        if(getProgress() == lesson-1) //so you progress linearly (can't do lesson 1 multiple times and unlock every single lesson)
             switch(currentLanguage) {
                 case 0 : 
                     Sprogress += 1;

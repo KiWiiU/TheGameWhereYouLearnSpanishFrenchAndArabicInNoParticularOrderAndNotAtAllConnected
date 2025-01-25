@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class RandomNameGenerator : MonoBehaviour
 {
-    public TMP_InputField field;
-    public void Generate() {
-        string[] names = new string[] {
+
+    // list of all possible random names
+    public static string[] names = new string[] {
             "Naruto", "Sasuke", "Ichigo", "Luffy",
             "Light", "Edward", "Eren", "Goku",
             "Kirito", "Lelouch", "Saitama", "Deku",
@@ -20,6 +20,8 @@ public class RandomNameGenerator : MonoBehaviour
             "Jason", "Jeffrey", "Gregory", "Scott",
             "Patrick", "Samuel", "Larry", "Justin",
         };
+    public TMP_InputField field;
+    public void Generate() {
         field.text = names[Random.Range(0, names.Length)];
         Holder.Name = field.text;
     }

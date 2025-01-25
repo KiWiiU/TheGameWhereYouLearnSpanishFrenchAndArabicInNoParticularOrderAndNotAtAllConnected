@@ -19,6 +19,8 @@ public class TheLerper : MonoBehaviour
             GetComponent<Slider>().value = FindGradientPosition(image.color, gradient);
         }
     }
+
+    // sample based search to find nearest color in gradient
     private float FindGradientPosition(Color targetColor, Gradient gradient)
     {
         float bestPosition = 0;
