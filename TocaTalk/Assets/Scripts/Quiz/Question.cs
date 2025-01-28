@@ -10,4 +10,7 @@ public class Question
     public string[] answers;
     public int correctAnswer;
 
+    public bool isMultipleChoice;
+    [TextArea(3, 10)]
+    public string correctAnswerText;
 }

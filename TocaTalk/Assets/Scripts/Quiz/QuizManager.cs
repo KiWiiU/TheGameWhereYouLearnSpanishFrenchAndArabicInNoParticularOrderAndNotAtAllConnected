@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Jobs;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -41,13 +44,26 @@ public class QuizManager : MonoBehaviour
     private void UpdateUI() {
         TMPro.TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
         questionText.text = currentQuestion.question;
-        Button[] buttons = obj.GetComponentsInChildren<Button>();
-        for(int i = 0; i < buttons.Length; i++) {
-            buttons[i].GetComponentInChildren<TMPro.TMP_Text>().text = currentQuestion.answers[i];
+        Button[] buttons = obj.GetComponentsInChildren<Button>(true); 
+        GameObject input = obj.GetComponentInChildren<TMP_InputField>(true).gameObject;
+        if(currentQuestion.isMultipleChoice) {// if multiple choice  
+            for(int i = 0; i < buttons.Length-1; i++) {
+                buttons[i].gameObject.SetActive(true);
+                buttons[i].GetComponentInChildren<TMP_Text>().text = currentQuestion.answers[i];
+            }
+            buttons[buttons.Length-1].gameObject.SetActive(false);
+                input.SetActive(false);
+        }
+        else {
+            for(int i = 0; i < buttons.Length; i++) {
+                buttons[i].gameObject.SetActive(false);
+            }
+            buttons[buttons.Length-1].gameObject.SetActive(true);
+            input.SetActive(true);
         }
     }
 
-    public void AnswerQuiz(int answer) {
+    public void AnswerMCQuiz(int answer) {
         if(answer == currentQuestion.correctAnswer) {
             numCorrect++;
             Debug.Log("Correct!");
@@ -65,8 +81,27 @@ public class QuizManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void AnswerTextQuiz() {
+        string answer = obj.GetComponentInChildren<TMP_InputField>().text;
+        if(answer.ToLower().Equals(currentQuestion.correctAnswerText.ToLower())) {
+            numCorrect++;
+            Debug.Log("Correct!");
+        }
+        else {
+            Debug.Log("Incorrect!");
+        }
+        if(questions.Count > 0) {
+            currentQuestion = questions.Dequeue();
+        }
+        else {
+            StopAllCoroutines();
+            StartCoroutine(StopQuiz());
+        }
+        UpdateUI();
+    }
+
     private IEnumerator StopQuiz() {
-        if(!isOpen) yield return null; // wait until the quiz is closed to continue
+        // if(!isOpen) yield return null; // wait until the quiz is closed to continue
         EventSystem.current.SetSelectedGameObject(null); //deselect the buttons so the enter key does not activate the button after it closes
         isOpen = false;
         animator.SetBool("isOpen", false);

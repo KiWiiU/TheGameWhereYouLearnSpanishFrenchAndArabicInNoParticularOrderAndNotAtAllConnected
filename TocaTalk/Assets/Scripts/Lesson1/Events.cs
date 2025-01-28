@@ -8,6 +8,7 @@ public class Events : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public QuizManager quizManager;
+    public Question[] test;
     public Question[] questions;
     private int currentEvent;
 
@@ -43,7 +44,7 @@ public class Events : MonoBehaviour
                 break;
             }
             case 2 : { // Trigger quiz
-                quizManager.StartQuiz(questions);
+                quizManager.StartQuiz(test);
                 break;
             }
             case 3 : { // Trigger dialogue after quiz, ending dialogue
