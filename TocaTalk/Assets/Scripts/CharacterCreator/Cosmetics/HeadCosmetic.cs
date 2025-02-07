@@ -12,6 +12,6 @@ public class HeadCosmetic : CosmeticItem
         Cornrows, Deku, Flowy, HeadScarf, HeadScarf2, Kufi, 
         Jessie, Lick, Long, Messy, Miku, Mushroom, Ponytail,
         Rick, Sailor, ShadeHat, SideSwept, Smurf, Sombrero,
-        Stone, Toad, Todoroki, TopHat, Witch, Short
+        Stone, Toad, Todoroki, Tokoyami, TopHat, Witch, Short, 
     }
 }

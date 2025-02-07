@@ -8,9 +8,11 @@ public class CosmeticItem : ScriptableObject
     [SerializeField] Sprite front;
     [SerializeField] Sprite back;
     [SerializeField] double cost;
+    [SerializeField] bool isColored;
     
     public double Cost {get {return cost;}}
     public Sprite Front {get {return front;}}
     public Sprite Back {get {return back;}}
     public string GetName {get {return Name;}}
+    public bool Colored {get {return isColored;}}
 }

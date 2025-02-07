@@ -59,6 +59,26 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.currentAccessoryColor = new Color(r, g, b, 1f);
+            } else {
+                Holder.Name = "";
+                Holder.Money = 0;
+                Holder.Sprogress = 0;
+                Holder.Fprogress = 0;
+                Holder.Aprogress = 0;
+                Holder.currentLanguage = 0;
+                Holder.skinColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentFaceCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentPantsCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentShirtCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentShoesCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentAccessoryCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
+                Holder.currentHeadColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentFaceColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentPantsColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentShirtColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentShoesColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentAccessoryColor = new Color(1f, 1f, 1f, 1f);
             }
         }
     }

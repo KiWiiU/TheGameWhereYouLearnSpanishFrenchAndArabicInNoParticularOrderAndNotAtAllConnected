@@ -18,6 +18,5 @@ public class AccessoryCosmetic : CosmeticItem
         Scarf,
         Scarf2,
         Sunglasses,
-
     }
 }

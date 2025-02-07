@@ -6,6 +6,7 @@ public class CosmeticDropdown : MonoBehaviour
 {
 
     public List<CosmeticItem> cosmeticItems;
+    public ColorPicker associatedColorPicker;
     PlayerCosmetics player;
     // Start is called before the first frame update
     void Start()
@@ -82,26 +83,73 @@ public class CosmeticDropdown : MonoBehaviour
 
     public void SetHeadCosmetic(int index) {
         Holder.currentHeadCosmetic = cosmeticItems[index];
+        Holder.currentHeadColor = new Color(1f, 1f, 1f);
         player.SetHeadCosmetic();
+        player.SetPlayerColors();
+        associatedColorPicker.Reset();
+        if(Holder.currentHeadCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
     public void SetPantsCosmetic(int index) {
         Holder.currentPantsCosmetic = cosmeticItems[index];
+        Holder.currentPantsColor = new Color(1f, 1f, 1f);
         player.SetPantsCosmetic();
+        player.SetPlayerColors();
+        associatedColorPicker.Reset();
+        if(Holder.currentPantsCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
     public void SetShirtCosmetic(int index) {
         Holder.currentShirtCosmetic = cosmeticItems[index];
+        Holder.currentShirtColor = new Color(1f, 1f, 1f);
         player.SetShirtCosmetic();
+        player.SetPlayerColors();
+        associatedColorPicker.Reset();
+        if(Holder.currentShirtCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
     public void SetShoesCosmetic(int index) {
         Holder.currentShoesCosmetic = cosmeticItems[index];
+        Holder.currentShoesColor = new Color(1f, 1f, 1f);
         player.SetShoesCosmetic();
+        player.SetPlayerColors();
+        associatedColorPicker.Reset();
+        if(Holder.currentShoesCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
     public void SetFaceCosmetic(int index) {
         Holder.currentFaceCosmetic = cosmeticItems[index];
+        Holder.currentFaceColor = new Color(1f, 1f, 1f);
         player.SetFaceCosmetic();
+        associatedColorPicker.Reset();
+        if(Holder.currentFaceCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
     public void SetAccessoryCosmetic(int index) {
         Holder.currentAccessoryCosmetic = cosmeticItems[index];
+        Holder.currentAccessoryColor = new Color(1f, 1f, 1f);
         player.SetAccessoryCosmetic();
+        player.SetPlayerColors();
+        associatedColorPicker.Reset();
+        if(Holder.currentAccessoryCosmetic.Colored) {
+            associatedColorPicker.gameObject.SetActive(false);
+        } else {
+            associatedColorPicker.gameObject.SetActive(true);
+        }
     }
 }

@@ -55,33 +55,45 @@ public class ColorPicker : MonoBehaviour
         }
     }
     public void SetHeadColor() {
+        if(Holder.currentHeadCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentHeadColor = color;
         player.SetPlayerColors();
     }
     public void SetFaceColor() {
+        if(Holder.currentFaceCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentFaceColor = color;
         player.SetPlayerColors();
     }
     public void SetShirtColor() {
+        if(Holder.currentShirtCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentShirtColor = color;
         player.SetPlayerColors();
     }
     public void SetPantsColor() {
+        if(Holder.currentPantsCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentPantsColor = color;
         player.SetPlayerColors();   
     }
     public void SetAccessoryColor() {
+        if(Holder.currentAccessoryCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentAccessoryColor = color;
         player.SetPlayerColors();   
     }
     public void SetShoesColor() {
+        if(Holder.currentShoesCosmetic.Colored) return;
         Color color = new Color(transform.GetChild(0).GetComponent<Slider>().value, transform.GetChild(1).GetComponent<Slider>().value, transform.GetChild(2).GetComponent<Slider>().value);
         Holder.currentShoesColor = color;
         player.SetPlayerColors();
+    }
+
+    public void Reset() {
+        transform.GetChild(0).GetComponent<Slider>().SetValueWithoutNotify(1f);
+        transform.GetChild(1).GetComponent<Slider>().SetValueWithoutNotify(1f);
+        transform.GetChild(2).GetComponent<Slider>().SetValueWithoutNotify(1f);
     }
 }

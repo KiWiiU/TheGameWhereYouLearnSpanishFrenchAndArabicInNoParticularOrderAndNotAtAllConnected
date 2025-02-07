@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
-  m_Name: Short
+  m_Name: Tokoyami
   m_EditorClassIdentifier: 
   Name: 
-  front: {fileID: 21300000, guid: 1fab3d5cd8b9dea46bf00deb5978ef40, type: 3}
-  back: {fileID: 21300000, guid: 1fab3d5cd8b9dea46bf00deb5978ef40, type: 3}
+  front: {fileID: 21300000, guid: 6adb9062a872d92439dc4af9ac672089, type: 3}
+  back: {fileID: 21300000, guid: b1b4517d9d6431a44ad424ed1c690bd4, type: 3}
   cost: 0
-  isColored: 0
-  type: 33
+  isColored: 1
+  type: 30
