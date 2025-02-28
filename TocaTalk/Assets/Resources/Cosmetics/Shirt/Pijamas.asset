@@ -17,4 +17,5 @@ MonoBehaviour:
   back: {fileID: 21300000, guid: ebc2084408058454fac54a2baeec11a8, type: 3}
   cost: 0
   isColored: 1
+  defaultColor: {r: 0.3479886, g: 0.5959651, b: 0.6415094, a: 1}
   shirtType: 2

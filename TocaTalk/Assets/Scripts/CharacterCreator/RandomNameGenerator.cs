@@ -30,5 +30,8 @@ public class RandomNameGenerator : MonoBehaviour
         
         field.interactable = true;
         field.text = Holder.Name;
+        if(Holder.Name.Equals("")) {
+            Generate();
+        }
     }
 }

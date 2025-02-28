@@ -13,7 +13,6 @@ public class SaveManager : MonoBehaviour
         // Reads in the save file
         if (!File.Exists("Assets/SaveFile.txt")) {
             File.Create("Assets/SaveFile.txt").Close();
-            Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
         }
         using(StreamReader reader = new StreamReader("Assets/SaveFile.txt"))
         {
@@ -29,58 +28,55 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.skinColor = new Color(r, g, b, 1f);
-                Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Head/" + reader.ReadLine());
-                Holder.currentFaceCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Face/" + reader.ReadLine());
-                Holder.currentPantsCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Pants/" + reader.ReadLine());
-                Holder.currentShirtCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Shirt/" + reader.ReadLine());
-                Holder.currentShoesCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Shoes/" + reader.ReadLine());
-                Holder.currentAccessoryCosmetic = (CosmeticItem)Resources.Load("Cosmetics/Accessory/" + reader.ReadLine());
+                Holder.currentCosmetics[0] = (CosmeticItem)Resources.Load("Cosmetics/Head/" + reader.ReadLine());
+                Holder.currentCosmetics[1] = (CosmeticItem)Resources.Load("Cosmetics/Face/" + reader.ReadLine());
+                Holder.currentCosmetics[2] = (CosmeticItem)Resources.Load("Cosmetics/Accessory/" + reader.ReadLine());
+                Holder.currentCosmetics[3] = (CosmeticItem)Resources.Load("Cosmetics/Pants/" + reader.ReadLine());
+                Holder.currentCosmetics[4] = (CosmeticItem)Resources.Load("Cosmetics/Shirt/" + reader.ReadLine());
+                Holder.currentCosmetics[5] = (CosmeticItem)Resources.Load("Cosmetics/Shoes/" + reader.ReadLine());
+                
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentHeadColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[0] = new Color(r, g, b, 1f);
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentFaceColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[1] = new Color(r, g, b, 1f);
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentPantsColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[2] = new Color(r, g, b, 1f);
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentShirtColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[3] = new Color(r, g, b, 1f);
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentShoesColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[4] = new Color(r, g, b, 1f);
                 r = float.Parse(reader.ReadLine());
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
-                Holder.currentAccessoryColor = new Color(r, g, b, 1f);
+                Holder.currentCosmeticColors[5] = new Color(r, g, b, 1f);
+                
             } else {
                 Holder.Name = "";
                 Holder.Money = 0;
                 Holder.Sprogress = 0;
                 Holder.Fprogress = 0;
                 Holder.Aprogress = 0;
-                Holder.currentLanguage = 0;
-                Holder.skinColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentHeadCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentFaceCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentPantsCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentShirtCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentShoesCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentAccessoryCosmetic = (CosmeticItem)Resources.Load("Cosmetics/0");
-                Holder.currentHeadColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentFaceColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentPantsColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentShirtColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentShoesColor = new Color(1f, 1f, 1f, 1f);
-                Holder.currentAccessoryColor = new Color(1f, 1f, 1f, 1f);
+                Holder.currentLanguage = 0;      
+                Holder.skinColor = new Color(0, 0, 0, 1f); // SKIN DEFAULT COLOR         
+                Holder.currentCosmetics[0] = (CosmeticItem)Resources.Load("Cosmetics/Head/Bald");
+                Holder.currentCosmetics[1] = (CosmeticItem)Resources.Load("Cosmetics/Face/Clean");
+                Holder.currentCosmetics[2] = (CosmeticItem)Resources.Load("Cosmetics/Accessory/None");
+                Holder.currentCosmetics[3] = (CosmeticItem)Resources.Load("Cosmetics/Pants/Jeans");
+                Holder.currentCosmetics[4] = (CosmeticItem)Resources.Load("Cosmetics/Shirt/TShirt");
+                Holder.currentCosmetics[5] = (CosmeticItem)Resources.Load("Cosmetics/Shoes/Sneakers");
             }
         }
+
     }
 
     public static void Save()
@@ -96,30 +92,32 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.skinColor.r);
             writer.WriteLine(Holder.skinColor.g);
             writer.WriteLine(Holder.skinColor.b);
-            writer.WriteLine(Holder.currentHeadCosmetic.name);
-            writer.WriteLine(Holder.currentFaceCosmetic.name);
-            writer.WriteLine(Holder.currentPantsCosmetic.name);
-            writer.WriteLine(Holder.currentShirtCosmetic.name);
-            writer.WriteLine(Holder.currentShoesCosmetic.name);
-            writer.WriteLine(Holder.currentAccessoryCosmetic.name);
-            writer.WriteLine(Holder.currentHeadColor.r);
-            writer.WriteLine(Holder.currentHeadColor.g);
-            writer.WriteLine(Holder.currentHeadColor.b);
-            writer.WriteLine(Holder.currentFaceColor.r);
-            writer.WriteLine(Holder.currentFaceColor.g);
-            writer.WriteLine(Holder.currentFaceColor.b);
-            writer.WriteLine(Holder.currentPantsColor.r);
-            writer.WriteLine(Holder.currentPantsColor.g);
-            writer.WriteLine(Holder.currentPantsColor.b);
-            writer.WriteLine(Holder.currentShirtColor.r);
-            writer.WriteLine(Holder.currentShirtColor.g);
-            writer.WriteLine(Holder.currentShirtColor.b);
-            writer.WriteLine(Holder.currentShoesColor.r);
-            writer.WriteLine(Holder.currentShoesColor.g);
-            writer.WriteLine(Holder.currentShoesColor.b);
-            writer.WriteLine(Holder.currentAccessoryColor.r);
-            writer.WriteLine(Holder.currentAccessoryColor.g);
-            writer.WriteLine(Holder.currentAccessoryColor.b);
+            writer.WriteLine(Holder.currentCosmetics[0].name);
+            writer.WriteLine(Holder.currentCosmetics[1].name);
+            writer.WriteLine(Holder.currentCosmetics[2].name);
+            writer.WriteLine(Holder.currentCosmetics[3].name);
+            writer.WriteLine(Holder.currentCosmetics[4].name);
+            writer.WriteLine(Holder.currentCosmetics[5].name);
+            
+            writer.WriteLine(Holder.currentCosmeticColors[0].r);
+            writer.WriteLine(Holder.currentCosmeticColors[0].g);
+            writer.WriteLine(Holder.currentCosmeticColors[0].b);
+            writer.WriteLine(Holder.currentCosmeticColors[1].r);
+            writer.WriteLine(Holder.currentCosmeticColors[1].g);
+            writer.WriteLine(Holder.currentCosmeticColors[1].b);
+            writer.WriteLine(Holder.currentCosmeticColors[2].r);
+            writer.WriteLine(Holder.currentCosmeticColors[2].g);
+            writer.WriteLine(Holder.currentCosmeticColors[2].b);
+            writer.WriteLine(Holder.currentCosmeticColors[3].r);
+            writer.WriteLine(Holder.currentCosmeticColors[3].g);
+            writer.WriteLine(Holder.currentCosmeticColors[3].b);
+            writer.WriteLine(Holder.currentCosmeticColors[4].r);
+            writer.WriteLine(Holder.currentCosmeticColors[4].g);
+            writer.WriteLine(Holder.currentCosmeticColors[4].b);
+            writer.WriteLine(Holder.currentCosmeticColors[5].r);
+            writer.WriteLine(Holder.currentCosmeticColors[5].g);
+            writer.WriteLine(Holder.currentCosmeticColors[5].b);
+            
         }
     }
 }

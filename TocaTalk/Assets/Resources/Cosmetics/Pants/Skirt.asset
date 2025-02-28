@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6e95690625ea242a5e221a2f8be2b0, type: 3}
   m_Name: Skirt
   m_EditorClassIdentifier: 
+  Name: 
   front: {fileID: 21300000, guid: 20c1e62464125f342a5ea5f94da53786, type: 3}
   back: {fileID: 21300000, guid: 07b5fd062ec398a4d9a69de57f2bd502, type: 3}
   cost: 0
+  isColored: 0
+  defaultColor: {r: 0.7264151, g: 0.4200299, b: 0.39404595, a: 1}
   pantsType: 3

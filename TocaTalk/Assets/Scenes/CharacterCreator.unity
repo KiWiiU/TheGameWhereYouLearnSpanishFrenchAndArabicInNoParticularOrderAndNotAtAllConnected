@@ -532,7 +532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 211652777}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetFaceCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -600,6 +600,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ccf8cfcd7cb92e4ea104cc6aed31fe2, type: 2}
   - {fileID: 11400000, guid: 74f126b4bba12a94eb92fc87be1d2ea8, type: 2}
   associatedColorPicker: {fileID: 627950133}
+  cosmeticType: 1
 --- !u!1001 &248471422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -629,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918349, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: cosmeticType
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_Pivot.x
@@ -641,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -741,15 +742,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShirtColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShirtColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShirtColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -959,17 +960,17 @@ RectTransform:
   - {fileID: 1590251419}
   - {fileID: 2106095418}
   - {fileID: 211652773}
-  - {fileID: 1321100824}
-  - {fileID: 1139453902}
   - {fileID: 573707505}
+  - {fileID: 1139453902}
+  - {fileID: 1321100824}
   - {fileID: 1505116359}
   - {fileID: 1453180582}
   - {fileID: 8552199304899436076}
   - {fileID: 191877729}
   - {fileID: 83244507}
-  - {fileID: 649711361}
-  - {fileID: 911370586}
   - {fileID: 1542605756}
+  - {fileID: 911370586}
+  - {fileID: 649711361}
   - {fileID: 1166059491}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2346,7 +2347,7 @@ RectTransform:
   - {fileID: 2008611758}
   - {fileID: 2063328232}
   m_Father: {fileID: 300118491}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2408,7 +2409,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 573707509}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetAccessoryCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2475,9 +2476,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b6e813108da35140adb10b5bfc8bb84, type: 2}
   - {fileID: 11400000, guid: 957cefc7b422a524e9db2a5e01f5627d, type: 2}
   - {fileID: 11400000, guid: 6b7627d20c21f824ba90ff598eff7f75, type: 2}
-  - {fileID: 11400000, guid: 7b52da816386d084b939c0fadcfcecf4, type: 2}
   - {fileID: 11400000, guid: 6e765282dd0484741af94b47451ca961, type: 2}
   associatedColorPicker: {fileID: 1542605757}
+  cosmeticType: 2
 --- !u!1 &579544022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,7 +5100,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1139453906}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetPantsCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5166,6 +5167,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9f165425207fc34690d8fd3a385b8a3, type: 2}
   - {fileID: 11400000, guid: 3c15b1c700beca94ca10d24e98d8dc70, type: 2}
   associatedColorPicker: {fileID: 1779462185}
+  cosmeticType: 3
 --- !u!1 &1140877150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,7 +5845,7 @@ RectTransform:
   - {fileID: 2041383862}
   - {fileID: 1581459113}
   m_Father: {fileID: 300118491}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -5905,7 +5907,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1321100828}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetShirtCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5976,6 +5978,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef3ec663fa82c2a4b8de4a521c975c0d, type: 2}
   - {fileID: 11400000, guid: a51034b525f43084b969d33df2c7bb42, type: 2}
   associatedColorPicker: {fileID: 893424058}
+  cosmeticType: 4
 --- !u!1001 &1339148089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6005,7 +6008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918349, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: cosmeticType
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_Pivot.x
@@ -6017,7 +6020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250084918350, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6116,16 +6119,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAccessoryColor
+      value: SetCosmeticColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ColorPicker, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAccessoryColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAccessoryColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6530,7 +6541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196e884338d46914aaad2f786a1babb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 7759858443741262320}
+  player: {fileID: 7759858443741262320}
   gradient:
     serializedVersion: 2
     key0: {r: 0.9686275, g: 0.86666673, b: 0.7686275, a: 1}
@@ -6738,15 +6749,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetPantsColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetPantsColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetPantsColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6981,7 +6992,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1505116363}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetShoesCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7048,6 +7059,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 380620e905700eb48aec684eaa230db9, type: 2}
   - {fileID: 11400000, guid: 196be44f2b2672c4f956dd53e826bfc8, type: 2}
   associatedColorPicker: {fileID: 1166059492}
+  cosmeticType: 5
 --- !u!1 &1521026970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9224,15 +9236,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFaceColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFaceColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFaceColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9632,15 +9644,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShoesColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShoesColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetShoesColor
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10333,7 +10345,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2106095422}
         m_TargetAssemblyTypeName: CosmeticDropdown, Assembly-CSharp
-        m_MethodName: SetHeadCosmetic
+        m_MethodName: SetCosmetic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10430,6 +10442,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1ea3a1dd11537c4f90c914c9f2ff93a, type: 2}
   - {fileID: 11400000, guid: c26e095f274c3524b8abf0f9a868ea60, type: 2}
   associatedColorPicker: {fileID: 1060370465}
+  cosmeticType: 0
 --- !u!1 &2133907487
 GameObject:
   m_ObjectHideFlags: 0
@@ -10778,6 +10791,18 @@ PrefabInstance:
     - target: {fileID: 1978306250445275968, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978306250585934500, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCosmeticColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978306250911837376, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCosmeticColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978306251090911047, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCosmeticColor
       objectReference: {fileID: 0}
     - target: {fileID: 1978306251826125492, guid: f2360c9606045134a8dcd73814af3b1d, type: 3}
       propertyPath: m_AnchorMax.x

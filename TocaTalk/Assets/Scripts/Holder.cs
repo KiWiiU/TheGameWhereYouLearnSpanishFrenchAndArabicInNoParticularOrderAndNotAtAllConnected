@@ -8,18 +8,10 @@ public class Holder : MonoBehaviour
 {
     public static string Name;
     public static int Money, Sprogress, Fprogress, Aprogress, currentLanguage;
-    public static CosmeticItem currentHeadCosmetic;
-    public static Color currentHeadColor;
-    public static CosmeticItem currentAccessoryCosmetic;
-    public static Color currentAccessoryColor;
-    public static CosmeticItem currentFaceCosmetic;
-    public static Color currentFaceColor;
-    public static CosmeticItem currentPantsCosmetic;
-    public static Color currentPantsColor;
-    public static CosmeticItem currentShirtCosmetic;
-    public static Color currentShirtColor;
-    public static CosmeticItem currentShoesCosmetic;
-    public static Color currentShoesColor;
+    
+    // Cosmetic list (head, face, accessory, pants, shirt, shoes)
+    public static CosmeticItem[] currentCosmetics = new CosmeticItem[6];
+    public static Color[] currentCosmeticColors = new Color[6];
     public static Color skinColor;
     [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)

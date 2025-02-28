@@ -5,18 +5,19 @@ using UnityEngine.UI;
 
 public class TheLerper : MonoBehaviour
 {
-    public SpriteRenderer image;
+    public SpriteRenderer player;
 
     public Gradient gradient;
     public void Start()
     {
-        if(Holder.skinColor.Equals(new Color(0,0,0,0.0f))) {
-            image.color = gradient.Evaluate(0);
+        if(Holder.skinColor.Equals(new Color(0, 0, 0, 1f))) {
+            player.color = gradient.Evaluate(0);
             GetComponent<Slider>().value = 0;
+            Holder.skinColor = player.color;
         }
         else {
-            image.color = Holder.skinColor;
-            GetComponent<Slider>().value = FindGradientPosition(image.color, gradient);
+            player.color = Holder.skinColor;
+            GetComponent<Slider>().value = FindGradientPosition(player.color, gradient);
         }
     }
 
@@ -45,7 +46,7 @@ public class TheLerper : MonoBehaviour
     public void theLerper(float c)
     {
         Color color = gradient.Evaluate(c);
-        image.color = color;
+        player.color = color;
         Holder.skinColor = color;
     }
 }
