@@ -22,18 +22,12 @@ public class PlayerCosmetics : MonoBehaviour
     }
     public void SetPlayerColors() {
         // Indeces of children need to be correct (head, face, accessory, pants, shirt, shoes)
-        if(!Holder.currentCosmetics[0].Colored)
-            transform.GetChild(0).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[0];
-        if(!Holder.currentCosmetics[1].Colored)
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[1];
-        if(!Holder.currentCosmetics[2].Colored)
-            transform.GetChild(2).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[2];
-        if(!Holder.currentCosmetics[3].Colored)
-            transform.GetChild(3).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[3];
-        if(!Holder.currentCosmetics[4].Colored)
-            transform.GetChild(4).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[4];
-        if(!Holder.currentCosmetics[5].Colored)
-            transform.GetChild(5).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[5];
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[0];
+        transform.GetChild(1).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[1];
+        transform.GetChild(2).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[2];
+        transform.GetChild(3).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[3];
+        transform.GetChild(4).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[4];
+        transform.GetChild(5).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[5];
     }
 
     public void SetPlayerCosmetic(int type) {

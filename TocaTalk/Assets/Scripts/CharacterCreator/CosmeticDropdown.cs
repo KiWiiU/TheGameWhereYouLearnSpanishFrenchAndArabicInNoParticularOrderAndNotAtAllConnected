@@ -39,18 +39,17 @@ public class CosmeticDropdown : MonoBehaviour
         Holder.currentCosmetics[(int)cosmeticType] = cosmeticItems[index];
         Holder.currentCosmeticColors[(int)cosmeticType] = new Color(cosmeticItems[index].DefaultColor.r, cosmeticItems[index].DefaultColor.g, cosmeticItems[index].DefaultColor.b, 1f);
         player.SetAllPlayerCosmetics();
-        player.SetPlayerColors();
-        
         if(Holder.currentCosmetics[(int)cosmeticType].Colored) {
             associatedColorPicker.gameObject.SetActive(false);
             Holder.currentCosmeticColors[(int)cosmeticType] = new Color(211, 211, 211);
         } else {
             associatedColorPicker.gameObject.SetActive(true);
         }
+        player.SetPlayerColors();
         associatedColorPicker.Set(Holder.currentCosmeticColors[(int)cosmeticType]);
     }
 
-    private void SetCosmeticFromDropdown(int index) {
+    private void SetCosmeticFromDropdown(int index) { // used only when loading from save file
         Holder.currentCosmetics[(int)cosmeticType] = cosmeticItems[index];
         if(Holder.currentCosmetics[(int)cosmeticType].Colored) {
             associatedColorPicker.gameObject.SetActive(false);
@@ -59,7 +58,7 @@ public class CosmeticDropdown : MonoBehaviour
             associatedColorPicker.gameObject.SetActive(true);
         }
         player.SetPlayerCosmetic((int)cosmeticType);
-        if(Holder.currentCosmeticColors[(int)cosmeticType].a == 0f) { // if save file is new
+        if(Holder.currentCosmeticColors[(int)cosmeticType].a == 0f) { // if save file was just created
             Holder.currentCosmeticColors[(int)cosmeticType] = new Color(cosmeticItems[index].DefaultColor.r, cosmeticItems[index].DefaultColor.g, cosmeticItems[index].DefaultColor.b, 1f);
         }
         player.SetPlayerColors();
