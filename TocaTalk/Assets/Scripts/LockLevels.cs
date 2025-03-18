@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,6 +41,10 @@ public class LockLevels : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene(lesson);
     }
     yield break; // exit coroutine
+   }
+
+   public void SetText(string text) {
+    warning.transform.GetChild(2).GetComponent<TMP_Text>().text = text;
    }
 
    public void Continue() {
