@@ -82,7 +82,9 @@ public class QuizManager : MonoBehaviour
     }
 
     public void AnswerTextQuiz() {
-        string answer = obj.GetComponentInChildren<TMP_InputField>().text;
+        TMP_InputField field = obj.GetComponentInChildren<TMP_InputField>();
+        string answer = field.text;
+        field.text = "";
         if(answer.ToLower().Equals(currentQuestion.correctAnswerText.ToLower())) {
             numCorrect++;
             Debug.Log("Correct!");
@@ -98,6 +100,12 @@ public class QuizManager : MonoBehaviour
             StartCoroutine(StopQuiz());
         }
         UpdateUI();
+    }
+
+    public void OnEndEdit() { // if user presses enter within the input field, submit the text
+        if(Input.GetKeyDown(KeyCode.Return)) {
+            AnswerTextQuiz();
+        }
     }
 
     private IEnumerator StopQuiz() {
