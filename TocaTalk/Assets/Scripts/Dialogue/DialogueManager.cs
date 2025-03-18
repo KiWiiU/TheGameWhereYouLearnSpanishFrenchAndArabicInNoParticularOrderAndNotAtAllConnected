@@ -63,11 +63,14 @@ public class DialogueManager : MonoBehaviour
         }
         
         nameText.text = currentDialogue.npc.npc.Name;
-        avatar.sprite = currentDialogue.npc.npc.Sprite;
+        // crop the sprite so it just sees the head of the character
+        avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
         currentSentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(Type());
     }
+
+
 
     void EndDialogue() {
        animator.SetBool("isOpen", false);
