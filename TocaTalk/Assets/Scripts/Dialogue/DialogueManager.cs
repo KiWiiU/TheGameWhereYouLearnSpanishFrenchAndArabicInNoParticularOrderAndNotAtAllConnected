@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-
+using ArabicSupport;
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
@@ -61,11 +61,18 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(sentence);
             }
         }
+        if(Holder.currentLanguage == 2) {
+            nameText.text = ArabicFixer.Fix(currentDialogue.npc.npc.Name);
+        }
         
-        nameText.text = currentDialogue.npc.npc.Name;
         // crop the sprite so it just sees the head of the character
         avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
-        currentSentence = sentences.Dequeue();
+        if(Holder.currentLanguage == 2) {
+            currentSentence = ArabicFixer.Fix(sentences.Dequeue());
+        } else {
+            currentSentence = sentences.Dequeue();
+        }
+        
         StopAllCoroutines();
         StartCoroutine(Type());
     }
@@ -95,7 +102,7 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in currentSentence.ToCharArray()) {
             dialogueText.text += letter;
             if(!letter.Equals(" "))
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.075f);
         }
         typingText = false;
     }

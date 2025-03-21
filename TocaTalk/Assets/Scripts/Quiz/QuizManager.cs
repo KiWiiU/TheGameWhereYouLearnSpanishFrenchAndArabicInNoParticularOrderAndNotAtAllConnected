@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using ArabicSupport;
 
 public class QuizManager : MonoBehaviour
 {
@@ -43,13 +44,23 @@ public class QuizManager : MonoBehaviour
 
     private void UpdateUI() {
         TMPro.TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
-        questionText.text = currentQuestion.question;
+        if(Holder.currentLanguage == 2) {
+            questionText.text = ArabicFixer.Fix(currentQuestion.question);
+        }
+        else {
+            questionText.text = currentQuestion.question;
+        }
         Button[] buttons = obj.GetComponentsInChildren<Button>(true); 
         GameObject input = obj.GetComponentInChildren<TMP_InputField>(true).gameObject;
         if(currentQuestion.isMultipleChoice) {// if multiple choice  
             for(int i = 0; i < buttons.Length-1; i++) {
                 buttons[i].gameObject.SetActive(true);
-                buttons[i].GetComponentInChildren<TMP_Text>().text = currentQuestion.answers[i];
+                if(Holder.currentLanguage == 2) {
+                    buttons[i].GetComponentInChildren<TMP_Text>().text = ArabicFixer.Fix(currentQuestion.answers[i]);
+                }
+                else {
+                    buttons[i].GetComponentInChildren<TMP_Text>().text = currentQuestion.answers[i];
+                }
             }
             buttons[buttons.Length-1].gameObject.SetActive(false);
                 input.SetActive(false);
@@ -61,6 +72,7 @@ public class QuizManager : MonoBehaviour
             buttons[buttons.Length-1].gameObject.SetActive(true);
             input.SetActive(true);
         }
+        
     }
 
     public void AnswerMCQuiz(int answer) {

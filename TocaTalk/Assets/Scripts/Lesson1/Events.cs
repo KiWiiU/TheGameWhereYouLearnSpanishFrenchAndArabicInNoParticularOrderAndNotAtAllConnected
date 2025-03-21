@@ -9,7 +9,6 @@ public class Events : MonoBehaviour
     public DialogueManager dialogueManager;
     public QuizManager quizManager;
     public Question[] test;
-    public Question[] questions;
     private int currentEvent;
 
     public CharacterDialogue[] secondDialogue;

@@ -8,6 +8,7 @@ public class Holder : MonoBehaviour
 {
     public static string Name;
     public static int Money, Sprogress, Fprogress, Aprogress, currentLanguage;
+    // Current Language -> 0 = Spanish, 1 = French, 2 = Arabic
     
     // Cosmetic list (head, face, accessory, pants, shirt, shoes)
     public static CosmeticItem[] currentCosmetics = new CosmeticItem[6];
