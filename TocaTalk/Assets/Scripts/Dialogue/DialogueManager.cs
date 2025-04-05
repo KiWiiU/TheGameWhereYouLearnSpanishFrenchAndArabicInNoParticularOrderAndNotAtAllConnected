@@ -6,12 +6,15 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using ArabicSupport;
+using UPersian.Components;
+using UPersian.Utils;
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
 
 
-    public TMP_Text dialogueText;
+    public TMP_Text LTLdialogueText;
+    public RtlText RTLdialogueText;
     public Image avatar;
     private Queue<CharacterDialogue> dialogues;
     private Queue<string> sentences;
@@ -35,6 +38,15 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", true);
         isOpen = true;
         this.dialogues.Clear();
+
+        if(Holder.currentLanguage == 2) {
+            RTLdialogueText.gameObject.SetActive(true);
+            LTLdialogueText.gameObject.SetActive(false);
+        } else {
+            RTLdialogueText.gameObject.SetActive(false);
+            LTLdialogueText.gameObject.SetActive(true);
+        }
+
         sentences.Clear();
         foreach(CharacterDialogue a in dialogues) {
             this.dialogues.Enqueue(a);
@@ -62,19 +74,18 @@ public class DialogueManager : MonoBehaviour
             }
         }
         if(Holder.currentLanguage == 2) {
-            nameText.text = ArabicFixer.Fix(currentDialogue.npc.npc.Name);
+            nameText.text = currentDialogue.npc.npc.Name.RtlFix();
         }
         
         // crop the sprite so it just sees the head of the character
         avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
-        if(Holder.currentLanguage == 2) {
-            currentSentence = ArabicFixer.Fix(sentences.Dequeue());
-        } else {
-            currentSentence = sentences.Dequeue();
-        }
-        
+        currentSentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(Type());
+        if(Holder.currentLanguage == 2) {
+            RTLdialogueText.text = currentSentence;
+        } else {
+            StartCoroutine(Type());
+        }
     }
 
 
@@ -88,7 +99,11 @@ public class DialogueManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return) && isOpen) {
             if(typingText) { // skip dialogue if still typing
                 StopAllCoroutines();
-                dialogueText.text = currentSentence;
+                if(Holder.currentLanguage == 2) {
+                    RTLdialogueText.text = currentSentence;
+                } else {
+                    LTLdialogueText.text = currentSentence;
+                }
                 typingText = false;
             } else {
                 DisplayNextSentence();
@@ -98,9 +113,9 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator Type() {
         typingText = true;
-        dialogueText.text = "";
+        LTLdialogueText.text = "";
         foreach(char letter in currentSentence.ToCharArray()) {
-            dialogueText.text += letter;
+            LTLdialogueText.text += letter;
             if(!letter.Equals(" "))
                 yield return new WaitForSeconds(0.075f);
         }

@@ -25,6 +25,9 @@ public class QuizManager : MonoBehaviour
     public bool IsOpen {get {return isOpen;}}
     public int NumCorrect {get {return numCorrect;}}
     public int NumQuestions {get {return numQuestions;}}
+
+    public InputField RTLField;
+    public TMP_InputField LTLField;
     public void Start() {
         questions = new();
         isOpen = false;
@@ -36,6 +39,15 @@ public class QuizManager : MonoBehaviour
         foreach(Question q in questions) {
             this.questions.Enqueue(q);
         }
+        
+        if(Holder.currentLanguage == 2) {
+            RTLField.gameObject.SetActive(true);
+            LTLField.gameObject.SetActive(false);
+        } else {
+            LTLField.gameObject.SetActive(true);
+            RTLField.gameObject.SetActive(false);
+        }
+
         currentQuestion = this.questions.Dequeue();
         numQuestions = questions.Length;
         obj.GetComponent<Canvas>().enabled = true;
@@ -43,7 +55,7 @@ public class QuizManager : MonoBehaviour
     }
 
     private void UpdateUI() {
-        TMPro.TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
+        TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
         if(Holder.currentLanguage == 2) {
             questionText.text = ArabicFixer.Fix(currentQuestion.question);
         }
@@ -51,7 +63,12 @@ public class QuizManager : MonoBehaviour
             questionText.text = currentQuestion.question;
         }
         Button[] buttons = obj.GetComponentsInChildren<Button>(true); 
-        GameObject input = obj.GetComponentInChildren<TMP_InputField>(true).gameObject;
+        GameObject input = null;
+        if(Holder.currentLanguage == 2) {
+            input = RTLField.gameObject;
+        } else {
+            input = LTLField.gameObject;
+        }
         if(currentQuestion.isMultipleChoice) {// if multiple choice  
             for(int i = 0; i < buttons.Length-1; i++) {
                 buttons[i].gameObject.SetActive(true);
@@ -94,9 +111,14 @@ public class QuizManager : MonoBehaviour
     }
 
     public void AnswerTextQuiz() {
-        TMP_InputField field = obj.GetComponentInChildren<TMP_InputField>();
-        string answer = field.text;
-        field.text = "";
+        string answer = null;
+        if(Holder.currentLanguage == 2) {
+            answer = RTLField.text;
+            RTLField.text = "";
+        } else {
+            answer = LTLField.text;
+            LTLField.text = "";
+        }
         if(answer.ToLower().Equals(currentQuestion.correctAnswerText.ToLower())) {
             numCorrect++;
             Debug.Log("Correct!");
