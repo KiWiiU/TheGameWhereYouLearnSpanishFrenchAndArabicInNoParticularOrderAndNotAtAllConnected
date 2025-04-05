@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5ed385ad3986674f8055a153779651c, type: 3}
-  m_Name: Dog
+  m_Name: Remy
   m_EditorClassIdentifier: 
-  _name: Dog
-  sprite: {fileID: 21300000, guid: 78e7d5efb64861349baa08fafe487fca, type: 3}
+  _name: Remy
+  sprite: {fileID: 21300000, guid: 907ec765a4146c049a6bd2cca1a472d9, type: 3}
   cost: 0

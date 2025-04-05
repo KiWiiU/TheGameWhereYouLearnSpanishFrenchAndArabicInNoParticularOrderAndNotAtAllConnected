@@ -59,7 +59,13 @@ public class SaveManager : MonoBehaviour
                 g = float.Parse(reader.ReadLine());
                 b = float.Parse(reader.ReadLine());
                 Holder.currentCosmeticColors[5] = new Color(r, g, b, 1f);
-                
+                for(int i = 0; i < Holder.petHunger.Length;i++) {
+                    Holder.petHunger[i] = double.Parse(reader.ReadLine());
+                }
+                if(reader.ReadLine() == "null")
+                    Holder.currentPet = null;
+                else
+                    Holder.currentPet = int.Parse(reader.ReadLine());
             } else {
                 Holder.Name = "";
                 Holder.Money = 0;
@@ -117,7 +123,13 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.currentCosmeticColors[5].r);
             writer.WriteLine(Holder.currentCosmeticColors[5].g);
             writer.WriteLine(Holder.currentCosmeticColors[5].b);
-            
+            for(int i = 0; i < Holder.petHunger.Length;i++) {
+                writer.WriteLine(Holder.petHunger[i]);
+            }
+            if(Holder.currentPet != null)
+                writer.WriteLine(Holder.currentPet);
+            else
+                writer.WriteLine("null");
         }
     }
 }

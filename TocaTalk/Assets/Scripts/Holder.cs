@@ -14,6 +14,9 @@ public class Holder : MonoBehaviour
     public static CosmeticItem[] currentCosmetics = new CosmeticItem[6];
     public static Color[] currentCosmeticColors = new Color[6];
     public static Color skinColor;
+
+    public static int? currentPet = null;
+    public static double[] petHunger = {100, 100, 100, 100, 100, 100, 100};
     [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)
     {

@@ -55,4 +55,8 @@ public class LockLevels : MonoBehaviour
     warning.SetActive(false);
     StopAllCoroutines();
    }
+
+   public void PetScene() {
+     GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene("Tamagotchi");
+   }
 }
