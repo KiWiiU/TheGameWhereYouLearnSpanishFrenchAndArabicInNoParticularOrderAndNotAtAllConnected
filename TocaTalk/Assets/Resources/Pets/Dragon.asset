@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ed385ad3986674f8055a153779651c, type: 3}
   m_Name: Dragon
   m_EditorClassIdentifier: 
+  id: 3
   _name: Dragon
   sprite: {fileID: 21300000, guid: 0a9603290183dae4c89c597266008842, type: 3}
   cost: 0

@@ -62,10 +62,11 @@ public class SaveManager : MonoBehaviour
                 for(int i = 0; i < Holder.petHunger.Length;i++) {
                     Holder.petHunger[i] = double.Parse(reader.ReadLine());
                 }
-                if(reader.ReadLine() == "null")
+                string s = reader.ReadLine();
+                if(s == "null")
                     Holder.currentPet = null;
                 else
-                    Holder.currentPet = int.Parse(reader.ReadLine());
+                    Holder.currentPet = int.Parse(s);
             } else {
                 Holder.Name = "";
                 Holder.Money = 0;
@@ -80,6 +81,13 @@ public class SaveManager : MonoBehaviour
                 Holder.currentCosmetics[3] = (CosmeticItem)Resources.Load("Cosmetics/Pants/Jeans");
                 Holder.currentCosmetics[4] = (CosmeticItem)Resources.Load("Cosmetics/Shirt/TShirt");
                 Holder.currentCosmetics[5] = (CosmeticItem)Resources.Load("Cosmetics/Shoes/Sneakers");
+                Holder.currentPet = null;
+                for(int i = 0; i < Holder.petHunger.Length;i++) {
+                    Holder.petHunger[i] = 100;
+                }
+                for(int i = 0; i < Holder.currentCosmetics.Length;i++) {
+                    Holder.currentCosmeticColors[i] = Holder.currentCosmetics[i].DefaultColor;
+                }
             }
         }
 
