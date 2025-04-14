@@ -98,6 +98,9 @@ public class QuizManager : MonoBehaviour
             Debug.Log("Correct!");
         }
         else {
+            if(Holder.currentPet != null) {
+                Holder.petHunger[(int)Holder.currentPet] -= 20f;
+            }
             Debug.Log("Incorrect!");
         }
         if(questions.Count > 0) {
@@ -119,13 +122,24 @@ public class QuizManager : MonoBehaviour
             answer = LTLField.text;
             LTLField.text = "";
         }
-        if(answer.ToLower().Equals(currentQuestion.correctAnswerText.ToLower())) {
-            numCorrect++;
-            Debug.Log("Correct!");
+
+        bool correct = false;
+        for(int i = 0; i < currentQuestion.correctAnswerTexts.Length; i++) {
+            if(answer.ToLower().Equals(currentQuestion.correctAnswerTexts[i].ToLower())) {
+                numCorrect++;
+                correct = true;
+                Debug.Log("Correct!");
+                break;
+            }
         }
-        else {
+        if(!correct) {
+            if(Holder.currentPet != null) {
+                Holder.petHunger[(int)Holder.currentPet] -= 20f;
+            }
             Debug.Log("Incorrect!");
         }
+
+
         if(questions.Count > 0) {
             currentQuestion = questions.Dequeue();
         }

@@ -1797,20 +1797,23 @@ MonoBehaviour:
   dialogueManager: {fileID: 1789974715}
   quizManager: {fileID: 1763108766}
   test:
-  - question: "\u064A\u0627 \u0647\u0644\u0627!"
+  - question: what should you do?
     answers: []
     correctAnswer: 0
     isMultipleChoice: 0
-    correctAnswerText: "\u064A\u0627 \u0647\u0644\u0627!"
-  - question: "\u064A\u0627 \u0647\u0644\u0627!"
+    correctAnswerTexts:
+    - get out
+    - run away
+    - perish
+  - question: and when should you do it?
     answers:
-    - "\u064A\u0627 \u0647\u0644\u0627!"
-    - "\u064A\u0627 \u0647\u0644\u0627!"
-    - "\u064A\u0627 \u0647\u0644\u0627!"
-    - "\u064A\u0627 \u0647\u0644\u0627!"
-    correctAnswer: 2
+    - NOW
+    - at some point , idk
+    - do what sorry?
+    - in 20 minutes give or take
+    correctAnswer: 0
     isMultipleChoice: 1
-    correctAnswerText: 
+    correctAnswerTexts: []
   secondDialogue:
   - sentences:
     - Wow! I am that old!
@@ -3077,16 +3080,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1767884916}
     - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
-      value: "\u0647\u0630\u0647 \u0647\u064A \u0627\u0644\u0644\u063A\u0629 \u0627\u0644\u0639\u0631\u0628\u064A\u0629."
+      value: 'OH MAH GAH! '
       objectReference: {fileID: 0}
     - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
-      value: "\u0634\u064A\u0621 \u0645\u0627 \u0634\u064A\u0621 \u0645\u0627"
+      value: is that a person?
       objectReference: {fileID: 0}
     - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
-      value: "\u064A\u0627 \u0647\u0644\u0627!"
+      value: HERE?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
+      value: HERE IN THIS ABONIMATION I CALL A HOME??
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
+      value: get out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
+      value: get out of here now while you still can.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
+      value: I was going to set this place on fire eventually
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
+      value: leave while you still have skin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
+      value: anyways since youre here, its my birthday!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377852652941588238, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
+      value: you wanna count to 20 with me????
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df94ea20ed5c3234d9bcf9dfa41d4960, type: 3}

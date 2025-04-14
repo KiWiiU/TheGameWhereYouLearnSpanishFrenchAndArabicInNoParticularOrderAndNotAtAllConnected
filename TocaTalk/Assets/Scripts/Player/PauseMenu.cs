@@ -39,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         if(!gameObject.activeSelf)
             return;
         if(type == 0) {// if user presses 'yes'
+            Time.timeScale = 1;
             sceneSwap.SwapScene("Lessons");
         } else { // if user presses 'no'
             sure.gameObject.SetActive(false);

@@ -83,7 +83,7 @@ public class SaveManager : MonoBehaviour
                 Holder.currentCosmetics[5] = (CosmeticItem)Resources.Load("Cosmetics/Shoes/Sneakers");
                 Holder.currentPet = null;
                 for(int i = 0; i < Holder.petHunger.Length;i++) {
-                    Holder.petHunger[i] = 100;
+                    Holder.petHunger[i] = 50;
                 }
                 for(int i = 0; i < Holder.currentCosmetics.Length;i++) {
                     Holder.currentCosmeticColors[i] = Holder.currentCosmetics[i].DefaultColor;

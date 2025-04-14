@@ -75,6 +75,8 @@ public class DialogueManager : MonoBehaviour
         }
         if(Holder.currentLanguage == 2) {
             nameText.text = currentDialogue.npc.npc.Name.RtlFix();
+        } else {
+            nameText.text = currentDialogue.npc.npc.Name;
         }
         
         // crop the sprite so it just sees the head of the character

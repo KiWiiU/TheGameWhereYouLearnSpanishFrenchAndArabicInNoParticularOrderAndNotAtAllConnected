@@ -12,5 +12,5 @@ public class Question
 
     public bool isMultipleChoice;
     [TextArea(3, 10)]
-    public string correctAnswerText;
+    public string[] correctAnswerTexts; // in case there are multiple correct answers
 }
