@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         petObject.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
         petObject.transform.localPosition = transform.localPosition + new Vector3(0.25f, 0f, 0f);
         CircleCollider2D petCollider = petObject.AddComponent<CircleCollider2D>();
-        petCollider.radius = 0.6f;
+        petCollider.radius = 0.569420f; // nice
         Rigidbody2D petRigidbody = petObject.AddComponent<Rigidbody2D>();
         petRigidbody.gravityScale = 0f;
         petRigidbody.freezeRotation = true;
@@ -60,16 +60,24 @@ public class PlayerController : MonoBehaviour
         } else {
             petObject.GetComponent<SpriteRenderer>().flipX = true;
         }
+        if(petObject.transform.position.y/4 < transform.position.y) {
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = 100;
+        } else {
+            petObject.GetComponent<SpriteRenderer>().sortingOrder = -100;
+        }
         Vector3 oldPosition = petObject.transform.position;
         Vector3 newPosition = petObject.transform.position;
-        if(Vector3.Distance(transform.position, petObject.transform.position) > 20f) {
-            // Debug.Log("teleporting");
+        if(Vector3.Distance(transform.position, petObject.transform.position) > 7.5f) {
             petObject.transform.position = transform.position;
             newPosition = petObject.transform.position;
         }
         else if(Vector3.Distance(transform.position, petObject.transform.position) > 0.5f) {
             petObject.transform.position = Vector3.MoveTowards(petObject.transform.position, transform.position, Time.deltaTime * 4f);
-            newPosition = petObject.transform.position;
+            if(petObject.GetComponent<CircleCollider2D>().bounds.Contains(gameObject.transform.position)) { // keep pet from walking into you
+                petObject.transform.position = oldPosition;
+            } else {
+                newPosition = petObject.transform.position;
+            }
         }
 
         if(Holder.currentPet != null) {
