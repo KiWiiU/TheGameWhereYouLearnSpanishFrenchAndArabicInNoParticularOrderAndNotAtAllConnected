@@ -17,7 +17,9 @@ public class Holder : MonoBehaviour
 
     public static int? currentPet = null;
     public static double[] petHunger = new double[8]; // num of pets
-    public static bool[] petUnlocked = {true, false, true, false, true, false, true, false};
+    public static bool[] petUnlocked = {true, true, true, true, true, false, true, true};
+
+    public static float volume = 1f;
     [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)
     {

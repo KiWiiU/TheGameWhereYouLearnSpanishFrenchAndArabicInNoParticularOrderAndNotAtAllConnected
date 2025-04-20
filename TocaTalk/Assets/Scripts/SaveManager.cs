@@ -67,6 +67,7 @@ public class SaveManager : MonoBehaviour
                     Holder.currentPet = null;
                 else
                     Holder.currentPet = int.Parse(s);
+                Holder.volume = float.Parse(reader.ReadLine());
             } else {
                 Holder.Name = "";
                 Holder.Money = 0;
@@ -88,11 +89,12 @@ public class SaveManager : MonoBehaviour
                 for(int i = 0; i < Holder.currentCosmetics.Length;i++) {
                     Holder.currentCosmeticColors[i] = Holder.currentCosmetics[i].DefaultColor;
                 }
+                Holder.volume = 1f;
             }
         }
 
     }
-
+    
     public static void Save()
     {
         using(StreamWriter writer = new StreamWriter("Assets/SaveFile.txt"))
@@ -112,7 +114,6 @@ public class SaveManager : MonoBehaviour
             writer.WriteLine(Holder.currentCosmetics[3].name);
             writer.WriteLine(Holder.currentCosmetics[4].name);
             writer.WriteLine(Holder.currentCosmetics[5].name);
-            
             writer.WriteLine(Holder.currentCosmeticColors[0].r);
             writer.WriteLine(Holder.currentCosmeticColors[0].g);
             writer.WriteLine(Holder.currentCosmeticColors[0].b);
@@ -138,6 +139,7 @@ public class SaveManager : MonoBehaviour
                 writer.WriteLine(Holder.currentPet);
             else
                 writer.WriteLine("null");
+            writer.WriteLine(Holder.volume);
         }
     }
 }
