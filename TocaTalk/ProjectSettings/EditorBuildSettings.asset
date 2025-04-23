@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tamagotchi.unity
     guid: 72f14434ab1192b41a7d2684a9577d93
+  - enabled: 1
+    path: Assets/Scenes/Marketplace.unity
+    guid: c876d7d7bbdaaf043becb22656301577
   m_configObjects: {}

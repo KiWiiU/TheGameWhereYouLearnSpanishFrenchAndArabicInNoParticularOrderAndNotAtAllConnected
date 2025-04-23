@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2205566015068424448}
   - component: {fileID: -2619942557089007617}
   m_Layer: 5
-  m_Name: Grid Element
+  m_Name: PetGridElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

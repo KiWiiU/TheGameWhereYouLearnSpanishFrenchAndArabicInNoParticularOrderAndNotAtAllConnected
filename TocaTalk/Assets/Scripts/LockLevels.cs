@@ -59,4 +59,7 @@ public class LockLevels : MonoBehaviour
    public void PetScene() {
      GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene("Tamagotchi");
    }
+   public void Marketplace() {
+     GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene("Marketplace");
+   }
 }

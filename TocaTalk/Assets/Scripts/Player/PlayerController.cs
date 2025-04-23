@@ -14,28 +14,16 @@ public class PlayerController : MonoBehaviour
     public void Start() {
         // set player's skin color
         GetComponent<SpriteRenderer>().color = Holder.skinColor;
-        // initialize pet (position history for it to follow, create the pet object)
-        petObject = new GameObject("Pet");
-        petObject.transform.SetParent(transform);
-        petObject.transform.position = transform.position;
-        SpriteRenderer spriteRenderer = petObject.AddComponent<SpriteRenderer>();
+        // initialize pet
+        if(transform.Find("Pet") != null) {
+            petObject = transform.Find("Pet").gameObject;
+            if(Holder.currentPet != null) {
+                petObject.transform.position = transform.position;
+                petObject.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Pet>("Pets")[(int)Holder.currentPet].Sprite;
+                petObject.transform.position = transform.position + new Vector3(0.25f, 0f, 0f);
+            }
+        }
 
-        if(Holder.currentPet == null)
-            spriteRenderer.sprite = null;
-        else 
-            spriteRenderer.sprite = Resources.LoadAll<Pet>("Pets")[(int)Holder.currentPet].Sprite;
-
-        spriteRenderer.sortingLayerName = "Player";
-        spriteRenderer.sortingOrder = -100;
-        // clifford the big red dog
-        petObject.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
-        petObject.transform.localPosition = transform.localPosition + new Vector3(0.25f, 0f, 0f);
-        CircleCollider2D petCollider = petObject.AddComponent<CircleCollider2D>();
-        petCollider.radius = 0.569420f; // nice
-        Rigidbody2D petRigidbody = petObject.AddComponent<Rigidbody2D>();
-        petRigidbody.gravityScale = 0f;
-        petRigidbody.freezeRotation = true;
-        petObject.layer = LayerMask.NameToLayer("Pet");
         dialogueManager = GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>();
         quizManager = GameObject.FindWithTag("Quiz").GetComponent<QuizManager>();
     }
@@ -55,6 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void movePet() {
+        if(petObject == null) return;
         if(petObject.transform.position.x < transform.position.x) {
             petObject.GetComponent<SpriteRenderer>().flipX = false;
         } else {
