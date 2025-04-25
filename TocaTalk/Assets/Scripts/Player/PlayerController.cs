@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Pet pet;
     private GameObject petObject;
 
+    private Rigidbody2D rb;
+
     public void Start() {
         // initialize pet
         if(transform.Find("Pet") != null) {
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
                 petObject.transform.position = transform.position + new Vector3(0.25f, 0f, 0f);
             }
         }
-
+        rb = GetComponent<Rigidbody2D>();
         dialogueManager = GameObject.FindWithTag("Dialogue")?.GetComponent<DialogueManager>();
         quizManager = GameObject.FindWithTag("Quiz")?.GetComponent<QuizManager>();
     }
@@ -33,11 +35,10 @@ public class PlayerController : MonoBehaviour
                 Input.GetAxisRaw("Vertical") * walkSpeed
             );
             // smooth the player's movement so it isnt choppy
-            GetComponent<Rigidbody2D>().velocity = Vector2.Lerp(GetComponent<Rigidbody2D>().velocity, targetVelocity, Time.deltaTime * 20f);
+            rb.velocity = Vector2.Lerp(GetComponent<Rigidbody2D>().velocity, targetVelocity, Time.fixedDeltaTime * 20f);
         }
-        else GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        else rb.velocity = Vector2.zero;
         movePet();
-        
     }
 
     private void movePet() {
