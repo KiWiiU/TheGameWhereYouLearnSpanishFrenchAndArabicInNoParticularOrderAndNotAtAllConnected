@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShoppingCart : MonoBehaviour
 {
     public List<MarketplaceItem> items;
     public GameObject visualPrefab;
+    public GameObject confirmationMenuObj;
     private Transform parent;
     private Vector3 offset;
     private Vector3 initialOffset;
@@ -24,6 +27,26 @@ public class ShoppingCart : MonoBehaviour
         initialOffset = new Vector3(-3f, -1.83f, 0);
         offset = initialOffset;
         items = new List<MarketplaceItem>();
+    }
+
+    public void confirmationMenu(GameObject obj) {
+        Holder.canPlayerMove = false;
+        MarketplaceItem item = obj.GetComponent<ItemBehavior>().item;
+        confirmationMenuObj.GetComponent<Canvas>().enabled = true;
+        confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", true);
+        confirmationMenuObj.transform.Find("Question").GetComponent<TMP_Text>().text = "Do you want buy " + item.Name + "???";
+        confirmationMenuObj.transform.Find("Yes").GetComponent<Button>().onClick.RemoveAllListeners();
+        confirmationMenuObj.transform.Find("No").GetComponent<Button>().onClick.RemoveAllListeners();
+        confirmationMenuObj.transform.Find("Yes").GetComponent<Button>().onClick.AddListener(() => {
+            confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
+            Holder.canPlayerMove = true;
+            addItem(item);
+            Destroy(obj);
+        });
+        confirmationMenuObj.transform.Find("No").GetComponent<Button>().onClick.AddListener(() => {
+            confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
+            Holder.canPlayerMove = true;
+        });
     }
     public void addItem(MarketplaceItem item) {
         items.Add(item);

@@ -20,6 +20,7 @@ public class Holder : MonoBehaviour
     public static bool[] petUnlocked = {true, true, true, true, true, false, true, true};
 
     public static float volume = 1f;
+    public static bool canPlayerMove = true;
     [SerializeField] public Dictionary<CosmeticItem, bool> unlockedItems = new();
     public void NameIt(string n)
     {

@@ -36,6 +36,7 @@ public class QuizManager : MonoBehaviour
         numCorrect = 0;
         isOpen = true;
         animator.SetBool("isOpen", true);
+        Holder.canPlayerMove = false;
         foreach(Question q in questions) {
             this.questions.Enqueue(q);
         }
@@ -163,6 +164,7 @@ public class QuizManager : MonoBehaviour
         animator.SetBool("isOpen", false);
         yield return new WaitForSeconds(1f);
         obj.GetComponent<Canvas>().enabled = false;
+        Holder.canPlayerMove = true;
         OnQuizEnd?.Invoke();
     }
 }

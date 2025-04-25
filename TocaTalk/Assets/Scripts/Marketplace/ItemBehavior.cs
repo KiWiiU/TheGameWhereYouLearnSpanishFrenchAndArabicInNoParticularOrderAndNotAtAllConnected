@@ -15,8 +15,7 @@ public class ItemBehavior : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            collider.gameObject.GetComponent<ShoppingCart>().addItem(item);
-            Destroy(gameObject);
+            collider.gameObject.GetComponent<ShoppingCart>().confirmationMenu(gameObject);
         }
     }
 }

@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     // dialogues is an array of dialogues that characters have in order
     public void StartDialogue(CharacterDialogue[] dialogues) {
         animator.SetBool("isOpen", true);
+        Holder.canPlayerMove = false;
         isOpen = true;
         this.dialogues.Clear();
 
@@ -95,6 +96,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() {
        animator.SetBool("isOpen", false);
        isOpen = false;
+       Holder.canPlayerMove = true;
        OnDialogueEnd?.Invoke();
     }
     public void Update() {

@@ -14,6 +14,7 @@ public class SaveManager : MonoBehaviour
         if (!File.Exists("Assets/SaveFile.txt")) {
             File.Create("Assets/SaveFile.txt").Close();
         }
+        bool exists = true;
         using(StreamReader reader = new StreamReader("Assets/SaveFile.txt"))
         {
             if (!reader.EndOfStream)
@@ -69,13 +70,14 @@ public class SaveManager : MonoBehaviour
                     Holder.currentPet = int.Parse(s);
                 Holder.volume = float.Parse(reader.ReadLine());
             } else {
+                exists = false;
                 Holder.Name = "";
                 Holder.Money = 0;
                 Holder.Sprogress = 0;
                 Holder.Fprogress = 0;
                 Holder.Aprogress = 0;
                 Holder.currentLanguage = 0;      
-                Holder.skinColor = new Color(0, 0, 0, 1f); // SKIN DEFAULT COLOR         
+                Holder.skinColor = new Color(0.97254f, 0.82353f, 0.70196078f, 1f); // SKIN DEFAULT COLOR         
                 Holder.currentCosmetics[0] = (CosmeticItem)Resources.Load("Cosmetics/Head/Bald");
                 Holder.currentCosmetics[1] = (CosmeticItem)Resources.Load("Cosmetics/Face/Clean");
                 Holder.currentCosmetics[2] = (CosmeticItem)Resources.Load("Cosmetics/Accessory/None");
@@ -89,10 +91,13 @@ public class SaveManager : MonoBehaviour
                 for(int i = 0; i < Holder.currentCosmetics.Length;i++) {
                     Holder.currentCosmeticColors[i] = Holder.currentCosmetics[i].DefaultColor;
                 }
-                Holder.volume = 1f;
+                Holder.volume = 0.33f;
             }
+            reader.Close();
         }
-
+        if(!exists) {
+            Save(); // save default values so it doesn't get corrupted
+        }
     }
     
     public static void Save()

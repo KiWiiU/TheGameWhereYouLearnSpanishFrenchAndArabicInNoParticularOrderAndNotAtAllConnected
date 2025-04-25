@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     private GameObject petObject;
 
     public void Start() {
-        // set player's skin color
-        GetComponent<SpriteRenderer>().color = Holder.skinColor;
         // initialize pet
         if(transform.Find("Pet") != null) {
             petObject = transform.Find("Pet").gameObject;
@@ -24,12 +22,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        dialogueManager = GameObject.FindWithTag("Dialogue").GetComponent<DialogueManager>();
-        quizManager = GameObject.FindWithTag("Quiz").GetComponent<QuizManager>();
+        dialogueManager = GameObject.FindWithTag("Dialogue")?.GetComponent<DialogueManager>();
+        quizManager = GameObject.FindWithTag("Quiz")?.GetComponent<QuizManager>();
     }
     public void FixedUpdate() {
         // cant move if dialogue or quiz is open
-        if(!dialogueManager.IsOpen && !quizManager.IsOpen) { 
+        if(Holder.canPlayerMove) { 
             Vector2 targetVelocity = new Vector2(
                 Input.GetAxisRaw("Horizontal") * walkSpeed,
                 Input.GetAxisRaw("Vertical") * walkSpeed

@@ -28,6 +28,7 @@ public class PlayerCosmetics : MonoBehaviour
         transform.GetChild(3).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[3];
         transform.GetChild(4).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[4];
         transform.GetChild(5).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[5];
+        GetComponent<SpriteRenderer>().color = Holder.skinColor;
     }
 
     public void SetPlayerCosmetic(int type) {
