@@ -8,10 +8,10 @@ public class HeadCosmetic : CosmeticItem
     public HeadType Type {get {return type;}}
 
     public enum HeadType {
-        Bald, AllMight, Banana, Beanie, Beret, Bob, Cap, Cap2,
-        Cornrows, Deku, Flowy, HeadScarf, HeadScarf2, Kufi, 
-        Jessie, Lick, Long, Messy, Miku, Mushroom, Ponytail,
-        Rick, Sailor, ShadeHat, SideSwept, Smurf, Sombrero,
-        Stone, Toad, Todoroki, Tokoyami, TopHat, Witch, Short, 
+        Afro, Agal, AllMight, Beanie, Beret, Bob, Buzzcut, Cap,
+        Cornrows, Deku, Dreadlocks, Floppyhat, Hijab, Jessie, Kufi, 
+        Lick, Miku, MushroomCover, MushroomHat, PaperboyHat,
+        Ponytail, Rick, Sailor, Senku, ShadeHat, Short, SideSwept,
+        Smurf, Sombrero, Todoroki, Tokoyami, TopHat, Witch,
     }
 }

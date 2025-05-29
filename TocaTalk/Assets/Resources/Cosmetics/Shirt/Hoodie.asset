@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Hoodie
   m_EditorClassIdentifier: 
   Name: 
-  front: {fileID: 21300000, guid: 95568f396d73ced468d76cb5bbda3174, type: 3}
-  back: {fileID: 21300000, guid: 95568f396d73ced468d76cb5bbda3174, type: 3}
+  front: {fileID: 21300000, guid: ee273d4678d12e345b4f21630e4c3032, type: 3}
+  back: {fileID: 21300000, guid: 0c86b6aed776f244aafe69c36fff0537, type: 3}
   cost: 0
   isColored: 0
-  defaultColor: {r: 0.14773941, g: 0.25252506, b: 0.3773585, a: 0}
-  shirtType: 0
+  defaultColor: {r: 0.4811321, g: 0.12028302, b: 0.12028302, a: 1}
+  shirtType: 3

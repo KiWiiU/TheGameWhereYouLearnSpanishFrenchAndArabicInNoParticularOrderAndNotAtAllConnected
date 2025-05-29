@@ -7,13 +7,13 @@ public class ShirtCosmetic : CosmeticItem
     [SerializeField] private ShirtType shirtType;
     public ShirtType Type => shirtType;
     public enum ShirtType {
-        Hoodie, // 42
+        Guaybera, // 42
+        Hoodie,
         LongSleeve,
-        Pijamas,
-        Pullover,
-        Robe,
-        Striped,
+        Pollera,
+        Sweater,
         TShirt,
-        HalfShirt, // 49
+        Tanktop,
+        Waldo, // 49
     }
 }

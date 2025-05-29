@@ -7,6 +7,7 @@ public class CosmeticItem : ScriptableObject
     [SerializeField] string Name;
     [SerializeField] Sprite front;
     [SerializeField] Sprite back;
+    [SerializeField] AnimationClip animation;
     [SerializeField] double cost;
     [SerializeField] bool isColored;
     [SerializeField] Color defaultColor;
@@ -14,6 +15,7 @@ public class CosmeticItem : ScriptableObject
     public double Cost {get {return cost;}}
     public Sprite Front {get {return front;}}
     public Sprite Back {get {return back;}}
+    public AnimationClip Animation {get{return animation;}}
     public string GetName {get {return Name;}}
     public bool Colored {get {return isColored;}}
 
