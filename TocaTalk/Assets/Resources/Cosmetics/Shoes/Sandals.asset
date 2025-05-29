@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Socks & Sandals
   front: {fileID: 21300000, guid: b0ae86a0c27fef244b755f108cb6c6f6, type: 3}
   back: {fileID: 21300000, guid: b0ae86a0c27fef244b755f108cb6c6f6, type: 3}
+  animation: {fileID: 7400000, guid: f01e1597cf1e6e84c89f747983fa3b1a, type: 2}
   cost: 0
   isColored: 0
   defaultColor: {r: 0.3584906, g: 0.15986024, b: 0.05918476, a: 1}

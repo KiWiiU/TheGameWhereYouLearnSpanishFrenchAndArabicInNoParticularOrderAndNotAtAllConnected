@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Aunt
   m_EditorClassIdentifier: 
   _name: Aunt
-  _sprite: {fileID: 21300000, guid: cc5068f4a0a06fd4c849fa64c922be81, type: 3}
+  _sprite: {fileID: 21300000, guid: e78f9d79e0981614680348848f07e92d, type: 3}
