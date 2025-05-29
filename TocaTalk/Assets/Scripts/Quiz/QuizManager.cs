@@ -26,7 +26,6 @@ public class QuizManager : MonoBehaviour
     public int NumCorrect {get {return numCorrect;}}
     public int NumQuestions {get {return numQuestions;}}
 
-    public InputField RTLField;
     public TMP_InputField LTLField;
     public void Start() {
         questions = new();
@@ -41,13 +40,8 @@ public class QuizManager : MonoBehaviour
             this.questions.Enqueue(q);
         }
         
-        if(Holder.currentLanguage == 2) {
-            RTLField.gameObject.SetActive(true);
             LTLField.gameObject.SetActive(false);
-        } else {
             LTLField.gameObject.SetActive(true);
-            RTLField.gameObject.SetActive(false);
-        }
 
         currentQuestion = this.questions.Dequeue();
         numQuestions = questions.Length;
@@ -65,11 +59,7 @@ public class QuizManager : MonoBehaviour
         }
         Button[] buttons = obj.GetComponentsInChildren<Button>(true); 
         GameObject input = null;
-        if(Holder.currentLanguage == 2) {
-            input = RTLField.gameObject;
-        } else {
-            input = LTLField.gameObject;
-        }
+        input = LTLField.gameObject;
         if(currentQuestion.isMultipleChoice) {// if multiple choice  
             for(int i = 0; i < buttons.Length-1; i++) {
                 buttons[i].gameObject.SetActive(true);
@@ -116,17 +106,14 @@ public class QuizManager : MonoBehaviour
 
     public void AnswerTextQuiz() {
         string answer = null;
-        if(Holder.currentLanguage == 2) {
-            answer = RTLField.text;
-            RTLField.text = "";
-        } else {
-            answer = LTLField.text;
-            LTLField.text = "";
-        }
+        answer = LTLField.text;
+        LTLField.text = "";
 
         bool correct = false;
-        for(int i = 0; i < currentQuestion.correctAnswerTexts.Length; i++) {
-            if(answer.ToLower().Equals(currentQuestion.correctAnswerTexts[i].ToLower())) {
+        for (int i = 0; i < currentQuestion.correctAnswerTexts.Length; i++)
+        {
+            if (answer.ToLower().Equals(currentQuestion.correctAnswerTexts[i].ToLower()))
+            {
                 numCorrect++;
                 correct = true;
                 Debug.Log("Correct!");
