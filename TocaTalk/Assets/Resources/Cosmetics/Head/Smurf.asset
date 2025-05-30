@@ -15,5 +15,8 @@ MonoBehaviour:
   Name: 
   front: {fileID: 21300000, guid: 74d511eff51ac6a4989a43fe155e8b6c, type: 3}
   back: {fileID: 21300000, guid: 6b687735c2c98b44ea9a91083edb72dc, type: 3}
+  animation: {fileID: 0}
   cost: 0
+  isColored: 0
+  defaultColor: {r: 1, g: 1, b: 1, a: 0}
   type: 25

@@ -9,18 +9,15 @@ using System.Diagnostics;
 public class PlayerCosmetics : MonoBehaviour
 {
    
-    private GameObject input = null;
     private Animator animator = null;
-    private String pantsA;
-    private String shoesA;
+    private string pantsA;
+    private string shoesA;
    // private GameObject goshoe;
     Vector3 currentPos;
     
    
     void Start()
     {
-
-      
         SetAllPlayerCosmetics();
         SetPlayerColors();
         animator = GetComponent<Animator>();
@@ -43,7 +40,7 @@ public class PlayerCosmetics : MonoBehaviour
             if(Holder.currentCosmetics[i] != null) {
               
                 transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = Holder.currentCosmetics[i].Front;
-                print(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite);
+                // print(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite);
                 
                 
             }
@@ -52,13 +49,13 @@ public class PlayerCosmetics : MonoBehaviour
 
     public void SetPlayerColors() {
         // Indexes of children need to be correct (head, face, accessory, pants, shirt, shoes)
+        transform.GetComponent<SpriteRenderer>().color = Holder.skinColor;
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[0];
         transform.GetChild(1).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[1];
         transform.GetChild(2).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[2];
         transform.GetChild(3).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[3];
         transform.GetChild(4).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[4];
         transform.GetChild(5).GetComponent<SpriteRenderer>().color = Holder.currentCosmeticColors[5];
-        
     }
 
     public void SetPlayerCosmetic(int type) {
@@ -82,7 +79,7 @@ public class PlayerCosmetics : MonoBehaviour
                 //checking to see if there is animation 
                 if(Holder.currentCosmetics[i].Animation != null){
                     names = Holder.currentCosmetics[i].Animation;
-                    print(names.name);
+                    // print(names.name);
 
                        //checking the shoes and setting the animation into motion
                     if (names.name == "sneakers"){
@@ -105,9 +102,9 @@ public class PlayerCosmetics : MonoBehaviour
                         animator.SetFloat("jeans", 1f);
 
                     }else if(names.name == "sweatpants"){
-                        print("Sweat working");
+                        // print("Sweat working");
                         animator.SetFloat("sweatpants", 1f);
-                        print(animator.GetFloat("sweatpants"));
+                        // print(animator.GetFloat("sweatpants"));
 
                     }else if(names.name == "backSkirt"){
                         animator.SetFloat("skirt", 1f);  
@@ -139,10 +136,10 @@ public class PlayerCosmetics : MonoBehaviour
 
                     }else if(names.name == "sweatpants"){
                         
-                        print("Working?????");
+                        // print("Working?????");
                         animator.SetFloat("Dum", 1f);
                         pantsA = names.name;
-                        print("working working ??" + pantsA);
+                        // print("working working ??" + pantsA);
 
                     }else if(names.name == "backSkirt"){
                         animator.SetFloat("Dum", 2f);                       
@@ -163,7 +160,7 @@ public class PlayerCosmetics : MonoBehaviour
             if(Holder.currentCosmetics[i] != null) {
                 if(Holder.currentCosmetics[i].Animation != null){
                     names = Holder.currentCosmetics[i].Animation;
-                    print(names.name);
+                    // print(names.name);
                 
                      if (names.name == "sneakers"){
                         //um is the variable for shoes that set the kind of shoes
@@ -190,51 +187,72 @@ public class PlayerCosmetics : MonoBehaviour
         }
     }
 
-//setting the animation for either movement or idle if up arrow is pressed or let go
-    public void DirectionCosmetics(){
-        
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
+    //setting the animation for either movement or idle if up arrow is pressed or let go
+    public void DirectionCosmetics()
+    {
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            animator.speed = 1;
             SetAllPlayerBackCosmetics();
             //xVelocity is for the base animation. might actually do somethiing.
             animator.SetFloat("xVelocity", 1f);
             //makes the animations go
             SetAllPlayerAnimationCosmetics();
-           
-        }else if(Input.GetKeyUp(KeyCode.UpArrow)){
-            //idle base person
-           animator.SetFloat("xVelocity", 0f);
 
-            if(shoesA !=null){
+        }
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            //idle base person
+            animator.SetFloat("xVelocity", 0f);
+
+            if (shoesA != null)
+            {
                 //setting the animation to the idle stages
-                if(shoesA == "sneakers"){
+                if (shoesA == "sneakers")
+                {
                     animator.SetFloat("sneakers", 0f);
 
-                } else if(shoesA == "boots"){
+                }
+                else if (shoesA == "boots")
+                {
                     animator.SetFloat("boots", 0f);
 
-                }else if(shoesA == "heels"){
+                }
+                else if (shoesA == "heels")
+                {
                     animator.SetFloat("heels", 0f);
 
-                }else if(shoesA == "sandals"){
+                }
+                else if (shoesA == "sandals")
+                {
                     animator.SetFloat("sandals", 0f);
 
                 }
             }
-            if(pantsA !=null){
-                if(pantsA=="jeans"){
+            if (pantsA != null)
+            {
+                if (pantsA == "jeans")
+                {
                     //print("CHOERENT WORDS");
                     animator.SetFloat("jeans", 0f);
 
-                }else if(pantsA == "sweatpants"){
+                }
+                else if (pantsA == "sweatpants")
+                {
                     animator.SetFloat("sweatpants", 0f);
 
-                }else if(pantsA == "backSkirt"){
-                    animator.SetFloat("skirt", 0f);                        
+                }
+                else if (pantsA == "backSkirt")
+                {
+                    animator.SetFloat("skirt", 0f);
 
-                }else if(pantsA == "Shorts"){
+                }
+                else if (pantsA == "Shorts")
+                {
                     animator.SetFloat("shorts", 0f);
                 }
-           }
+            }
             //prob does something, don't feel like thinking about it rn
             SetAllPlayerCosmetics();
         }

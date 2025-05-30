@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: Hijab
   m_EditorClassIdentifier: 
-  Name: Head Scarf Alt.
+  Name: Hijab
   front: {fileID: 21300000, guid: 8cf7dd5f78a58724fa8e768466596640, type: 3}
   back: {fileID: 21300000, guid: e0f4e7bdce256c74381c0e863dfd10dd, type: 3}
+  animation: {fileID: 0}
   cost: 0
   isColored: 0
   defaultColor: {r: 0.09229262, g: 0.1296293, b: 0.3207547, a: 1}

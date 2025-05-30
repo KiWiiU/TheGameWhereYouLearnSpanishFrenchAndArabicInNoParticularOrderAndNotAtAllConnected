@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96458ce3bcaf9b941a506a0d9ac4d272, type: 3}
   m_Name: ShadeHat
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Shade Hat
   front: {fileID: 21300000, guid: c6d112c28e1610048bc6d8044aab64e7, type: 3}
   back: {fileID: 21300000, guid: d81df72b7c1149741851c524d444ac99, type: 3}
+  animation: {fileID: 0}
   cost: 0
   isColored: 0
   defaultColor: {r: 0.6320754, g: 0.25357592, b: 0.10435206, a: 1}
