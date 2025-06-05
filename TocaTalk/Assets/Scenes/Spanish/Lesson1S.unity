@@ -1800,6 +1800,71 @@ MonoBehaviour:
     npc: {fileID: 778017371}
   - sentences:
     - 'Mi hermano se llama Antonio. '
+    - "\xC9l es muy alto e inteligente.\r"
+    - "Mi hermana se llama Sof\xEDa. "
+    - "Ella es muy atl\xE9tica y divertida."
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFD\xF3nde est\xE1 el encendedor para las velas?"
+    - "(Where\u2019s the lighter for the candles?)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "Creo que est\xE1 arriba en el armario."
+    - "(I think it\u2019s upstairs in the closet)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFQu\xE9? No te oigo"
+    - "(What? I can\u2019t hear you.)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "Abuelo dijo el encendedor est\xE1 arriba en el armario"
+    - (Grandpa said the lighter is upstairs in the closet)
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1Gracias!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "[Singing]: Cumplea\xF1os feliz!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "[Singing]: Cumplea\xF1os feliz!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "[Singing]: Cumplea\xF1os a Juan!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "[Singing]: Cumplea\xF1os feliz!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Woooooooo!
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFTienes uno a\xF1o?"
+    - "\xBFTienes dos a\xF1os?"
+    - "\xBFTienes tres a\xF1os?"
+    - "\xBFTienes cuatro a\xF1os?"
+    - "\xBFTienes cinco a\xF1os?"
+    - "\xBFTienes seis a\xF1os?"
+    - "\xBFTienes siete a\xF1os?"
+    - "\xBFTienes ocho a\xF1os?"
+    - "\xBFTienes nueve a\xF1os?"
+    - "\xBFTienes diez a\xF1os?"
+    - "\xBFTienes once a\xF1os?"
+    - "\xBFTienes doce a\xF1os?"
+    - "\xBFTienes trece a\xF1os?"
+    - "\xBFTienes catorce a\xF1os?"
+    - "\xBFTienes quince a\xF1os?"
+    - "\xBFTienes diecis\xE9is a\xF1os?"
+    - "\xBFTienes diecisiete a\xF1os?"
+    - "\xBFTienes dieciocho a\xF1os?"
+    - "\xBFTienes diecinueve a\xF1os?"
+    - "\xBFTienes veinte a\xF1os?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1Si, tengo veinte a\xF1os!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1Feliz cumplea\xF1os!"
     npc: {fileID: 778017371}
   test:
   - question: what should you do?
@@ -1822,13 +1887,9 @@ MonoBehaviour:
     correctAnswerTexts: []
   secondDialogue:
   - sentences:
-    - Wow! I am that old!
-    - That is crazy!
-    - Don't you think that is crazy, moma?
-    npc: {fileID: 1767884916}
-  - sentences:
-    - That is absolutely insane.
-    - My deer.
+    - "\xA1Hola!"
+    - "\xA1Gracias!"
+    - "Este es mi amigo, Luis.\r"
     npc: {fileID: 778017371}
 --- !u!114 &1662897351
 MonoBehaviour:
