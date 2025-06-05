@@ -14,97 +14,124 @@ public class QuizManager : MonoBehaviour
     public GameObject obj; // Quiz parent game object
     private Queue<Question> questions;
     private bool isOpen;
+    public GameObject correctAnswer;
     public Animator animator;
     private int numCorrect; // number of questions the player got correct
     private int numQuestions;
     public event Action OnQuizEnd; // event to trigger when quiz ends
     private Question currentQuestion;
 
-        // Same structure as the DialogueManager
+    // Same structure as the DialogueManager
 
-    public bool IsOpen {get {return isOpen;}}
-    public int NumCorrect {get {return numCorrect;}}
-    public int NumQuestions {get {return numQuestions;}}
+    public bool IsOpen { get { return isOpen; } }
+    public int NumCorrect { get { return numCorrect; } }
+    public int NumQuestions { get { return numQuestions; } }
 
     public TMP_InputField LTLField;
-    public void Start() {
+    public void Start()
+    {
         questions = new();
         isOpen = false;
     }
-    public void StartQuiz(Question[] questions) {
+    public void StartQuiz(Question[] questions)
+    {
         numCorrect = 0;
         isOpen = true;
         animator.SetBool("isOpen", true);
         Holder.canPlayerMove = false;
-        foreach(Question q in questions) {
+        foreach (Question q in questions)
+        {
             this.questions.Enqueue(q);
         }
-        
-            LTLField.gameObject.SetActive(false);
-            LTLField.gameObject.SetActive(true);
 
+        LTLField.gameObject.SetActive(false);
+        LTLField.gameObject.SetActive(true);
         currentQuestion = this.questions.Dequeue();
         numQuestions = questions.Length;
         obj.GetComponent<Canvas>().enabled = true;
         UpdateUI();
     }
 
-    private void UpdateUI() {
+    private void UpdateUI()
+    {
         TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
-        if(Holder.currentLanguage == 2) {
-            questionText.text = ArabicFixer.Fix(currentQuestion.question);
-        }
-        else {
-            questionText.text = currentQuestion.question;
-        }
-        Button[] buttons = obj.GetComponentsInChildren<Button>(true); 
-        GameObject input = null;
-        input = LTLField.gameObject;
-        if(currentQuestion.isMultipleChoice) {// if multiple choice  
-            for(int i = 0; i < buttons.Length-1; i++) {
+        questionText.text = currentQuestion.question;
+        Button[] buttons = obj.GetComponentsInChildren<Button>(true);
+        
+        if (currentQuestion.isMultipleChoice)
+        {// if multiple choice  
+            for (int i = 0; i < buttons.Length - 1; i++)
+            {
                 buttons[i].gameObject.SetActive(true);
-                if(Holder.currentLanguage == 2) {
-                    buttons[i].GetComponentInChildren<TMP_Text>().text = ArabicFixer.Fix(currentQuestion.answers[i]);
-                }
-                else {
-                    buttons[i].GetComponentInChildren<TMP_Text>().text = currentQuestion.answers[i];
-                }
+                buttons[i].GetComponentInChildren<TMP_Text>().text = (char)(i+65) + ": " + currentQuestion.answers[i];
             }
-            buttons[buttons.Length-1].gameObject.SetActive(false);
-                input.SetActive(false);
+            buttons[buttons.Length - 1].gameObject.SetActive(false);
+            LTLField.gameObject.SetActive(false);
         }
-        else {
-            for(int i = 0; i < buttons.Length; i++) {
+        else
+        {
+            for (int i = 0; i < buttons.Length; i++)
+            {
                 buttons[i].gameObject.SetActive(false);
             }
-            buttons[buttons.Length-1].gameObject.SetActive(true);
-            input.SetActive(true);
+            buttons[buttons.Length - 1].gameObject.SetActive(true);
+            LTLField.gameObject.SetActive(true);
         }
-        
+        correctAnswer.SetActive(false);
     }
 
-    public void AnswerMCQuiz(int answer) {
-        if(answer == currentQuestion.correctAnswer) {
+    private void RemoveUI()
+    {
+        Button[] buttons = obj.GetComponentsInChildren<Button>(true);
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].gameObject.SetActive(false);
+        }
+            buttons[buttons.Length - 1].gameObject.SetActive(false);
+            LTLField.gameObject.SetActive(false);
+    }
+
+    public void AnswerQuiz(int answer)
+    {
+        if (currentQuestion.isMultipleChoice)
+        {
+            StartCoroutine(AnswerMCQuiz(answer));
+        }
+        else
+        {
+            StartCoroutine(AnswerTextQuiz());
+        }
+    }
+
+    public IEnumerator AnswerMCQuiz(int answer)
+    {
+        if (answer == currentQuestion.correctAnswer)
+        {
             numCorrect++;
             Debug.Log("Correct!");
         }
-        else {
-            if(Holder.currentPet != null) {
+        else
+        {
+            if (Holder.currentPet != null)
+            {
                 Holder.petHunger[(int)Holder.currentPet] -= 20f;
             }
-            Debug.Log("Incorrect!");
+            yield return StartCoroutine(ShowCorrectAnswer());
         }
-        if(questions.Count > 0) {
+        if (questions.Count > 0)
+        {
             currentQuestion = questions.Dequeue();
+            UpdateUI();
         }
-        else {
+        else
+        {
             StopAllCoroutines();
             StartCoroutine(StopQuiz());
         }
-        UpdateUI();
     }
 
-    public void AnswerTextQuiz() {
+    public IEnumerator AnswerTextQuiz()
+    {
         string answer = null;
         answer = LTLField.text;
         LTLField.text = "";
@@ -120,31 +147,38 @@ public class QuizManager : MonoBehaviour
                 break;
             }
         }
-        if(!correct) {
-            if(Holder.currentPet != null) {
+        if (!correct)
+        {
+            if (Holder.currentPet != null)
+            {
                 Holder.petHunger[(int)Holder.currentPet] -= 20f;
             }
-            Debug.Log("Incorrect!");
+            yield return StartCoroutine(ShowCorrectAnswer());
         }
 
 
-        if(questions.Count > 0) {
+        if (questions.Count > 0)
+        {
             currentQuestion = questions.Dequeue();
+            UpdateUI();
         }
-        else {
+        else
+        {
             StopAllCoroutines();
             StartCoroutine(StopQuiz());
         }
-        UpdateUI();
     }
 
-    public void OnEndEdit() { // if user presses enter within the input field, submit the text
-        if(Input.GetKeyDown(KeyCode.Return)) {
-            AnswerTextQuiz();
+    public void OnEndEdit()
+    { // if user presses enter within the input field, submit the text
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            StartCoroutine(AnswerTextQuiz());
         }
     }
 
-    private IEnumerator StopQuiz() {
+    private IEnumerator StopQuiz()
+    {
         // if(!isOpen) yield return null; // wait until the quiz is closed to continue
         EventSystem.current.SetSelectedGameObject(null); //deselect the buttons so the enter key does not activate the button after it closes
         isOpen = false;
@@ -153,5 +187,23 @@ public class QuizManager : MonoBehaviour
         obj.GetComponent<Canvas>().enabled = false;
         Holder.canPlayerMove = true;
         OnQuizEnd?.Invoke();
+    }
+
+    private IEnumerator ShowCorrectAnswer()
+    {
+        RemoveUI();
+        TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
+        questionText.text = "INCORRECT!";
+        if (currentQuestion.isMultipleChoice)
+        {
+            Button[] buttons = obj.GetComponentsInChildren<Button>(true);
+            correctAnswer.GetComponent<TMP_Text>().text = "Correct Answer:\n" + buttons[currentQuestion.correctAnswer].GetComponentInChildren<TMP_Text>().text;
+        }
+        else
+        {
+            correctAnswer.GetComponent<TMP_Text>().text = "Correct Answer:\n" + currentQuestion.correctAnswerTexts[0];
+        }
+        correctAnswer.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
     }
 }

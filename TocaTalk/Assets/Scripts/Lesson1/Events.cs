@@ -40,8 +40,9 @@ public class Events : MonoBehaviour
     public void TriggerEvent() {
         switch(++currentEvent) {
             case 1 : { // Trigger first dialogue
-                    dialogueObj.GetComponent<DialogueManager>().StartDialogue(firstDialogue);
-                    break;
+                quizManager.StartQuiz(test);
+                // dialogueObj.GetComponent<DialogueManager>().StartDialogue(firstDialogue);
+                break;
             }
             case 2 : { // Trigger quiz
                 quizManager.StartQuiz(test);
