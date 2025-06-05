@@ -1670,6 +1670,137 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1789974715}
   quizManager: {fileID: 516620498}
+  firstDialogue:
+  - sentences:
+    - "\xA1Hola Juan!"
+    - "\xA1Feliz cumplea\xF1os! "
+    npc: {fileID: 1767884916}
+  - sentences:
+    - "\xA1Hola!"
+    - "\xA1Gracias!"
+    - "Este es mi amigo, Luis.\r"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Hola Luis, me llamo [name].
+    - "\xBFComo estas?\r"
+    npc: {fileID: 1767884916}
+  - sentences:
+    - "\xBFBien, y tu?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - 'Estoy bien. '
+    - "\xA1Entra!"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Juan, ven aca.
+    - Necesito hablarte de algo.
+    npc: {fileID: 778017371}
+  - sentences:
+    - Ok, ya voy.
+    npc: {fileID: 778017371}
+  - sentences:
+    - '*You and Luis awkwardly stand around*'
+    npc: {fileID: 0}
+  - sentences:
+    - " \xBFSo, de donde eres?"
+    npc: {fileID: 0}
+  - sentences:
+    - "Nac\xED en Tijuana pero vivo en la Ciudad de M\xE9xico\r"
+    npc: {fileID: 0}
+  - sentences:
+    - "Yo nac\xED aqu\xED mi mam\xE1 es de Heroica Veracruz y mi pap\xE1 es de San
+      Luis Potos\xED"
+    npc: {fileID: 0}
+  - sentences:
+    - "Jaja, pensar\xEDas que yo ser\xEDa el de San Luis\r"
+    - "(Haha, you\u2019d think I\u2019d be the one from San Luis)"
+    npc: {fileID: 0}
+  - sentences:
+    - "\xA1Hola [name]!"
+    - Ah, y hola,
+    - "\xBFC\xF3mo te llamas?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Hola, me llamo Luis
+    - Soy amigo de Juan.
+    npc: {fileID: 0}
+  - sentences:
+    - "Esta es mi T\xEDa Ximena."
+    npc: {fileID: 0}
+  - sentences:
+    - "Esta es mi T\xEDa Ximena."
+    npc: {fileID: 0}
+  - sentences:
+    - "\xA1Y no te olvides de m\xED!"
+    - "(And don\u2019t forget about me!)"
+    npc: {fileID: 0}
+  - sentences:
+    - "Y este es mi T\xEDo Fernando."
+    - Son de Celaya.
+    npc: {fileID: 0}
+  - sentences:
+    - "\xA1Mucho gusto! (Nice to meet you)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1Mucho gusto! (Nice to meet you)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1Igual! (You too)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "Deber\xEDamos dirigirnos a la cocina, parece que est\xE1n preparando el pastel"
+    - "(We should head over to the kitchen, it looks like they\u2019re getting the
+      cake ready)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Ah, debes ser el amigo de Juan.
+    - "(Oh you must be Juan\u2019s friend)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1S\xED, soy yo! (Yup, that's me)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFLuis, verdad? (Luis, right?)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFLuis, verdad? "
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xA1S\xED!"
+    - "\xBFComo estan?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "Estamos bien, y t\xFA c\xF3mo est\xE1s?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "Tambi\xE9n me va bien."
+    - "(I\u2019m doing good as well)"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Estos son mis padres.
+    npc: {fileID: 778017371}
+  - sentences:
+    - Estos son mis padres.
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFTienes hermanos?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFTienes hermanos?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - "No, soy hijo/hija \xFAnico/\xFAnica. (only child)"
+    - "\xBFY tu?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - Tengo un hermano mayor y una hermana menor.
+    npc: {fileID: 778017371}
+  - sentences:
+    - "\xBFC\xF3mo se llaman?"
+    npc: {fileID: 778017371}
+  - sentences:
+    - 'Mi hermano se llama Antonio. '
+    npc: {fileID: 778017371}
   test:
   - question: what should you do?
     answers:
@@ -2053,11 +2184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.0463123
+      value: 7.3661
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52788997
+      value: -0.52871996
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z

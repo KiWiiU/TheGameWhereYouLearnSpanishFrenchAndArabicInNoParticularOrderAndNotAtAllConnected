@@ -8,6 +8,7 @@ public class Events : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public QuizManager quizManager;
+    public CharacterDialogue[] firstDialogue;
     public Question[] test;
     private int currentEvent;
 
@@ -39,8 +40,8 @@ public class Events : MonoBehaviour
     public void TriggerEvent() {
         switch(++currentEvent) {
             case 1 : { // Trigger first dialogue
-                dialogueObj.GetComponent<DialogueTrigger>().TriggerDialogue();
-                break;
+                    dialogueObj.GetComponent<DialogueManager>().StartDialogue(firstDialogue);
+                    break;
             }
             case 2 : { // Trigger quiz
                 quizManager.StartQuiz(test);
