@@ -56,7 +56,8 @@ public class DialogueManager : MonoBehaviour
         
         // Load the first character's sentences
         foreach(string sentence in currentDialogue.sentences) {
-            sentences.Enqueue(sentence);
+            string a = sentence.Replace("[name]", Holder.Name);
+            sentences.Enqueue(a);
         }
         
         DisplayNextSentence();
@@ -71,7 +72,8 @@ public class DialogueManager : MonoBehaviour
             // Load next character's dialogue
             currentDialogue = dialogues.Dequeue();
             foreach(string sentence in currentDialogue.sentences) {
-                sentences.Enqueue(sentence);
+                string a = sentence.Replace("[name]", Holder.Name);
+                sentences.Enqueue(a);
             }
         }
         if(Holder.currentLanguage == 2) {
@@ -82,6 +84,14 @@ public class DialogueManager : MonoBehaviour
         
         // crop the sprite so it just sees the head of the character
         avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
+        if (currentDialogue.npc.npc.Name == "") // Narrator
+        {
+            avatar.gameObject.SetActive(false);
+        }
+        else
+        {
+            avatar.gameObject.SetActive(true);
+        }
         currentSentence = sentences.Dequeue();
         StopAllCoroutines();
         if(Holder.currentLanguage == 2) {
