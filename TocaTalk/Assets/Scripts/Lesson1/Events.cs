@@ -8,11 +8,11 @@ public class Events : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public QuizManager quizManager;
-    public CharacterDialogue[] firstDialogue;
+    public DialogueList[] firstDialogue;
     public Question[] test;
     private int currentEvent;
 
-    public CharacterDialogue[] secondDialogue;
+    public DialogueList[] secondDialogue;
     private GameObject dialogueObj;
 
     private int playerScore;

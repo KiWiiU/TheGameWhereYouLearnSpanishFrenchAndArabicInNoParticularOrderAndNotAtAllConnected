@@ -181,6 +181,131 @@ Transform:
   m_Father: {fileID: 1271272120}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &67243496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67243497}
+  - component: {fileID: 67243500}
+  - component: {fileID: 67243499}
+  - component: {fileID: 67243498}
+  m_Layer: 0
+  m_Name: You
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &67243497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67243496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.9, y: 11.6, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &67243498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67243496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 8d8748ece8d82a34da1d44c5be2972fe, type: 2}
+--- !u!61 &67243499
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67243496}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &67243500
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67243496}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a0c081fa585184647a0cb41b35801f7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &145369655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1594,7 @@ Transform:
   - {fileID: 1767884912}
   - {fileID: 778017370}
   - {fileID: 2059767067}
+  - {fileID: 67243497}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1705,204 +1831,14 @@ MonoBehaviour:
   dialogueManager: {fileID: 1650625400}
   quizManager: {fileID: 516620498}
   firstDialogue:
-  - sentences:
-    - HELLO [name]!!! [name] [name]
-    npc: {fileID: 2059767068}
-  - sentences:
-    - "\xA1Hola Juan!"
-    - "\xA1Feliz cumplea\xF1os! "
-    npc: {fileID: 1767884916}
-  - sentences:
-    - "\xA1Hola!"
-    - "\xA1Gracias!"
-    - "Este es mi amigo, Luis.\r"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Hola Luis, me llamo [name].
-    - "\xBFComo estas?\r"
-    npc: {fileID: 1767884916}
-  - sentences:
-    - "\xBFBien, y tu?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - 'Estoy bien. '
-    - "\xA1Entra!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Juan, ven aca.
-    - Necesito hablarte de algo.
-    npc: {fileID: 778017371}
-  - sentences:
-    - Ok, ya voy.
-    npc: {fileID: 778017371}
-  - sentences:
-    - '*You and Luis awkwardly stand around*'
-    npc: {fileID: 0}
-  - sentences:
-    - " \xBFSo, de donde eres?"
-    npc: {fileID: 0}
-  - sentences:
-    - "Nac\xED en Tijuana pero vivo en la Ciudad de M\xE9xico\r"
-    npc: {fileID: 0}
-  - sentences:
-    - "Yo nac\xED aqu\xED mi mam\xE1 es de Heroica Veracruz y mi pap\xE1 es de San
-      Luis Potos\xED"
-    npc: {fileID: 0}
-  - sentences:
-    - "Jaja, pensar\xEDas que yo ser\xEDa el de San Luis\r"
-    - "(Haha, you\u2019d think I\u2019d be the one from San Luis)"
-    npc: {fileID: 0}
-  - sentences:
-    - "\xA1Hola [name]!"
-    - Ah, y hola,
-    - "\xBFC\xF3mo te llamas?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Hola, me llamo Luis
-    - Soy amigo de Juan.
-    npc: {fileID: 0}
-  - sentences:
-    - "Esta es mi T\xEDa Ximena."
-    npc: {fileID: 0}
-  - sentences:
-    - "Esta es mi T\xEDa Ximena."
-    npc: {fileID: 0}
-  - sentences:
-    - "\xA1Y no te olvides de m\xED!"
-    - "(And don\u2019t forget about me!)"
-    npc: {fileID: 0}
-  - sentences:
-    - "Y este es mi T\xEDo Fernando."
-    - Son de Celaya.
-    npc: {fileID: 0}
-  - sentences:
-    - "\xA1Mucho gusto! (Nice to meet you)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1Mucho gusto! (Nice to meet you)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1Igual! (You too)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "Deber\xEDamos dirigirnos a la cocina, parece que est\xE1n preparando el pastel"
-    - "(We should head over to the kitchen, it looks like they\u2019re getting the
-      cake ready)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Ah, debes ser el amigo de Juan.
-    - "(Oh you must be Juan\u2019s friend)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1S\xED, soy yo! (Yup, that's me)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFLuis, verdad? (Luis, right?)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFLuis, verdad? "
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1S\xED!"
-    - "\xBFComo estan?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "Estamos bien, y t\xFA c\xF3mo est\xE1s?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "Tambi\xE9n me va bien."
-    - "(I\u2019m doing good as well)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Estos son mis padres.
-    npc: {fileID: 778017371}
-  - sentences:
-    - Estos son mis padres.
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFTienes hermanos?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFTienes hermanos?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "No, soy hijo/hija \xFAnico/\xFAnica. (only child)"
-    - "\xBFY tu?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Tengo un hermano mayor y una hermana menor.
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFC\xF3mo se llaman?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - 'Mi hermano se llama Antonio. '
-    - "\xC9l es muy alto e inteligente.\r"
-    - "Mi hermana se llama Sof\xEDa. "
-    - "Ella es muy atl\xE9tica y divertida."
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFD\xF3nde est\xE1 el encendedor para las velas?"
-    - "(Where\u2019s the lighter for the candles?)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "Creo que est\xE1 arriba en el armario."
-    - "(I think it\u2019s upstairs in the closet)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFQu\xE9? No te oigo"
-    - "(What? I can\u2019t hear you.)"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "Abuelo dijo el encendedor est\xE1 arriba en el armario"
-    - (Grandpa said the lighter is upstairs in the closet)
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1Gracias!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "[Singing]: Cumplea\xF1os feliz!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "[Singing]: Cumplea\xF1os feliz!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "[Singing]: Cumplea\xF1os a Juan!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "[Singing]: Cumplea\xF1os feliz!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - Woooooooo!
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xBFTienes uno a\xF1o?"
-    - "\xBFTienes dos a\xF1os?"
-    - "\xBFTienes tres a\xF1os?"
-    - "\xBFTienes cuatro a\xF1os?"
-    - "\xBFTienes cinco a\xF1os?"
-    - "\xBFTienes seis a\xF1os?"
-    - "\xBFTienes siete a\xF1os?"
-    - "\xBFTienes ocho a\xF1os?"
-    - "\xBFTienes nueve a\xF1os?"
-    - "\xBFTienes diez a\xF1os?"
-    - "\xBFTienes once a\xF1os?"
-    - "\xBFTienes doce a\xF1os?"
-    - "\xBFTienes trece a\xF1os?"
-    - "\xBFTienes catorce a\xF1os?"
-    - "\xBFTienes quince a\xF1os?"
-    - "\xBFTienes diecis\xE9is a\xF1os?"
-    - "\xBFTienes diecisiete a\xF1os?"
-    - "\xBFTienes dieciocho a\xF1os?"
-    - "\xBFTienes diecinueve a\xF1os?"
-    - "\xBFTienes veinte a\xF1os?"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1Si, tengo veinte a\xF1os!"
-    npc: {fileID: 778017371}
-  - sentences:
-    - "\xA1Feliz cumplea\xF1os!"
-    npc: {fileID: 778017371}
+  - dialogues:
+    - sentence: My name is [name].
+      npc: {fileID: 67243498}
+    - sentence: Die
+      npc: {fileID: 2059767068}
+  - dialogues:
+    - sentence: fshdjf
+      npc: {fileID: 1767884916}
   test:
   - question: what should you do?
     answers:
@@ -1923,11 +1859,9 @@ MonoBehaviour:
     isMultipleChoice: 1
     correctAnswerTexts: []
   secondDialogue:
-  - sentences:
-    - "\xA1Hola!"
-    - "\xA1Gracias!"
-    - "Este es mi amigo, Luis.\r"
-    npc: {fileID: 778017371}
+  - dialogues:
+    - sentence: hfjksdhfk
+      npc: {fileID: 2059767068}
 --- !u!114 &1662897351
 MonoBehaviour:
   m_ObjectHideFlags: 0

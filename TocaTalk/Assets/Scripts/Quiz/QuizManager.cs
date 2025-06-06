@@ -54,6 +54,7 @@ public class QuizManager : MonoBehaviour
 
     private void UpdateUI()
     {
+        obj.transform.GetChild(0).Find("bg").GetComponent<Image>().color = new Color(33f / 255f, 93f / 255f, 142f / 255f); // blue bg
         TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
         questionText.text = currentQuestion.question;
         Button[] buttons = obj.GetComponentsInChildren<Button>(true);
@@ -192,6 +193,7 @@ public class QuizManager : MonoBehaviour
     private IEnumerator ShowCorrectAnswer()
     {
         RemoveUI();
+        obj.transform.GetChild(0).Find("bg").GetComponent<Image>().color = new Color(132f / 255f, 17f / 255f, 0f); // red color bg
         TMP_Text questionText = obj.GetComponentInChildren<TMPro.TMP_Text>();
         questionText.text = "INCORRECT!";
         if (currentQuestion.isMultipleChoice)

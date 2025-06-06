@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CharacterDialogue 
+public class DialogueList
 {
-    [TextArea(3, 10)]
-    public string sentence;
-    public NPC npc;
-
+    public CharacterDialogue[] dialogues;
 }

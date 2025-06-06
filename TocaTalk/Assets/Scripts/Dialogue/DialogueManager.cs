@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     public bool IsOpen {get {return isOpen;}}
 
     // dialogues is an array of dialogues that characters have in order
-    public void StartDialogue(CharacterDialogue[] dialogues) {
+    public void StartDialogue(DialogueList[] dialogues) {
         animator.SetBool("isOpen", true);
         Holder.canPlayerMove = false;
         isOpen = true;
@@ -38,16 +38,17 @@ public class DialogueManager : MonoBehaviour
         LTLdialogueText.gameObject.SetActive(true);
 
         sentences.Clear();
-        foreach(CharacterDialogue a in dialogues) {
-            this.dialogues.Enqueue(a);
+        foreach(DialogueList a in dialogues) {
+            for (int i = 0; i < a.dialogues.Length; i++)
+            {
+                this.dialogues.Enqueue(a.dialogues[i]);
+            }
         }
         currentDialogue = this.dialogues.Dequeue();
         
         // Load the first character's sentences
-        foreach(string sentence in currentDialogue.sentences) {
-            string a = sentence.Replace("[name]", Holder.Name);
-            sentences.Enqueue(a);
-        }
+        string sentence = currentDialogue.sentence.Replace("[name]", Holder.Name);
+        sentences.Enqueue(sentence);
         
         DisplayNextSentence();
     }
@@ -60,15 +61,12 @@ public class DialogueManager : MonoBehaviour
             }
             // Load next character's dialogue
             currentDialogue = dialogues.Dequeue();
-            foreach(string sentence in currentDialogue.sentences) {
-                string a = sentence.Replace("[name]", Holder.Name);
-                sentences.Enqueue(a);
-            }
+            string a = currentDialogue.sentence.Replace("[name]", Holder.Name);
+            sentences.Enqueue(a);
         }
         nameText.text = currentDialogue.npc.npc.Name;
-
         // crop the sprite so it just sees the head of the character
-        if (currentDialogue.npc.npc.Name == "") // Narrator
+        if (currentDialogue.npc.npc.Name == "" || currentDialogue.npc.npc.Name == "You") // Narrator
         {
             avatar.gameObject.SetActive(false);
             dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(false);
