@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 public class Events : MonoBehaviour
 {
 
-    public DialogueManager dialogueManager;
+    public DialogueManager dm;
     public QuizManager quizManager;
     public DialogueList[] firstDialogue;
     public Question[] test;
     private int currentEvent;
-
-    public DialogueList[] secondDialogue;
     private GameObject dialogueObj;
 
     private int playerScore;
@@ -22,10 +20,47 @@ public class Events : MonoBehaviour
         playerScore = 0;
         totalScore = 0;
         currentEvent = 0;
-        dialogueManager.OnDialogueEnd += OnDialogueEnd;
-        quizManager.OnQuizEnd += OnQuizEnd;
+        // dm.OnDialogueEnd += OnDialogueEnd;
+        // quizManager.OnQuizEnd += OnQuizEnd;
         dialogueObj = GameObject.FindWithTag("Dialogue");
     }
+
+    public void doThing(bool mode)
+    {
+        int q = 0, d = 0;
+        if (mode)
+            while (true)
+            {
+                if (q >= test.Length && d >= firstDialogue.Length)
+                    break;
+                if (d < firstDialogue.Length)
+                    dm.StartDialogue(firstDialogue[d..d+1]);
+                if (q < test.Length)
+                    quizManager.StartQuiz(test[q..q+1]);
+                playerScore += quizManager.NumCorrect;
+                totalScore += quizManager.NumQuestions;
+                q++;
+                d++;
+            }
+        else
+        {
+            while (true)
+            {
+                if (q >= test.Length && d >= firstDialogue.Length)
+                    break;
+                if (q < test.Length)
+                    quizManager.StartQuiz(test[q..q+1]);
+                if (d < firstDialogue.Length)
+                    dm.StartDialogue(firstDialogue[d..d+1]);
+                playerScore += quizManager.NumCorrect;
+                totalScore += quizManager.NumQuestions;
+                q++;
+                d++;
+            }
+        }
+    }
+
+    /*
 
     private void OnQuizEnd() {
         playerScore += quizManager.NumCorrect;
@@ -61,5 +96,6 @@ public class Events : MonoBehaviour
             }
         }
     }
+    */
 
 }

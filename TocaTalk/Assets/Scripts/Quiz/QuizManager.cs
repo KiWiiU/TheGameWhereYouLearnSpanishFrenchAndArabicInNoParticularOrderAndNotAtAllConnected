@@ -7,7 +7,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using ArabicSupport;
 
 public class QuizManager : MonoBehaviour
 {
