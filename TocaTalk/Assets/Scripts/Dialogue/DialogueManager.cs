@@ -5,16 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using ArabicSupport;
-using UPersian.Components;
-using UPersian.Utils;
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
 
-
+    public GameObject dialogueBox;
     public TMP_Text LTLdialogueText;
-    public RtlText RTLdialogueText;
     public Image avatar;
     private Queue<CharacterDialogue> dialogues;
     private Queue<string> sentences;
@@ -39,14 +35,7 @@ public class DialogueManager : MonoBehaviour
         Holder.canPlayerMove = false;
         isOpen = true;
         this.dialogues.Clear();
-
-        if(Holder.currentLanguage == 2) {
-            RTLdialogueText.gameObject.SetActive(true);
-            LTLdialogueText.gameObject.SetActive(false);
-        } else {
-            RTLdialogueText.gameObject.SetActive(false);
-            LTLdialogueText.gameObject.SetActive(true);
-        }
+        LTLdialogueText.gameObject.SetActive(true);
 
         sentences.Clear();
         foreach(CharacterDialogue a in dialogues) {
@@ -76,29 +65,23 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(a);
             }
         }
-        if(Holder.currentLanguage == 2) {
-            nameText.text = currentDialogue.npc.npc.Name.RtlFix();
-        } else {
-            nameText.text = currentDialogue.npc.npc.Name;
-        }
-        
+        nameText.text = currentDialogue.npc.npc.Name;
+
         // crop the sprite so it just sees the head of the character
-        avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
         if (currentDialogue.npc.npc.Name == "") // Narrator
         {
             avatar.gameObject.SetActive(false);
+            dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(false);
         }
         else
         {
             avatar.gameObject.SetActive(true);
+            dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(true);
+            avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
         }
         currentSentence = sentences.Dequeue();
         StopAllCoroutines();
-        if(Holder.currentLanguage == 2) {
-            RTLdialogueText.text = currentSentence;
-        } else {
-            StartCoroutine(Type());
-        }
+        StartCoroutine(Type());
     }
 
 
@@ -113,11 +96,7 @@ public class DialogueManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return) && isOpen) {
             if(typingText) { // skip dialogue if still typing
                 StopAllCoroutines();
-                if(Holder.currentLanguage == 2) {
-                    RTLdialogueText.text = currentSentence;
-                } else {
-                    LTLdialogueText.text = currentSentence;
-                }
+                LTLdialogueText.text = currentSentence;
                 typingText = false;
             } else {
                 DisplayNextSentence();
