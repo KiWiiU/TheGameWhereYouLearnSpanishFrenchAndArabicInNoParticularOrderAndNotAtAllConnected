@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.Jobs;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -32,15 +30,18 @@ public class QuizManager : MonoBehaviour
         questions = new();
         isOpen = false;
     }
-    public void StartQuiz(Question[] questions)
+    public void StartQuiz(QuestionList[] questions)
     {
         numCorrect = 0;
         isOpen = true;
         animator.SetBool("isOpen", true);
         Holder.canPlayerMove = false;
-        foreach (Question q in questions)
+        foreach (QuestionList list in questions)
         {
-            this.questions.Enqueue(q);
+            for (int i = 0; i < list.questions.Length; i++)
+            {
+                this.questions.Enqueue(list.questions[i]);
+            }
         }
 
         LTLField.gameObject.SetActive(false);

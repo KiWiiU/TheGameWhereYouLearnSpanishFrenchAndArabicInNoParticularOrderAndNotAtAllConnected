@@ -1709,24 +1709,31 @@ MonoBehaviour:
     - sentence: Goodbye.
       npc: {fileID: 778017371}
   test:
-  - question: what should you do?
-    answers:
-    - 
-    correctAnswer: 0
-    isMultipleChoice: 0
-    correctAnswerTexts:
-    - get out
-    - run away
-    - perish
-  - question: and when should you do it?
-    answers:
-    - NOW
-    - at some point , idk
-    - do what sorry?
-    - in 20 minutes give or take
-    correctAnswer: 0
-    isMultipleChoice: 1
-    correctAnswerTexts: []
+  - questions:
+    - question: This is the first question
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - nope
+      - yep
+    - question: This is the second question in the first chunk.
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - nope
+      - yep
+  - questions:
+    - question: Second question
+      answers:
+      - AHHHHHHHHHH!!!!!
+      - NOOOOOOOOOOOOOOOO!!!!!
+      - :(((
+      - fjsdkflsdjfsdfsdf
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts: []
 --- !u!114 &1662897351
 MonoBehaviour:
   m_ObjectHideFlags: 0
