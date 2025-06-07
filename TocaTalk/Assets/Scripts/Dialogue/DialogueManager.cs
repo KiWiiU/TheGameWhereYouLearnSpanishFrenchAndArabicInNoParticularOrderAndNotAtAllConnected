@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour
 
 
 
-    void EndDialogue() {
+    public void EndDialogue() {
        animator.SetBool("isOpen", false);
        isOpen = false;
        Holder.canPlayerMove = true;

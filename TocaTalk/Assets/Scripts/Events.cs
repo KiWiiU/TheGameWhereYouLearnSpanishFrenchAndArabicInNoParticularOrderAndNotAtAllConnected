@@ -74,10 +74,11 @@ public class Events : MonoBehaviour
 
     public IEnumerator NextEvent()
     {
+        print(currentlyOpen);
         if (currentlyOpen)
         {
-            yield return new WaitUntil(() => !currentlyOpen); // wait until its not currently open
-            yield return new WaitForSeconds(1f); // wait a little bit after ready to make it seem less rigid
+            print("abort attempted next event");
+            yield break;
         }
         if (eventQueue.Count == 0)
         {
@@ -98,7 +99,6 @@ public class Events : MonoBehaviour
         {
             StartCoroutine(EndLesson());
         }
-        currentlyOpen = false;
     }
 
 
@@ -112,11 +112,13 @@ public class Events : MonoBehaviour
     {
         playerScore += qm.NumCorrect;
         totalScore += qm.NumQuestions;
+        currentlyOpen = false;
         StartCoroutine(NextEvent());
     }
 
     private void OnDialogueEnd()
     {
+        currentlyOpen = false;
         StartCoroutine(NextEvent());
     }
 
