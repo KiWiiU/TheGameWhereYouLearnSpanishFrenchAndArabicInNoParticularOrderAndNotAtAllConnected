@@ -30,24 +30,21 @@ public class QuizManager : MonoBehaviour
         questions = new();
         isOpen = false;
     }
-    public void StartQuiz(QuestionList[] questions)
+    public void StartQuiz(QuestionList questions)
     {
         numCorrect = 0;
         isOpen = true;
         animator.SetBool("isOpen", true);
         Holder.canPlayerMove = false;
-        foreach (QuestionList list in questions)
+        foreach (Question question in questions.questions)
         {
-            for (int i = 0; i < list.questions.Length; i++)
-            {
-                this.questions.Enqueue(list.questions[i]);
-            }
+            this.questions.Enqueue(question);
         }
 
         LTLField.gameObject.SetActive(false);
         LTLField.gameObject.SetActive(true);
         currentQuestion = this.questions.Dequeue();
-        numQuestions = questions.Length;
+        numQuestions = questions.questions.Length;
         obj.GetComponent<Canvas>().enabled = true;
         UpdateUI();
     }

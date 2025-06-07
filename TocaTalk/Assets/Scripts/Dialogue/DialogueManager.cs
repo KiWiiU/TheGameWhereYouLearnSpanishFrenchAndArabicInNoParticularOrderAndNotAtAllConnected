@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     public bool IsOpen {get {return isOpen;}}
 
     // dialogues is an array of dialogues that characters have in order
-    public void StartDialogue(DialogueList[] dialogues) {
+    public void StartDialogue(DialogueList dialogues) {
         animator.SetBool("isOpen", true);
         Holder.canPlayerMove = false;
         isOpen = true;
@@ -38,11 +38,8 @@ public class DialogueManager : MonoBehaviour
         LTLdialogueText.gameObject.SetActive(true);
 
         sentences.Clear();
-        foreach(DialogueList a in dialogues) {
-            for (int i = 0; i < a.dialogues.Length; i++)
-            {
-                this.dialogues.Enqueue(a.dialogues[i]);
-            }
+        foreach(CharacterDialogue a in dialogues.dialogues) {
+            this.dialogues.Enqueue(a);
         }
         currentDialogue = this.dialogues.Dequeue();
         

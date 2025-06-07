@@ -830,11 +830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.39
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1011,6 +1011,152 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 340e7181e7fa8324391ec780416f768c, type: 2}
+--- !u!1 &815360393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815360396}
+  - component: {fileID: 815360395}
+  - component: {fileID: 815360394}
+  m_Layer: 0
+  m_Name: Doorbell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &815360394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815360393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9c742e6f662444c83aef7e8ee107f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogues:
+    - sentence: '*Riiiiiiiiiing*'
+      npc: {fileID: 2059767068}
+  trigger: {fileID: 857328669}
+--- !u!82 &815360395
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815360393}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2ab05b459df8d0f448ace98f94a3e48f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &815360396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815360393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.4, y: 1.12, z: -0.7296777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &828876782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,6 +1256,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1162163f2389d341a740b85f53e6ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogues:
+  - dialogues:
+    - sentence: My name [name]
+      npc: {fileID: 67243498}
+    - sentence: My name [Jeff]
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: you liar my name is jeff.
+      npc: {fileID: 778017371}
+  questions:
+  - questions:
+    - question: Do you like Jeff?
+      answers:
+      - Yes.
+      - No.
+      - MY NAME JEFFF
+      - my name isnt jeff :(
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  npc: {fileID: 1767884910}
 --- !u!61 &857328669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1117,13 +1284,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857328667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.311634, y: -3.618017}
+  m_Offset: {x: 9.90972, y: 2.2101448}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1134,7 +1301,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.6255455, y: 8.46454}
+  m_Size: {x: 4.4464855, y: 6.2259088}
   m_EdgeRadius: 0
 --- !u!4 &857328670
 Transform:
@@ -1625,9 +1792,9 @@ GameObject:
   - component: {fileID: 1662897349}
   - component: {fileID: 1662897348}
   - component: {fileID: 1662897347}
-  - component: {fileID: 1662897350}
   - component: {fileID: 1662897351}
   - component: {fileID: 1662897352}
+  - component: {fileID: 1662897353}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: GameController
@@ -1685,55 +1852,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662897350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662897346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f38a6d97275fa4daa3fd848e2bf3dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dm: {fileID: 1650625400}
-  quizManager: {fileID: 516620498}
-  dialogue:
-  - dialogues:
-    - sentence: My name is JEFF!!!
-      npc: {fileID: 1767884916}
-    - sentence: My name is [name] [name]!!!!
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: Goodbye.
-      npc: {fileID: 778017371}
-  test:
-  - questions:
-    - question: This is the first question
-      answers: []
-      correctAnswer: 0
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - nope
-      - yep
-    - question: This is the second question in the first chunk.
-      answers: []
-      correctAnswer: 0
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - nope
-      - yep
-  - questions:
-    - question: Second question
-      answers:
-      - AHHHHHHHHHH!!!!!
-      - NOOOOOOOOOOOOOOOO!!!!!
-      - :(((
-      - fjsdkflsdjfsdfsdf
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts: []
 --- !u!114 &1662897351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,6 +1876,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946ddcc0fba455b4bba27b304ac43f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1662897353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662897346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1c26a69cda18545938823bbf32bd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 1650625400}
+  qm: {fileID: 516620498}
 --- !u!1 &1767884910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,7 +1908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1767884911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1837,7 +1969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767884910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.8039284, y: -6.866203, z: 0.06548391}
+  m_LocalPosition: {x: 11.14, y: 0.61, z: 0.06548391}
   m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2141,11 +2273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.39
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2202,11 +2334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.372527
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52873
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z
