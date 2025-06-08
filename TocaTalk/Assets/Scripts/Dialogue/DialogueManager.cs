@@ -50,9 +50,12 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence() {
-        if(sentences.Count == 0) {
-            if(dialogues.Count == 0) {
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0)
+        {
+            if (dialogues.Count == 0)
+            {
                 EndDialogue();
                 return;
             }
@@ -92,6 +95,8 @@ public class DialogueManager : MonoBehaviour
             if(typingText) { // skip dialogue if still typing
                 StopAllCoroutines();
                 LTLdialogueText.text = currentSentence;
+                LTLdialogueText.ForceMeshUpdate();
+                LayoutRebuilder.ForceRebuildLayoutImmediate(LTLdialogueText.rectTransform);
                 typingText = false;
             } else {
                 DisplayNextSentence();
@@ -104,7 +109,11 @@ public class DialogueManager : MonoBehaviour
         LTLdialogueText.text = "";
         foreach(char letter in currentSentence.ToCharArray()) {
             LTLdialogueText.text += letter;
-            if(!letter.Equals(" "))
+            Canvas.ForceUpdateCanvases();  // 🧠 This is the secret sauce <= Chatgpt message
+            LTLdialogueText.ForceMeshUpdate();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(LTLdialogueText.rectTransform);
+            yield return null;
+            if (!letter.Equals(" "))
                 yield return new WaitForSeconds(0.075f);
         }
         typingText = false;
