@@ -38,11 +38,7 @@ public class PlayerCosmetics : MonoBehaviour
     public void SetAllPlayerCosmetics() {
         for(int i = 0; i < Enum.GetNames(typeof(CosmeticItem.CosmeticType)).Length;i++) {
             if(Holder.currentCosmetics[i] != null) {
-              
                 transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = Holder.currentCosmetics[i].Front;
-                // print(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite);
-                
-                
             }
         }
     }

@@ -74,10 +74,8 @@ public class Events : MonoBehaviour
 
     public IEnumerator NextEvent()
     {
-        print(currentlyOpen);
-        if (currentlyOpen)
+        if (currentlyOpen) // abort if already going through queue or if queue is empty
         {
-            print("abort attempted next event");
             yield break;
         }
         if (eventQueue.Count == 0)
@@ -127,8 +125,6 @@ public class Events : MonoBehaviour
         yield return new WaitForSeconds(2f);
         if ((double)playerScore / totalScore >= .8)
             Holder.progress(1);
-        else
-            Debug.Log("Player has failed the lesson.");
         GetComponent<SceneSwap>().SwapScene("Lessons");
     }
 

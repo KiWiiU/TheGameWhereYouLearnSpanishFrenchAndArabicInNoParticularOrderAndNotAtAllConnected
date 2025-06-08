@@ -6,7 +6,8 @@ public class Trigger : MonoBehaviour
 {
     public DialogueList[] dialogues;
     public QuestionList[] questions;
-    public GameObject npc;
+    public GameObject luisNPC;
+    public GameObject cousinNPC;
     Events eventManager;
     // When player walks into trigger, it triggers the events of the level
 
@@ -18,11 +19,17 @@ public class Trigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            npc.SetActive(true);
-            eventManager.EnqueuePingPong(dialogues, questions); // dialogue first because its put in first
-            eventManager.EnqueueEndLesson();
-            StartCoroutine(eventManager.NextEvent());
-            Destroy(this);
+            StartCoroutine(HandleTrigger());
         }
+    }
+
+    public IEnumerator HandleTrigger()
+    {
+        luisNPC.SetActive(true);
+        cousinNPC.SetActive(true);
+        eventManager.EnqueuePingPong(questions, dialogues); // questions first because its put in first
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(eventManager.NextEvent());
+        Destroy(this);
     }
 }

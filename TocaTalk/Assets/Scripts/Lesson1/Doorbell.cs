@@ -19,7 +19,7 @@ public class Doorbell : MonoBehaviour
     }
     public IEnumerator Ring()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         AudioSource music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         music.Pause();
         sound.Play();

@@ -70,7 +70,10 @@ public class PauseMenu : MonoBehaviour
 
     public void ChangeVolume(float volume) {
         Holder.volume = volume;
-        GameObject.FindWithTag("Music").GetComponent<AudioSource>().volume = volume;
+        foreach (AudioSource a in FindObjectsOfType<AudioSource>())
+        {
+            a.volume = volume;
+        }
     }
 
 }

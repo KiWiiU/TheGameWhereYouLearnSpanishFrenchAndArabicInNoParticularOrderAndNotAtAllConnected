@@ -106,7 +106,6 @@ public class QuizManager : MonoBehaviour
         if (answer == currentQuestion.correctAnswer)
         {
             numCorrect++;
-            Debug.Log("Correct!");
         }
         else
         {
@@ -141,7 +140,6 @@ public class QuizManager : MonoBehaviour
             {
                 numCorrect++;
                 correct = true;
-                Debug.Log("Correct!");
                 break;
             }
         }
