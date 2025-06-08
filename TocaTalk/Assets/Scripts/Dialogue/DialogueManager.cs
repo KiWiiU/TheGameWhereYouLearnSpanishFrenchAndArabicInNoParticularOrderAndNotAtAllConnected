@@ -66,7 +66,7 @@ public class DialogueManager : MonoBehaviour
         }
         nameText.text = currentDialogue.npc.npc.Name;
         // crop the sprite so it just sees the head of the character
-        if (currentDialogue.npc.npc.Name == "" || currentDialogue.npc.npc.Name == "You") // Narrator or Player
+        if (currentDialogue.npc.npc.Name == "" || currentDialogue.npc.npc.Name == "You" || currentDialogue.npc.npc.Name == "Everyone") // Narrator or Player
         {
             avatar.gameObject.SetActive(false);
             dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(false);

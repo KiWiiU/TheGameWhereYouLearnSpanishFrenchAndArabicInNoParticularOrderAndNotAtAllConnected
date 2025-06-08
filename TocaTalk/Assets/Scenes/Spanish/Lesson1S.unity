@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -765,6 +765,131 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.013691, y: 5.1588097}
   m_EdgeRadius: 0
+--- !u!1 &444733965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444733966}
+  - component: {fileID: 444733969}
+  - component: {fileID: 444733968}
+  - component: {fileID: 444733967}
+  m_Layer: 0
+  m_Name: Everyone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444733966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444733965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.9, y: 11.6, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444733967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444733965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 87679f7ab6337b648b3f7d5462ddf952, type: 2}
+--- !u!61 &444733968
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444733965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &444733969
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444733965}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a0c081fa585184647a0cb41b35801f7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &500888835
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +959,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bd9767ffff3c649a4ecf026c6735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &589440543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589440544}
+  - component: {fileID: 589440547}
+  - component: {fileID: 589440546}
+  - component: {fileID: 589440545}
+  m_Layer: 0
+  m_Name: Dad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &589440544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589440543}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.74, y: -7.99, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589440545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589440543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: b6523edcaefd552468ad678e20c1f013, type: 2}
+--- !u!61 &589440546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589440543}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &589440547
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589440543}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &617672303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
@@ -897,6 +1147,131 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6512947, y: 17.820961}
   m_EdgeRadius: 0
+--- !u!1 &678118007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678118008}
+  - component: {fileID: 678118011}
+  - component: {fileID: 678118010}
+  - component: {fileID: 678118009}
+  m_Layer: 0
+  m_Name: Grandma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678118008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678118007}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -22.01, y: -1.56, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678118009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678118007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: fb6b39957158a084b9e08846e241420b, type: 2}
+--- !u!61 &678118010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678118007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &678118011
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678118007}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &749846873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,6 +1494,131 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 340e7181e7fa8324391ec780416f768c, type: 2}
+--- !u!1 &787921336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787921337}
+  - component: {fileID: 787921340}
+  - component: {fileID: 787921339}
+  - component: {fileID: 787921338}
+  m_Layer: 0
+  m_Name: Mom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787921337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787921336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.53, y: -7.99, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787921338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787921336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: d95a613e0fc74fe4aabb5f09ca6435ee, type: 2}
+--- !u!61 &787921339
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787921336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &787921340
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787921336}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &815360393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1896,200 @@ MonoBehaviour:
 
 '
       npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: '*You and Luis awkwardly stand around*'
+      npc: {fileID: 2059767068}
+  - dialogues:
+    - sentence: "\xBFSo, de donde eres?"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "Nac\xED en Tijuana pero vivo en la Ciudad de M\xE9xico"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Nac\xED aqu\xED. Mi mam\xE1 es de Heroica Veracruz y mi pap\xE1
+        es de San Luis Potos\xED"
+      npc: {fileID: 67243498}
+    - sentence: "Jaja, pensar\xEDas que yo ser\xEDa el de San Luis"
+      npc: {fileID: 918745520}
+    - sentence: "(Haha, you\u2019d think I\u2019d be the one from San Luis)"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xA1Hola [name]! Ah, y hola, \xBFc\xF3mo te llamas?"
+      npc: {fileID: 778017371}
+  - dialogues:
+    - sentence: Hola, me llamo Luis
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: Soy amigo de Juan
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Esta es mi T\xEDa Ximena."
+      npc: {fileID: 67243498}
+    - sentence: "\xA1Y no te olvides de m\xED!"
+      npc: {fileID: 921638171}
+    - sentence: "(And don\u2019t forget about me!)"
+      npc: {fileID: 921638171}
+  - dialogues:
+    - sentence: "Y este es mi T\xEDo Fernando."
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: Son de Celaya
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xA1Mucho gusto!"
+      npc: {fileID: 921638171}
+  - dialogues:
+    - sentence: "\xA1Igual!"
+      npc: {fileID: 918745520}
+    - sentence: "Deber\xEDamos dirigirnos a la cocina, parece que est\xE1n preparando
+        el pastel"
+      npc: {fileID: 778017371}
+    - sentence: "(We should head over to the kitchen, it looks like they\u2019re
+        getting the cake ready)"
+      npc: {fileID: 778017371}
+  - dialogues:
+    - sentence: Ah, debes ser el amigo de Juan.
+      npc: {fileID: 787921338}
+    - sentence: "\xA1S\xED, soy yo!"
+      npc: {fileID: 918745520}
+    - sentence: "\xBFLuis, verdad?"
+      npc: {fileID: 589440545}
+  - dialogues:
+    - sentence: "\xA1S\xED!"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xBFComo estan?"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Estamos bien, y t\xFA c\xF3mo est\xE1s?"
+      npc: {fileID: 787921338}
+    - sentence: "Tambi\xE9n me va bien."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: Estos son mis padres.
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xBFTienes hermanos?"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "No, soy hijo/hija \xFAnico/\xFAnica."
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xBFY tu?"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: Tengo un hermano mayor y una hermana menor.
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xBFC\xF3mo se llaman?"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: Mi hermano se llama Antonio.
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xC9l es muy alto e inteligente."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Mi hermana se llama Sof\xEDa."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Ella es muy atl\xE9tica y divertida."
+      npc: {fileID: 918745520}
+    - sentence: "\xBFD\xF3nde est\xE1 el encendedor para las velas?"
+      npc: {fileID: 1767884916}
+    - sentence: "(Where\u2019s the lighter for the candles?)"
+      npc: {fileID: 1767884916}
+    - sentence: "Creo que est\xE1 arriba en el armario."
+      npc: {fileID: 1858289665}
+    - sentence: "(I think it\u2019s upstairs in the closet)"
+      npc: {fileID: 1858289665}
+    - sentence: "\xBFQu\xE9? No te oigo."
+      npc: {fileID: 1767884916}
+    - sentence: (What? I can't hear you)
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "Abuelo dijo el encendedor est\xE1 arriba en el armario."
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xA1Gracias!"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os a Juan!"
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: Woooooo!
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "\xBFTienes uno a\xF1o?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes dos a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes tres a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes cuatro a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes cinco a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes seis a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes siete a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes ocho a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes nueve a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diez a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes once a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes doce a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes trece a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes catorce a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes quince a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecis\xE9is a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecisiete a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes dieciocho a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecinueve a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes veinte a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xA1Si, tengo veinte a\xF1os!"
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "\xA1Feliz cumplea\xF1os!"
+      npc: {fileID: 444733967}
   questions:
   - questions:
     - question: 'Translate: Hello Juan!'
@@ -1421,7 +2115,7 @@ MonoBehaviour:
     - question: 'Translate: Hi Luis, my name is...'
       answers:
       - Hola Luis, me llamo...
-      - Hola Luis, me nombre...
+      - Hola Luis, me lamo...
       - Bienvenido Luis, me nombre...
       - Bienvenido Luis, me llamo...
       correctAnswer: 0
@@ -1447,7 +2141,7 @@ MonoBehaviour:
       isMultipleChoice: 1
       correctAnswerTexts: []
   - questions:
-    - question: 'Translate: Estoy bien.'
+    - question: 'Translate: I''m good.'
       answers:
       - "Mal, \xBFy t\xFA?"
       - "Bien, \xBFy yo?"
@@ -1456,10 +2150,579 @@ MonoBehaviour:
       correctAnswer: 0
       isMultipleChoice: 0
       correctAnswerTexts:
+      - Estoy bien
+      - estoy bien.
+  - questions:
+    - question: 'Translate: So, where are you from?'
+      answers:
+      - "\xBFSo, de donde eres?"
+      - "\xBFSo, donde?"
+      - "\xBFSo, donde usted?"
+      - "\xBFSo, eres donde?"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
       - I'm good.
       - I am good
       - I'm good
       - I am good.
+  - questions:
+    - question: 'Translate: I was born in Tijuana but I live in Mexico City'
+      answers:
+      - "El born en Tijuana pero yo livo en la Cuidad de M\xE9xico"
+      - "Vivo en Tijuana pero nac\xED en la Ciudad de M\xE9xico"
+      - "Nac\xED en Tijuana pero vivo en la Ciudad de M\xE9xico"
+      - "Vivo en Tijuana y vivo en la Ciudad de M\xE9xico"
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - I'm good.
+      - I am good
+      - I'm good
+      - I am good.
+  - questions:
+    - question: "Translate: Nac\xED aqu\xED"
+      answers:
+      - I live here
+      - I was born here
+      - I used to live here
+      - I live near water
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - I'm good.
+      - I am good
+      - I'm good
+      - I am good.
+    - question: 'Translate: My mom is from Heroica Veracruz'
+      answers:
+      - "Mi mam\xE1 es de Heroica Veracruz"
+      - "Mi mam\xE1 de Heroica Veracruz"
+      - "Mam\xE1 es de Heroica Veracruz"
+      - "Mi mam\xE1 vivo de Heroica Veracruz"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - I'm good.
+      - I am good
+      - I'm good
+      - I am good.
+    - question: "Translate: Mi pap\xE1 es de San Luis Potos\xED"
+      answers:
+      - "My dad was born in San Luis Potos\xED"
+      - "My dad lives in San Luis Potos\xED"
+      - "My dad is from San Luis Potos\xED"
+      - "My dad is San Luis Potos\xED"
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - I'm good.
+      - I am good
+      - I'm good
+      - I am good.
+  - questions:
+    - question: 'Translate: What is your name?'
+      answers:
+      - "\xBFQue te llamas?"
+      - "\xBFC\xF3mo te llamas?"
+      - "\xBFte lama?"
+      - "\xBFC\xF3mo de llamas?"
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - I'm good.
+      - I am good
+      - I'm good
+      - I am good.
+  - questions:
+    - question: 'Translate: Hi, my name is Luis'
+      answers:
+      - "\xBFQue te llamas?"
+      - "\xBFC\xF3mo te llamas?"
+      - "\xBFte lama?"
+      - "\xBFC\xF3mo de llamas?"
+      correctAnswer: 1
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Hola, me llamo Luis
+      - Hola me llamo Luis
+      - Hola me llamo Luis.
+      - Hola, me llamo Luis.
+  - questions:
+    - question: 'Translate: I am Juan''s friend (male)'
+      answers:
+      - Soy amigo de Juan
+      - Soy Juan's amigo
+      - Soy amiga de Juan
+      - Soy Juan's amiga
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Hola, me llamo Luis
+      - Hola me llamo Luis
+      - Hola me llamo Luis.
+      - Hola, me llamo Luis.
+  - questions:
+    - question: "Translate: Esta es mi T\xEDa Ximena"
+      answers:
+      - This is my cousin Ximena
+      - How is my aunt Ximena?
+      - This is my sister Ximena
+      - This is my aunt Ximena
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Hola, me llamo Luis
+      - Hola me llamo Luis
+      - Hola me llamo Luis.
+      - Hola, me llamo Luis.
+  - questions:
+    - question: 'Translate: And this is my uncle Fernando'
+      answers:
+      - "Y este es mi T\xEDo Fernando."
+      - "Y el es mi T\xEDo Fernando."
+      - Y este es mi primo Fernando
+      - "Y este mi T\xEDo Fernando."
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Hola, me llamo Luis
+      - Hola me llamo Luis
+      - Hola me llamo Luis.
+      - Hola, me llamo Luis.
+  - questions:
+    - question: 'Translate: They are (in reference to both of them) from Celaya'
+      answers:
+      - "Y este es mi T\xEDo Fernando."
+      - "Y el es mi T\xEDo Fernando."
+      - Y este es mi primo Fernando
+      - "Y este mi T\xEDo Fernando."
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Son de Celaya
+  - questions:
+    - question: "Translate: \xA1Mucho gusto!"
+      answers:
+      - Very nice!
+      - Very windy!
+      - It's nice to be with you!
+      - Nice to meet you!
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Son de Celaya
+  - questions:
+    - question: "Translate: \xA1Igual!"
+      answers:
+      - Iguana!
+      - Thank you!
+      - Nice to meet you too!
+      - Nice to meet you!
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Son de Celaya
+  - questions:
+    - question: 'Translate: Yes (no punctuation)'
+      answers:
+      - Iguana!
+      - Thank you!
+      - Nice to meet you too!
+      - Nice to meet you!
+      correctAnswer: 2
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: How are you? (multiple people)'
+      answers:
+      - "\xBFComo estan?"
+      - "\xBFQue esta?"
+      - "\xBFComo estas?"
+      - "\xBFComo tu?"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: We are good'
+      answers:
+      - Esta bien
+      - Estamos bien
+      - Estas bien
+      - Estan bien
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: Estos son mis padres'
+      answers:
+      - These are my dads
+      - These are my parents
+      - We are the parents
+      - How are my dads?
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: Do you have siblings? (No punctuation)'
+      answers:
+      - These are my dads
+      - These are my parents
+      - We are the parents
+      - How are my dads?
+      correctAnswer: 1
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Tienes hermanos
+  - questions:
+    - question: "Translate: No, soy hijo/hija \xFAnico/\xFAnica."
+      answers:
+      - No, I am the special child
+      - No, I am the only cousin
+      - No, I am the only sibling
+      - No, I am the only child
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Tienes hermanos
+  - questions:
+    - question: 'Translate: And you? (no accents, no punctuation, informal)'
+      answers:
+      - No, I am the special child
+      - No, I am the only cousin
+      - No, I am the only sibling
+      - No, I am the only child
+      correctAnswer: 3
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: I have an older brother and a younger sister'
+      answers:
+      - Tengo hermano mayor y hermana menor.
+      - Tengo un hermano mayor y una hermana menor.
+      - Tengo un hermano menor y una hermana mayor.
+      - Tengo un mayor hermano y una menor hermana.
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: What are their names?'
+      answers:
+      - "\xBFC\xF3mo se llaman?"
+      - "\xBFC\xF3mo se llamas?"
+      - "\xBFC\xF3mo se llama?"
+      - "\xBFC\xF3mo se llamos?"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: My brother''s name is Antonio'
+      answers:
+      - Mi hermana se llama Antonio.
+      - Mi hermano se llama Antonio.
+      - Mi hermano se llamo Antonio.
+      - Mi hermana se llamo Antonio.
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: He is very tall and smart'
+      answers:
+      - Ella es muy alta e inteligente
+      - "\xC9l es muy talo e inteligente"
+      - "\xC9l es muy alto e inteligente."
+      - Ella es muy alto e inteligente
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: "Translate: My sister's name is Sof\xEDa."
+      answers:
+      - "Mi hermana se llama Sof\xEDa."
+      - "Mi hermana es Sof\xEDa."
+      - "Mi hermano se llama Sof\xEDa."
+      - "Mi hermano se llamo Sof\xEDa."
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: "Translate: Ella es muy atl\xE9tica y divertida"
+      answers:
+      - She is very athletic and dumb
+      - She is very tall and divisive
+      - She is very athletic and creative
+      - She is very athletic and fun
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: Grandpa'
+      answers:
+      - Hijo
+      - Abuelo
+      - Primo
+      - Abuela
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: Thank you (no punctuation)'
+      answers:
+      - Hijo
+      - Abuelo
+      - Primo
+      - Abuela
+      correctAnswer: 1
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 1'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 2'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 3'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 4'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 5'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 6'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 7'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 8'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 9'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 10'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 11'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 12'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 13'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 14'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 15'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 16'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 17'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 18'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 19'
+      answers:
+      - Diecinueve
+      - Once
+      - Veinte
+      - Diecisiete
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 20'
+      answers:
+      - Dos
+      - Diecidoce
+      - Quince doce
+      - Veinte
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: "Translate: \xA1Si, tengo veinte a\xF1os!"
+      answers:
+      - Yes I am 30 years old
+      - Yes I am 22 years old
+      - Yes I am 20 years old
+      - Yes I am 2 years old
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
   luisNPC: {fileID: 918745518}
   cousinNPC: {fileID: 1767884910}
 --- !u!61 &857328669
@@ -1618,6 +2881,131 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a0c081fa585184647a0cb41b35801f7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &921638169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921638170}
+  - component: {fileID: 921638173}
+  - component: {fileID: 921638172}
+  - component: {fileID: 921638171}
+  m_Layer: 0
+  m_Name: UncleNPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &921638170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921638169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.33, y: -0.9687824, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &921638171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921638169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 17527afe708fd614c91b84aa761b95c9, type: 2}
+--- !u!61 &921638172
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921638169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &921638173
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921638169}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1947,6 +3335,12 @@ Transform:
   - {fileID: 778017370}
   - {fileID: 2059767067}
   - {fileID: 67243497}
+  - {fileID: 921638170}
+  - {fileID: 787921337}
+  - {fileID: 589440544}
+  - {fileID: 1858289664}
+  - {fileID: 678118008}
+  - {fileID: 444733966}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2373,6 +3767,131 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 31.53207, y: 1.0575962}
   m_EdgeRadius: 0
+--- !u!1 &1858289663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858289664}
+  - component: {fileID: 1858289667}
+  - component: {fileID: 1858289666}
+  - component: {fileID: 1858289665}
+  m_Layer: 0
+  m_Name: Grandpa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1858289664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858289663}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.49, y: -7.99, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858289665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858289663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 8cf0edb781f0f6041be1ebadc72922b2, type: 2}
+--- !u!61 &1858289666
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858289663}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &1858289667
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858289663}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2059266842
 GameObject:
   m_ObjectHideFlags: 0
