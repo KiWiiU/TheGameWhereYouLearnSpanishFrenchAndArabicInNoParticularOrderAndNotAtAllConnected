@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,6 +10,8 @@ public class Events : MonoBehaviour
 
     public DialogueManager dm;
     public QuizManager qm;
+
+    public event Action OnEventsEnd;
 
     private Queue<object> eventQueue = new();
     private int playerScore;
@@ -74,12 +77,13 @@ public class Events : MonoBehaviour
 
     public IEnumerator NextEvent()
     {
-        if (currentlyOpen) // abort if already going through queue or if queue is empty
+        if (currentlyOpen) // abort if already going through queue
         {
             yield break;
         }
-        if (eventQueue.Count == 0)
+        if (eventQueue.Count == 0) // method call when events are done
         {
+            OnEventsEnd?.Invoke();
             yield break;
         }
 

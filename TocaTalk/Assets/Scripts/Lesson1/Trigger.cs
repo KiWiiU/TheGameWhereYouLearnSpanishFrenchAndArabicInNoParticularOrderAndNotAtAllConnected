@@ -14,6 +14,13 @@ public class Trigger : MonoBehaviour
     public void Start()
     {
         eventManager = GameObject.FindWithTag("GameController").GetComponent<Events>();
+        eventManager.OnEventsEnd += OnEventsEnd;
+    }
+
+    public void OnEventsEnd()
+    {
+        print("done");
+        eventManager.OnEventsEnd -= OnEventsEnd;
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

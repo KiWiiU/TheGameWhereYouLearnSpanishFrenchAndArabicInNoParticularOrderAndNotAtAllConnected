@@ -65,8 +65,8 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(a);
         }
         nameText.text = currentDialogue.npc.npc.Name;
-        // crop the sprite so it just sees the head of the character
-        if (currentDialogue.npc.npc.Name == "" || currentDialogue.npc.npc.Name == "You" || currentDialogue.npc.npc.Name == "Everyone") // Narrator or Player
+        
+        if (currentDialogue.npc.npc.Sprite == null) // No avatar sprite = dont show the box
         {
             avatar.gameObject.SetActive(false);
             dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(false);
@@ -75,6 +75,7 @@ public class DialogueManager : MonoBehaviour
         {
             avatar.gameObject.SetActive(true);
             dialogueBox.transform.Find("AvatarBackground").gameObject.SetActive(true);
+            // crop the sprite so it just sees the head of the character
             avatar.sprite = Sprite.Create(currentDialogue.npc.npc.Sprite.texture, new Rect(6.5f, 43, 20, 20), new Vector2(0.5f, 0.5f), 100);
         }
         currentSentence = sentences.Dequeue();

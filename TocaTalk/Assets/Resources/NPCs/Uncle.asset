@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39748438df10d6f4d9ff44727505f9c0, type: 3}
   m_Name: Uncle
   m_EditorClassIdentifier: 
-  _name: Aunt
-  _sprite: {fileID: 21300000, guid: e78f9d79e0981614680348848f07e92d, type: 3}
+  _name: Uncle
+  _sprite: {fileID: 21300000, guid: bfa23b9ff62de2444b7adcb5623276b0, type: 3}
