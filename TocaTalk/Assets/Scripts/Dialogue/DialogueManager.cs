@@ -110,7 +110,6 @@ public class DialogueManager : MonoBehaviour
         LTLdialogueText.text = "";
         foreach(char letter in currentSentence.ToCharArray()) {
             LTLdialogueText.text += letter;
-            Canvas.ForceUpdateCanvases();  // 🧠 This is the secret sauce <= Chatgpt message
             LTLdialogueText.ForceMeshUpdate();
             LayoutRebuilder.ForceRebuildLayoutImmediate(LTLdialogueText.rectTransform);
             yield return null;
