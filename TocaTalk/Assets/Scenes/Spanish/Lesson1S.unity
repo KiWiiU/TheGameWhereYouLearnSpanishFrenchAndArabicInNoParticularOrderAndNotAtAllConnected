@@ -1019,7 +1019,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000044703484, y: -0.24071366}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1030,7 +1030,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.36800197, y: 0.15857267}
   m_EdgeRadius: 0
 --- !u!212 &589440547
 SpriteRenderer:
@@ -1207,7 +1207,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01004909, y: -0.25337777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1218,7 +1218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.2782366, y: 0.13324445}
   m_EdgeRadius: 0
 --- !u!212 &678118011
 SpriteRenderer:
@@ -1401,7 +1401,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.024285637, y: -0.21959843}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1412,7 +1412,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.35828775, y: 0.20080313}
   m_EdgeRadius: 0
 --- !u!212 &778017369
 SpriteRenderer:
@@ -1554,7 +1554,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009714305, y: -0.24493673}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1565,7 +1565,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.3485735, y: 0.1501265}
   m_EdgeRadius: 0
 --- !u!212 &787921340
 SpriteRenderer:
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1162163f2389d341a740b85f53e6ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
+  theGoodDialogues:
   - dialogues:
     - sentence: "\xA1Hola Juan!"
       npc: {fileID: 67243498}
@@ -1896,6 +1896,7 @@ MonoBehaviour:
 
 '
       npc: {fileID: 1767884916}
+  dialogues2:
   - dialogues:
     - sentence: '*You and Luis awkwardly stand around*'
       npc: {fileID: 2059767068}
@@ -1913,6 +1914,7 @@ MonoBehaviour:
       npc: {fileID: 918745520}
     - sentence: "(Haha, you\u2019d think I\u2019d be the one from San Luis)"
       npc: {fileID: 918745520}
+  dialogues3:
   - dialogues:
     - sentence: "\xA1Hola [name]! Ah, y hola, \xBFc\xF3mo te llamas?"
       npc: {fileID: 778017371}
@@ -1947,150 +1949,7 @@ MonoBehaviour:
     - sentence: "(We should head over to the kitchen, it looks like they\u2019re
         getting the cake ready)"
       npc: {fileID: 778017371}
-  - dialogues:
-    - sentence: Ah, debes ser el amigo de Juan.
-      npc: {fileID: 787921338}
-    - sentence: "\xA1S\xED, soy yo!"
-      npc: {fileID: 918745520}
-    - sentence: "\xBFLuis, verdad?"
-      npc: {fileID: 589440545}
-  - dialogues:
-    - sentence: "\xA1S\xED!"
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "\xBFComo estan?"
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "Estamos bien, y t\xFA c\xF3mo est\xE1s?"
-      npc: {fileID: 787921338}
-    - sentence: "Tambi\xE9n me va bien."
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: Estos son mis padres.
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: "\xBFTienes hermanos?"
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "No, soy hijo/hija \xFAnico/\xFAnica."
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: "\xBFY tu?"
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: Tengo un hermano mayor y una hermana menor.
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "\xBFC\xF3mo se llaman?"
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: Mi hermano se llama Antonio.
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "\xC9l es muy alto e inteligente."
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "Mi hermana se llama Sof\xEDa."
-      npc: {fileID: 918745520}
-  - dialogues:
-    - sentence: "Ella es muy atl\xE9tica y divertida."
-      npc: {fileID: 918745520}
-    - sentence: "\xBFD\xF3nde est\xE1 el encendedor para las velas?"
-      npc: {fileID: 1767884916}
-    - sentence: "(Where\u2019s the lighter for the candles?)"
-      npc: {fileID: 1767884916}
-    - sentence: "Creo que est\xE1 arriba en el armario."
-      npc: {fileID: 1858289665}
-    - sentence: "(I think it\u2019s upstairs in the closet)"
-      npc: {fileID: 1858289665}
-    - sentence: "\xBFQu\xE9? No te oigo."
-      npc: {fileID: 1767884916}
-    - sentence: (What? I can't hear you)
-      npc: {fileID: 1767884916}
-  - dialogues:
-    - sentence: "Abuelo dijo el encendedor est\xE1 arriba en el armario."
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: "\xA1Gracias!"
-      npc: {fileID: 67243498}
-  - dialogues:
-    - sentence: "(Singing) Cumplea\xF1os feliz! "
-      npc: {fileID: 444733967}
-    - sentence: "(Singing) Cumplea\xF1os feliz! "
-      npc: {fileID: 444733967}
-    - sentence: "(Singing) Cumplea\xF1os a Juan!"
-      npc: {fileID: 444733967}
-    - sentence: "(Singing) Cumplea\xF1os feliz! "
-      npc: {fileID: 444733967}
-    - sentence: Woooooo!
-      npc: {fileID: 1767884916}
-  - dialogues:
-    - sentence: "\xBFTienes uno a\xF1o?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes dos a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes tres a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes cuatro a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes cinco a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes seis a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes siete a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes ocho a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes nueve a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes diez a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes once a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes doce a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes trece a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes catorce a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes quince a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes diecis\xE9is a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes diecisiete a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes dieciocho a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes diecinueve a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xBFTienes veinte a\xF1os?"
-      npc: {fileID: 444733967}
-  - dialogues:
-    - sentence: "\xA1Si, tengo veinte a\xF1os!"
-      npc: {fileID: 1767884916}
-  - dialogues:
-    - sentence: "\xA1Feliz cumplea\xF1os!"
-      npc: {fileID: 444733967}
-  questions:
+  theFirstQuestions:
   - questions:
     - question: 'Translate: Hello Juan!'
       answers:
@@ -2152,6 +2011,7 @@ MonoBehaviour:
       correctAnswerTexts:
       - Estoy bien
       - estoy bien.
+  questions2:
   - questions:
     - question: 'Translate: So, where are you from?'
       answers:
@@ -2220,6 +2080,7 @@ MonoBehaviour:
       - I am good
       - I'm good
       - I am good.
+  questions3:
   - questions:
     - question: 'Translate: What is your name?'
       answers:
@@ -2323,408 +2184,9 @@ MonoBehaviour:
       isMultipleChoice: 1
       correctAnswerTexts:
       - Son de Celaya
-  - questions:
-    - question: 'Translate: Yes (no punctuation)'
-      answers:
-      - Iguana!
-      - Thank you!
-      - Nice to meet you too!
-      - Nice to meet you!
-      correctAnswer: 2
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - "S\xED"
-      - Si
-  - questions:
-    - question: 'Translate: How are you? (multiple people)'
-      answers:
-      - "\xBFComo estan?"
-      - "\xBFQue esta?"
-      - "\xBFComo estas?"
-      - "\xBFComo tu?"
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - "S\xED"
-      - Si
-  - questions:
-    - question: 'Translate: We are good'
-      answers:
-      - Esta bien
-      - Estamos bien
-      - Estas bien
-      - Estan bien
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - "S\xED"
-      - Si
-  - questions:
-    - question: 'Translate: Estos son mis padres'
-      answers:
-      - These are my dads
-      - These are my parents
-      - We are the parents
-      - How are my dads?
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - "S\xED"
-      - Si
-  - questions:
-    - question: 'Translate: Do you have siblings? (No punctuation)'
-      answers:
-      - These are my dads
-      - These are my parents
-      - We are the parents
-      - How are my dads?
-      correctAnswer: 1
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - Tienes hermanos
-  - questions:
-    - question: "Translate: No, soy hijo/hija \xFAnico/\xFAnica."
-      answers:
-      - No, I am the special child
-      - No, I am the only cousin
-      - No, I am the only sibling
-      - No, I am the only child
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Tienes hermanos
-  - questions:
-    - question: 'Translate: And you? (no accents, no punctuation, informal)'
-      answers:
-      - No, I am the special child
-      - No, I am the only cousin
-      - No, I am the only sibling
-      - No, I am the only child
-      correctAnswer: 3
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: I have an older brother and a younger sister'
-      answers:
-      - Tengo hermano mayor y hermana menor.
-      - Tengo un hermano mayor y una hermana menor.
-      - Tengo un hermano menor y una hermana mayor.
-      - Tengo un mayor hermano y una menor hermana.
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: What are their names?'
-      answers:
-      - "\xBFC\xF3mo se llaman?"
-      - "\xBFC\xF3mo se llamas?"
-      - "\xBFC\xF3mo se llama?"
-      - "\xBFC\xF3mo se llamos?"
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: My brother''s name is Antonio'
-      answers:
-      - Mi hermana se llama Antonio.
-      - Mi hermano se llama Antonio.
-      - Mi hermano se llamo Antonio.
-      - Mi hermana se llamo Antonio.
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: He is very tall and smart'
-      answers:
-      - Ella es muy alta e inteligente
-      - "\xC9l es muy talo e inteligente"
-      - "\xC9l es muy alto e inteligente."
-      - Ella es muy alto e inteligente
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: "Translate: My sister's name is Sof\xEDa."
-      answers:
-      - "Mi hermana se llama Sof\xEDa."
-      - "Mi hermana es Sof\xEDa."
-      - "Mi hermano se llama Sof\xEDa."
-      - "Mi hermano se llamo Sof\xEDa."
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: "Translate: Ella es muy atl\xE9tica y divertida"
-      answers:
-      - She is very athletic and dumb
-      - She is very tall and divisive
-      - She is very athletic and creative
-      - She is very athletic and fun
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: Grandpa'
-      answers:
-      - Hijo
-      - Abuelo
-      - Primo
-      - Abuela
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Y tu
-  - questions:
-    - question: 'Translate: Thank you (no punctuation)'
-      answers:
-      - Hijo
-      - Abuelo
-      - Primo
-      - Abuela
-      correctAnswer: 1
-      isMultipleChoice: 0
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 1'
-      answers:
-      - Uno
-      - Una
-      - Dos
-      - Tres
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 2'
-      answers:
-      - Uno
-      - Una
-      - Dos
-      - Tres
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 3'
-      answers:
-      - Uno
-      - Una
-      - Dos
-      - Tres
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 4'
-      answers:
-      - Seis
-      - Siete
-      - Cinco
-      - Cuatro
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 5'
-      answers:
-      - Seis
-      - Siete
-      - Cinco
-      - Cuatro
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 6'
-      answers:
-      - Seis
-      - Siete
-      - Cinco
-      - Cuatro
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 7'
-      answers:
-      - Seis
-      - Siete
-      - Cinco
-      - Cuatro
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 8'
-      answers:
-      - Ocho
-      - Diez
-      - Nueve
-      - Once
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 9'
-      answers:
-      - Ocho
-      - Diez
-      - Nueve
-      - Once
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 10'
-      answers:
-      - Ocho
-      - Diez
-      - Nueve
-      - Once
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 11'
-      answers:
-      - Ocho
-      - Diez
-      - Nueve
-      - Once
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 12'
-      answers:
-      - Dos
-      - Doce
-      - Trece
-      - Catorce
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 13'
-      answers:
-      - Dos
-      - Doce
-      - Trece
-      - Catorce
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 14'
-      answers:
-      - Dos
-      - Doce
-      - Trece
-      - Catorce
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 15'
-      answers:
-      - "Diecis\xE9is"
-      - Dieciocho
-      - Quince
-      - Diecisiete
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 16'
-      answers:
-      - "Diecis\xE9is"
-      - Dieciocho
-      - Quince
-      - Diecisiete
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 17'
-      answers:
-      - "Diecis\xE9is"
-      - Dieciocho
-      - Quince
-      - Diecisiete
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 18'
-      answers:
-      - "Diecis\xE9is"
-      - Dieciocho
-      - Quince
-      - Diecisiete
-      correctAnswer: 1
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 19'
-      answers:
-      - Diecinueve
-      - Once
-      - Veinte
-      - Diecisiete
-      correctAnswer: 0
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: 'Translate: 20'
-      answers:
-      - Dos
-      - Diecidoce
-      - Quince doce
-      - Veinte
-      correctAnswer: 3
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
-  - questions:
-    - question: "Translate: \xA1Si, tengo veinte a\xF1os!"
-      answers:
-      - Yes I am 30 years old
-      - Yes I am 22 years old
-      - Yes I am 20 years old
-      - Yes I am 2 years old
-      correctAnswer: 2
-      isMultipleChoice: 1
-      correctAnswerTexts:
-      - Gracias
   luisNPC: {fileID: 918745518}
   cousinNPC: {fileID: 1767884910}
+  kitchenEvent: {fileID: 1358629170}
 --- !u!61 &857328669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2826,7 +2288,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.058285292, y: -0.24071369}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2837,7 +2299,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.25143135, y: 0.15857261}
   m_EdgeRadius: 0
 --- !u!212 &918745522
 SpriteRenderer:
@@ -2951,7 +2413,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.004857108, y: -0.2364906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2962,7 +2424,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.26114574, y: 0.16701877}
   m_EdgeRadius: 0
 --- !u!212 &921638173
 SpriteRenderer:
@@ -3417,6 +2879,627 @@ PolygonCollider2D:
       - {x: -1.0578296, y: 1.0610996}
       - {x: -1.0511197, y: -0.5149805}
       - {x: 0.58778536, y: -0.5203361}
+--- !u!1 &1358629170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358629172}
+  - component: {fileID: 1358629171}
+  - component: {fileID: 1358629173}
+  m_Layer: 0
+  m_Name: Waaaah Waaaah Waaaah
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1358629171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358629170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaeb62e056db4844afa3230da96eec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues1:
+  - dialogues:
+    - sentence: Ah, debes ser el amigo de Juan.
+      npc: {fileID: 787921338}
+    - sentence: "\xA1S\xED, soy yo!"
+      npc: {fileID: 918745520}
+    - sentence: "\xBFLuis, verdad?"
+      npc: {fileID: 589440545}
+  - dialogues:
+    - sentence: "\xA1S\xED!"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xBFComo estan?"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Estamos bien, y t\xFA c\xF3mo est\xE1s?"
+      npc: {fileID: 787921338}
+    - sentence: "Tambi\xE9n me va bien."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: Estos son mis padres.
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xBFTienes hermanos?"
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "No, soy hijo/hija \xFAnico/\xFAnica."
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xBFY tu?"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: Tengo un hermano mayor y una hermana menor.
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xBFC\xF3mo se llaman?"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: Mi hermano se llama Antonio.
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "\xC9l es muy alto e inteligente."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Mi hermana se llama Sof\xEDa."
+      npc: {fileID: 918745520}
+  - dialogues:
+    - sentence: "Ella es muy atl\xE9tica y divertida."
+      npc: {fileID: 918745520}
+    - sentence: "\xBFD\xF3nde est\xE1 el encendedor para las velas?"
+      npc: {fileID: 1767884916}
+    - sentence: "(Where\u2019s the lighter for the candles?)"
+      npc: {fileID: 1767884916}
+    - sentence: "Creo que est\xE1 arriba en el armario."
+      npc: {fileID: 1858289665}
+    - sentence: "(I think it\u2019s upstairs in the closet)"
+      npc: {fileID: 1858289665}
+    - sentence: "\xBFQu\xE9? No te oigo."
+      npc: {fileID: 1767884916}
+    - sentence: (What? I can't hear you)
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "Abuelo dijo el encendedor est\xE1 arriba en el armario."
+      npc: {fileID: 67243498}
+    - sentence: (Grandpa said the lighter is upstairs in the closet!)
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xA1Gracias!"
+      npc: {fileID: 67243498}
+  dialogues2:
+  - dialogues:
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os a Juan!"
+      npc: {fileID: 444733967}
+    - sentence: "(Singing) Cumplea\xF1os feliz! "
+      npc: {fileID: 444733967}
+    - sentence: Woooooo!
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "\xBFTienes uno a\xF1o?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes dos a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes tres a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes cuatro a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes cinco a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes seis a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes siete a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes ocho a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes nueve a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diez a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes once a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes doce a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes trece a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes catorce a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes quince a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecis\xE9is a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecisiete a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes dieciocho a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes diecinueve a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xBFTienes veinte a\xF1os?"
+      npc: {fileID: 444733967}
+  - dialogues:
+    - sentence: "\xA1Si, tengo veinte a\xF1os!"
+      npc: {fileID: 1767884916}
+  - dialogues:
+    - sentence: "\xA1Feliz cumplea\xF1os!"
+      npc: {fileID: 444733967}
+  questions1:
+  - questions:
+    - question: 'Translate: Yes (no punctuation)'
+      answers:
+      - Iguana!
+      - Thank you!
+      - Nice to meet you too!
+      - Nice to meet you!
+      correctAnswer: 2
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: How are you? (multiple people)'
+      answers:
+      - "\xBFComo estan?"
+      - "\xBFQue esta?"
+      - "\xBFComo estas?"
+      - "\xBFComo tu?"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: We are good'
+      answers:
+      - Esta bien
+      - Estamos bien
+      - Estas bien
+      - Estan bien
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: Estos son mis padres'
+      answers:
+      - These are my dads
+      - These are my parents
+      - We are the parents
+      - How are my dads?
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - "S\xED"
+      - Si
+  - questions:
+    - question: 'Translate: Do you have siblings? (No punctuation)'
+      answers:
+      - These are my dads
+      - These are my parents
+      - We are the parents
+      - How are my dads?
+      correctAnswer: 1
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Tienes hermanos
+  - questions:
+    - question: "Translate: No, soy hijo/hija \xFAnico/\xFAnica."
+      answers:
+      - No, I am the special child
+      - No, I am the only cousin
+      - No, I am the only sibling
+      - No, I am the only child
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Tienes hermanos
+  - questions:
+    - question: 'Translate: And you? (no accents, no punctuation, informal)'
+      answers:
+      - No, I am the special child
+      - No, I am the only cousin
+      - No, I am the only sibling
+      - No, I am the only child
+      correctAnswer: 3
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: I have an older brother and a younger sister'
+      answers:
+      - Tengo hermano mayor y hermana menor.
+      - Tengo un hermano mayor y una hermana menor.
+      - Tengo un hermano menor y una hermana mayor.
+      - Tengo un mayor hermano y una menor hermana.
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: What are their names?'
+      answers:
+      - "\xBFC\xF3mo se llaman?"
+      - "\xBFC\xF3mo se llamas?"
+      - "\xBFC\xF3mo se llama?"
+      - "\xBFC\xF3mo se llamos?"
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: My brother''s name is Antonio'
+      answers:
+      - Mi hermana se llama Antonio.
+      - Mi hermano se llama Antonio.
+      - Mi hermano se llamo Antonio.
+      - Mi hermana se llamo Antonio.
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: He is very tall and smart'
+      answers:
+      - Ella es muy alta e inteligente
+      - "\xC9l es muy talo e inteligente"
+      - "\xC9l es muy alto e inteligente."
+      - Ella es muy alto e inteligente
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: "Translate: My sister's name is Sof\xEDa."
+      answers:
+      - "Mi hermana se llama Sof\xEDa."
+      - "Mi hermana es Sof\xEDa."
+      - "Mi hermano se llama Sof\xEDa."
+      - "Mi hermano se llamo Sof\xEDa."
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: "Translate: Ella es muy atl\xE9tica y divertida"
+      answers:
+      - She is very athletic and dumb
+      - She is very tall and divisive
+      - She is very athletic and creative
+      - She is very athletic and fun
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: Grandpa'
+      answers:
+      - Hijo
+      - Abuelo
+      - Primo
+      - Abuela
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Y tu
+  - questions:
+    - question: 'Translate: Thank you (no punctuation)'
+      answers:
+      - Hijo
+      - Abuelo
+      - Primo
+      - Abuela
+      correctAnswer: 1
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Gracias
+  questions2:
+  - questions:
+    - question: 'Translate: 1'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 2'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 3'
+      answers:
+      - Uno
+      - Una
+      - Dos
+      - Tres
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 4'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 5'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 6'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 7'
+      answers:
+      - Seis
+      - Siete
+      - Cinco
+      - Cuatro
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 8'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 9'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 10'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 11'
+      answers:
+      - Ocho
+      - Diez
+      - Nueve
+      - Once
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 12'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 13'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 14'
+      answers:
+      - Dos
+      - Doce
+      - Trece
+      - Catorce
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 15'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 16'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 17'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 18'
+      answers:
+      - "Diecis\xE9is"
+      - Dieciocho
+      - Quince
+      - Diecisiete
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 19'
+      answers:
+      - Diecinueve
+      - Once
+      - Veinte
+      - Diecisiete
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: 'Translate: 20'
+      answers:
+      - Dos
+      - Diecidoce
+      - Quince doce
+      - Veinte
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  - questions:
+    - question: "Translate: \xA1Si, tengo veinte a\xF1os!"
+      answers:
+      - Yes I am 30 years old
+      - Yes I am 22 years old
+      - Yes I am 20 years old
+      - Yes I am 2 years old
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts:
+      - Gracias
+  cousinNPC: {fileID: 1767884910}
+--- !u!4 &1358629172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358629170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.42, y: -9.01, z: -0.08035164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1358629173
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358629170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.32681894, y: 1.0167694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6536379, y: 3.905056}
+  m_EdgeRadius: 0
 --- !u!1 &1466350461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,7 +3766,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.019428343, y: -0.2533828}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3694,7 +3777,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.3485732, y: 0.13323438}
   m_EdgeRadius: 0
 --- !u!114 &1767884916
 MonoBehaviour:
@@ -3827,7 +3910,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011034153, y: -0.24441864}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3838,7 +3921,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.25725406, y: 0.15116271}
   m_EdgeRadius: 0
 --- !u!212 &1858289667
 SpriteRenderer:
