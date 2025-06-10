@@ -22,15 +22,17 @@ public class EnterKitchen : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        print("enter");
         if (other.gameObject.tag == "Player")
         {
+            print("enter");
             eventManager.EnqueuePingPong(dialogues1, questions1);
             StartCoroutine(eventManager.NextEvent());
         }
         // move cake and cousin to table
         eventManager.EnqueuePingPong(dialogues2, questions2);
+        eventManager.EnqueueEndLesson(); // end level
         StartCoroutine(eventManager.NextEvent());
-        // end level??
         Destroy(this);
     }
 

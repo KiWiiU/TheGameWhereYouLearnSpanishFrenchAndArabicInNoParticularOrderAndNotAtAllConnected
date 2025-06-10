@@ -131,7 +131,7 @@ public class QuizManager : MonoBehaviour
     {
         string answer = null;
         answer = LTLField.text;
-        LTLField.text = "";
+        
 
         bool correct = false;
         for (int i = 0; i < currentQuestion.correctAnswerTexts.Length; i++)
@@ -152,7 +152,7 @@ public class QuizManager : MonoBehaviour
             yield return StartCoroutine(ShowCorrectAnswer());
         }
 
-
+        LTLField.text = "";
         if (questions.Count > 0)
         {
             currentQuestion = questions.Dequeue();
