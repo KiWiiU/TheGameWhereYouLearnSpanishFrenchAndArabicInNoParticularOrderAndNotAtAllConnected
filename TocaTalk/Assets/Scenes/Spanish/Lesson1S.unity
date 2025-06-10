@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -306,6 +306,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &129239679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6012892259376083068, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
+  m_PrefabInstance: {fileID: 749846873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &145369655
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +611,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7633810804465223077, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190.4063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810804465223077, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100.4256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810804465223082, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810804465223082, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810804465223082, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810805553961463, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633810805901286051, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7633810806016813641, guid: 7b0fb29fa1794054fa7ecb4a86b7d98f, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -1682,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogues:
-    - sentence: '*Riiiiiiiiiing*'
+    - sentence: '*Diiing Dooooong*'
       npc: {fileID: 2059767068}
   trigger: {fileID: 857328669}
 --- !u!82 &815360395
@@ -2193,6 +2226,9 @@ MonoBehaviour:
       isMultipleChoice: 0
       correctAnswerTexts:
       - Son de Celaya
+      - ellos son de Celaya
+      - ellos son de Celaya.
+      - Son de Celaya.
   - questions:
     - question: "Translate: \xA1Mucho gusto!"
       answers:
@@ -2559,7 +2595,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 21.686302, y: -7.5299597}
+  m_Offset: {x: 21.94785, y: -7.8895855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2570,7 +2606,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.543848, y: 5.1588097}
+  m_Size: {x: 3.020752, y: 4.439558}
   m_EdgeRadius: 0
 --- !u!1 &1199642306
 GameObject:
@@ -2786,7 +2822,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 21.686302, y: -7.5299597}
+  m_Offset: {x: 21.686302, y: -7.726119}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2797,7 +2833,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.543848, y: 5.1588097}
+  m_Size: {x: 3.5438461, y: 4.766491}
   m_EdgeRadius: 0
 --- !u!1 &1271272119
 GameObject:
@@ -3495,6 +3531,7 @@ MonoBehaviour:
       correctAnswerTexts:
       - Gracias
   cousinNPC: {fileID: 1767884910}
+  player: {fileID: 129239679}
 --- !u!4 &1358629172
 Transform:
   m_ObjectHideFlags: 0
@@ -3517,7 +3554,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358629170}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -4769,6 +4806,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218333684148311644, guid: dfb56b8fde6c7674b9f16c4cd3974ad1, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520700775603046657, guid: dfb56b8fde6c7674b9f16c4cd3974ad1, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531251925714044676, guid: dfb56b8fde6c7674b9f16c4cd3974ad1, type: 3}
+      propertyPath: m_fontStyle
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9188734941774576892, guid: dfb56b8fde6c7674b9f16c4cd3974ad1, type: 3}

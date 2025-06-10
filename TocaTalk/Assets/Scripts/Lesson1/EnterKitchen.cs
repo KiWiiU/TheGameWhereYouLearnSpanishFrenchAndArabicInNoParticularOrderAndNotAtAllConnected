@@ -6,7 +6,7 @@ public class EnterKitchen : MonoBehaviour
 {
     public DialogueList[] dialogues1, dialogues2;
     public QuestionList[] questions1, questions2;
-    public GameObject cousinNPC;
+    public GameObject cousinNPC, player;
     Events eventManager;
 
     public void Start()
@@ -20,20 +20,20 @@ public class EnterKitchen : MonoBehaviour
         eventManager.OnEventsEnd -= OnEventsEnd;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         print("enter");
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject == player)
         {
-            print("enter");
+            print("player hit");
             eventManager.EnqueuePingPong(dialogues1, questions1);
             StartCoroutine(eventManager.NextEvent());
+            // move cake and cousin to table
+            eventManager.EnqueuePingPong(dialogues2, questions2);
+            eventManager.EnqueueEndLesson(); // end level
+            StartCoroutine(eventManager.NextEvent());
+            Destroy(this);
         }
-        // move cake and cousin to table
-        eventManager.EnqueuePingPong(dialogues2, questions2);
-        eventManager.EnqueueEndLesson(); // end level
-        StartCoroutine(eventManager.NextEvent());
-        Destroy(this);
     }
 
 }
