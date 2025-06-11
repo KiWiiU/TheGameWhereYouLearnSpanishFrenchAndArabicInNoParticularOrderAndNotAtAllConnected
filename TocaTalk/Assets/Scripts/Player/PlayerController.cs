@@ -13,14 +13,21 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private float petWobbleTime = 0f;
+    private float petWobbleSpeed = 10f;
+    private float petWobbleAmount = 3f;
+
     public void Start() {
         // initialize pet
         if(transform.Find("Pet") != null) {
             petObject = transform.Find("Pet").gameObject;
             if(Holder.currentPet != null) {
+                petObject.SetActive(true);
                 petObject.transform.position = transform.position;
                 petObject.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Pet>("Pets")[(int)Holder.currentPet].Sprite;
                 petObject.transform.position = transform.position + new Vector3(0.25f, 0f, 0f);
+            } else {
+                petObject.SetActive(false);
             }
         }
         rb = GetComponent<Rigidbody2D>();
@@ -66,6 +73,13 @@ public class PlayerController : MonoBehaviour
             } else {
                 newPosition = petObject.transform.position;
             }
+        }
+        if (Vector3.Distance(oldPosition, newPosition) > 0.01f) {
+            petWobbleTime += Time.deltaTime * petWobbleSpeed;
+            float rotationZ = Mathf.Sin(petWobbleTime) * petWobbleAmount;
+            petObject.transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        } else {
+            petObject.transform.rotation = Quaternion.Lerp(petObject.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * 3f);
         }
 
         if(Holder.currentPet != null) {
