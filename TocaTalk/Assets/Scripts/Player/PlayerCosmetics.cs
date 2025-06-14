@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 public class PlayerCosmetics : MonoBehaviour
 {
-   
+
     private Animator animator = null;
     private string pantsA;
     private string shoesA;
@@ -253,5 +253,23 @@ public class PlayerCosmetics : MonoBehaviour
             SetAllPlayerCosmetics();
         }
 
+    }
+
+    public void MakeInvisible()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = false;
+        }
+    }
+
+    public void MakeVisible()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = true;
+        }
     }
 }

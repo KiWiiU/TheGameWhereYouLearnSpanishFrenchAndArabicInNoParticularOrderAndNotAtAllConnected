@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Marketplace.unity
     guid: c876d7d7bbdaaf043becb22656301577
+  - enabled: 1
+    path: Assets/Scenes/Spanish/Lesson2S.unity
+    guid: 1746d990c3560d24f81a92decb0ab05f
   m_configObjects: {}

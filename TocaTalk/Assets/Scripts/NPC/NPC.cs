@@ -9,13 +9,17 @@ public class NPC : MonoBehaviour
     private float wobbleSpeed = 5f;
     private Vector2 lastPosition;
     private SpriteRenderer sprite;
+    private SpriteRenderer playerSprite;
     private GameObject player;
+    private BoxCollider2D boxCollider;
     public void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = npc.Sprite;
-        lastPosition = transform.position;
         sprite = GetComponent<SpriteRenderer>();
+        sprite.sprite = npc.Sprite;
+        lastPosition = transform.position;
+        boxCollider = GetComponent<BoxCollider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerSprite = player.GetComponent<SpriteRenderer>();
     }
 
     public void Update()
@@ -31,8 +35,9 @@ public class NPC : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         lastPosition = transform.position;
-        sprite.sortingOrder = transform.position.y < player.transform.position.y ? 9999 : -9999;
+        sprite.sortingOrder = ((Vector2)transform.position + boxCollider.offset).y < playerSprite.bounds.center.y ? 9999 : -9999;
     }
+
 
 
     public IEnumerator MoveTo(Vector2 position, float speed)

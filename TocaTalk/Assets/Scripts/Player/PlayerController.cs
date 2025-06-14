@@ -17,16 +17,20 @@ public class PlayerController : MonoBehaviour
     private float petWobbleSpeed = 10f;
     private float petWobbleAmount = 3f;
 
-    public void Start() {
+    public void Awake() {
         // initialize pet
-        if(transform.Find("Pet") != null) {
+        if (transform.Find("Pet") != null)
+        {
             petObject = transform.Find("Pet").gameObject;
-            if(Holder.currentPet != null) {
+            if (Holder.currentPet != null)
+            {
                 petObject.SetActive(true);
                 petObject.transform.position = transform.position;
                 petObject.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Pet>("Pets")[(int)Holder.currentPet].Sprite;
                 petObject.transform.position = transform.position + new Vector3(0.25f, 0f, 0f);
-            } else {
+            }
+            else
+            {
                 petObject.SetActive(false);
             }
         }
@@ -62,19 +66,20 @@ public class PlayerController : MonoBehaviour
         }
         Vector3 oldPosition = petObject.transform.position;
         Vector3 newPosition = petObject.transform.position;
+        Vector3 gotoPosition = transform.position - new Vector3(0, 1.25f, 0); // make the pet go to your feet not the center of your body
         if(Vector3.Distance(transform.position, petObject.transform.position) > 7.5f) {
             petObject.transform.position = transform.position;
             newPosition = petObject.transform.position;
         }
-        else if(Vector3.Distance(transform.position, petObject.transform.position) > 0.5f) {
-            petObject.transform.position = Vector3.MoveTowards(petObject.transform.position, transform.position, Time.deltaTime * 4f);
-            if(petObject.GetComponent<CircleCollider2D>().bounds.Contains(gameObject.transform.position)) { // keep pet from walking into you
+        else if(Vector3.Distance(gotoPosition, petObject.transform.position) > 0.5f) {
+            petObject.transform.position = Vector3.MoveTowards(petObject.transform.position, gotoPosition, Time.deltaTime * 4f);
+            if(petObject.GetComponent<CircleCollider2D>().bounds.Contains(gotoPosition)) { // keep pet from walking into you
                 petObject.transform.position = oldPosition;
             } else {
                 newPosition = petObject.transform.position;
             }
         }
-        if (Vector3.Distance(oldPosition, newPosition) > 0.01f) {
+        if (Vector3.Distance(oldPosition, newPosition) > 0.05f) {
             petWobbleTime += Time.deltaTime * petWobbleSpeed;
             float rotationZ = Mathf.Sin(petWobbleTime) * petWobbleAmount;
             petObject.transform.rotation = Quaternion.Euler(0, 0, rotationZ);
