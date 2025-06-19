@@ -22,10 +22,8 @@ public class EnterKitchen : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("enter");
         if (other.gameObject == player)
         {
-            print("player hit");
             eventManager.EnqueuePingPong(dialogues1, questions1);
             StartCoroutine(eventManager.NextEvent());
             // move cake and cousin to table
