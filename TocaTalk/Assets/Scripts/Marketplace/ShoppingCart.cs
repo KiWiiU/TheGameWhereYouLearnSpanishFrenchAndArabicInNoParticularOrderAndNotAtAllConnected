@@ -23,7 +23,7 @@ public class ShoppingCart : MonoBehaviour
         itemsInColumn = 0;
         numRows = 1;
         numColumns = 3;
-        parent = gameObject.transform.Find("ShoppingCart").GetChild(0);
+        parent = transform.GetChild(0);
         initialOffset = new Vector3(-3f, -1.83f, 0);
         offset = initialOffset;
         items = new List<MarketplaceItem>();
