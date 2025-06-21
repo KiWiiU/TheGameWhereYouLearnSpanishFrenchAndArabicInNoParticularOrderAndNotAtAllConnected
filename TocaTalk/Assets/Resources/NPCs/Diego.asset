@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Diego
   m_EditorClassIdentifier: 
   _name: Diego
-  _sprite: {fileID: 21300000, guid: 10e924dc9b60ff043a3305b9da1c9c35, type: 3}
+  _sprite: {fileID: 21300000, guid: ae029f3c697be7b43982ce0bfe0232a6, type: 3}

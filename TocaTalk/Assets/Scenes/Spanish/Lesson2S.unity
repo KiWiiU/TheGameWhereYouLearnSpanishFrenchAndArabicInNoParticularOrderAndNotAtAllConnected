@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15146928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.77, y: -2.39, z: 0.06548391}
+  m_LocalPosition: {x: 8.77, y: -2.55, z: 0.06548391}
   m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -373,6 +373,131 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &144469547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144469548}
+  - component: {fileID: 144469551}
+  - component: {fileID: 144469550}
+  - component: {fileID: 144469549}
+  m_Layer: 0
+  m_Name: Miguel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &144469548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144469547}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.27, y: -4, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144469549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144469547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 12a24b3f1c5576b419ba39abe14a3c50, type: 2}
+--- !u!61 &144469550
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144469547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.014647253, y: -0.14464211}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20590915, y: 0.09087812}
+  m_EdgeRadius: 0
+--- !u!212 &144469551
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144469547}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 154ee9650407a4f40a90a1fd8f8e1e50, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &231171301
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,8 +557,258 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &244483469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244483470}
+  - component: {fileID: 244483473}
+  - component: {fileID: 244483472}
+  - component: {fileID: 244483471}
+  m_Layer: 0
+  m_Name: Dora
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244483470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244483469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.47, y: -2.87, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244483471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244483469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 6455da91cd8f4b643a2a76271a49150c, type: 2}
+--- !u!61 &244483472
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244483469}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015626445, y: -0.21985021}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20871052, y: 0.07750565}
+  m_EdgeRadius: 0
+--- !u!212 &244483473
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244483469}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 19de5fd7e1ed58f46a6fdff2deefac13, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
+--- !u!1 &257740539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257740540}
+  - component: {fileID: 257740543}
+  - component: {fileID: 257740542}
+  - component: {fileID: 257740541}
+  m_Layer: 0
+  m_Name: Maya (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &257740540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257740539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.97, y: -4.1, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201144, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257740541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257740539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: ea9bc1a831297b84daab77ef34156993, type: 2}
+--- !u!61 &257740542
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257740539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012501068, y: -0.22172543}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18370827, y: 0.08497043}
+  m_EdgeRadius: 0
+--- !u!212 &257740543
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257740539}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 931a9ae3b4adb914da2714e4877a7fdb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!1001 &273681616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,6 +945,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344a717aa4240914d8981ff92d97c1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &364007077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364007078}
+  - component: {fileID: 364007081}
+  - component: {fileID: 364007080}
+  - component: {fileID: 364007079}
+  m_Layer: 0
+  m_Name: Dora (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &364007078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364007077}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.35, y: -8.6, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364007079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364007077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 6455da91cd8f4b643a2a76271a49150c, type: 2}
+--- !u!61 &364007080
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364007077}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015626445, y: -0.21985021}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20871052, y: 0.07750565}
+  m_EdgeRadius: 0
+--- !u!212 &364007081
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364007077}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 19de5fd7e1ed58f46a6fdff2deefac13, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &370813527
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +1112,287 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bd9767ffff3c649a4ecf026c6735a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &520781534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520781535}
+  m_Layer: 0
+  m_Name: doraSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520781535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520781534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.27, y: -0.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 704056769}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545296431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545296432}
+  - component: {fileID: 545296435}
+  - component: {fileID: 545296434}
+  - component: {fileID: 545296433}
+  m_Layer: 0
+  m_Name: PlayerMirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &545296432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545296431}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.01, y: -8.3, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201144, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545296433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545296431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: ea9bc1a831297b84daab77ef34156993, type: 2}
+--- !u!61 &545296434
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545296431}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012501068, y: -0.22172543}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18370827, y: 0.08497043}
+  m_EdgeRadius: 0
+--- !u!212 &545296435
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545296431}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 931a9ae3b4adb914da2714e4877a7fdb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
+--- !u!1 &604656401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 604656402}
+  - component: {fileID: 604656405}
+  - component: {fileID: 604656404}
+  - component: {fileID: 604656403}
+  m_Layer: 0
+  m_Name: Diego (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &604656402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604656401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2, y: -4.41, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &604656403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604656401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: cc1dc4623d39b094c86610581319f9ab, type: 2}
+--- !u!61 &604656404
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604656401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007813156, y: -0.15207805}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16808188, y: 0.08475583}
+  m_EdgeRadius: 0
+--- !u!212 &604656405
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604656401}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ae029f3c697be7b43982ce0bfe0232a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &617672303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
@@ -649,8 +1430,93 @@ Transform:
   - {fileID: 1823628979}
   - {fileID: 1777627320}
   - {fileID: 1588805400}
+  - {fileID: 520781535}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &741825349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741825351}
+  - component: {fileID: 741825350}
+  m_Layer: 0
+  m_Name: Tocabg5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &741825350
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741825349}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1337225887
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: a0ebbf9ebc43cee4499e225e70b3eaea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 3.84}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &741825351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741825349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.6144, y: -3.23, z: 0}
+  m_LocalScale: {x: 5.7639494, y: 4.3818, z: 5.2932034}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &749846873
 PrefabInstance:
@@ -705,7 +1571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_LocalScale.x
@@ -813,6 +1679,131 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
+--- !u!1 &750355067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 750355068}
+  - component: {fileID: 750355071}
+  - component: {fileID: 750355070}
+  - component: {fileID: 750355069}
+  m_Layer: 0
+  m_Name: Antonia (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &750355068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750355067}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.68, y: -3.68, z: 0.06548391}
+  m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750355069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750355067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: f7cba5a0c542aac48803e5212433c531, type: 2}
+--- !u!61 &750355070
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750355067}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015626445, y: -0.21985021}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.67}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20871052, y: 0.07750565}
+  m_EdgeRadius: 0
+--- !u!212 &750355071
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750355067}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 19de5fd7e1ed58f46a6fdff2deefac13, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!1001 &828876782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -826,7 +1817,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 3512837c9800ccd4ea64a24e609e4415, type: 3}
     - target: {fileID: 5513784199554347833, guid: a556514ddf606c44cb33e552a8a2b84f, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5513784199554347833, guid: a556514ddf606c44cb33e552a8a2b84f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,7 +1956,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &829333580
 MonoBehaviour:
@@ -1008,7 +1999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055555585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.25, y: -3.29, z: 0.06548391}
+  m_LocalPosition: {x: 5.25, y: -2.95, z: 0.06548391}
   m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1095,7 +2086,7 @@ SpriteRenderer:
   m_SortingLayerID: 544606731
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae029f3c697be7b43982ce0bfe0232a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 154ee9650407a4f40a90a1fd8f8e1e50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1188,7 +2179,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205612447
 GameObject:
@@ -1217,7 +2208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205612447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.29, y: -2.6700006, z: 0.06548391}
+  m_LocalPosition: {x: 10.29, y: -3.36, z: 0.06548391}
   m_LocalScale: {x: 7.9999995, y: 9.201143, z: 1.0700476}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1250,7 +2241,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007813156, y: -0.21271583}
+  m_Offset: {x: 0.007813156, y: -0.15207805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1261,7 +2252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16808188, y: 0.06893735}
+  m_Size: {x: 0.16808188, y: 0.08475583}
   m_EdgeRadius: 0
 --- !u!212 &1205612451
 SpriteRenderer:
@@ -1304,7 +2295,7 @@ SpriteRenderer:
   m_SortingLayerID: 544606731
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10e924dc9b60ff043a3305b9da1c9c35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae029f3c697be7b43982ce0bfe0232a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1349,8 +2340,16 @@ Transform:
   - {fileID: 1055555586}
   - {fileID: 15146929}
   - {fileID: 1205612448}
+  - {fileID: 1622645517}
+  - {fileID: 244483470}
+  - {fileID: 257740540}
+  - {fileID: 144469548}
+  - {fileID: 750355068}
+  - {fileID: 604656402}
+  - {fileID: 364007078}
+  - {fileID: 545296432}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588805399
 GameObject:
@@ -1410,6 +2409,131 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.7741609}
   m_EdgeRadius: 0
+--- !u!1 &1622645516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622645517}
+  - component: {fileID: 1622645519}
+  - component: {fileID: 1622645518}
+  - component: {fileID: 1622645520}
+  m_Layer: 0
+  m_Name: Everyone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622645517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622645516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.9, y: 11.6, z: 0.06548391}
+  m_LocalScale: {x: 7.4763026, y: 8.598816, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271272120}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1622645518
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622645516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!212 &1622645519
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622645516}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 544606731
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a0c081fa585184647a0cb41b35801f7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1622645520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622645516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55edc59c97ac27d4193ede3f6f840316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 87679f7ab6337b648b3f7d5462ddf952, type: 2}
 --- !u!1 &1662897346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +2603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1662897351
 MonoBehaviour:
@@ -1519,6 +2643,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 273681617}
   qm: {fileID: 516620498}
+--- !u!1 &1739773065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6012892259376083068, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
+  m_PrefabInstance: {fileID: 749846873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777627319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +2920,7 @@ Transform:
   - {fileID: 370813528}
   - {fileID: 2005450374}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005450373
 GameObject:
@@ -2007,6 +3136,589 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50.768433, y: 2.2761135}
   m_EdgeRadius: 0
+--- !u!1 &2124190172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124190175}
+  - component: {fileID: 2124190174}
+  - component: {fileID: 2124190173}
+  m_Layer: 0
+  m_Name: InitialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2124190173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124190172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c6d44c2fa7ce647857345f93613c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doraNPC: {fileID: 244483469}
+  player: {fileID: 1739773065}
+  newBG: {fileID: 741825349}
+  bounds: {fileID: 704056768}
+  miguelNPC: {fileID: 1055555585}
+  antoniaNPC: {fileID: 15146928}
+  mayaNPC: {fileID: 1874621043}
+  diegoNPC: {fileID: 1205612447}
+  MirrorDora: {fileID: 364007077}
+  MirrorPlayer: {fileID: 545296431}
+  MirrorMiguel: {fileID: 144469547}
+  MirrorAntonia: {fileID: 750355067}
+  MirrorMaya: {fileID: 257740539}
+  MirrorDiego: {fileID: 604656401}
+  dialogue1:
+  - dialogues:
+    - sentence: "\xA1Hola [name]!"
+      npc: {fileID: 1622645520}
+    - sentence: "\xA1Hola! Siento por haber llegado tarde."
+      npc: {fileID: 67243498}
+    - sentence: Estaba paseando a mi pez mascota
+      npc: {fileID: 67243498}
+    - sentence: "(Hi! Sorry I\u2019m late I was taking my pet fish for a walk)"
+      npc: {fileID: 67243498}
+    - sentence: "Claro \xA1no te preocupes!"
+      npc: {fileID: 1874621045}
+    - sentence: "(Yeah don\u2019t worry about it!)"
+      npc: {fileID: 1874621045}
+    - sentence: "Acabas de decir \u2013"
+      npc: {fileID: 1055555587}
+    - sentence: (Did you just say-)
+      npc: {fileID: 1055555587}
+    - sentence: "\xA1\xBFQu\xE9?!"
+      npc: {fileID: 15146930}
+    - sentence: (HUH?!)
+      npc: {fileID: 15146930}
+    - sentence: "\xBFC\xF3mo puedes\u2026?"
+      npc: {fileID: 1205612449}
+    - sentence: "(How do you even\u2026?)"
+      npc: {fileID: 1205612449}
+    - sentence: "Y \xBFqu\xE9 vamos hacer hoy?"
+      npc: {fileID: 67243498}
+    - sentence: (So, what are we doing today?)
+      npc: {fileID: 67243498}
+    - sentence: "Todav\xEDa no lo hemos decido"
+      npc: {fileID: 1874621045}
+    - sentence: "(We haven\u2019t figured that out yet)"
+      npc: {fileID: 1874621045}
+  - dialogues:
+    - sentence: "\xBFQuieren ir a la bolera?"
+      npc: {fileID: 1205612449}
+  - dialogues:
+    - sentence: "No me gusta jugar a los bolos, es muy dif\xEDcil. (It's too difficult)"
+      npc: {fileID: 15146930}
+    - sentence: "\xBFPor qu\xE9 no vamos de compras?\n"
+      npc: {fileID: 15146930}
+    - sentence: "Hay tantas tiendas bonitas por aqu\xED.\r"
+      npc: {fileID: 15146930}
+    - sentence: "Why don\u2019t we go shopping?\n"
+      npc: {fileID: 15146930}
+    - sentence: "There\u2019s so many nice stores around here."
+      npc: {fileID: 15146930}
+    - sentence: " \xA1Que aburrido!\n"
+      npc: {fileID: 1874621045}
+    - sentence: (Booooooooooooring!)
+      npc: {fileID: 1874621045}
+    - sentence: "\xBFPor qu\xE9 no vamos al cine?"
+      npc: {fileID: 1874621045}
+    - sentence: "(Why don\u2019t we go see a movie?)"
+      npc: {fileID: 1874621045}
+    - sentence: "Acaba de salir una pel\xEDcula de terror muy buena"
+      npc: {fileID: 1874621045}
+    - sentence: "(There\u2019s a really good horror movie that just came out)"
+      npc: {fileID: 1874621045}
+  - dialogues:
+    - sentence: "\xA1Ni pensarlo! (No way!)"
+      npc: {fileID: 1055555587}
+    - sentence: "\xA1No me gusta ver pel\xEDculas de terror\xA1"
+      npc: {fileID: 1055555587}
+    - sentence: "\xA1Son demasiado aterradoras!"
+      npc: {fileID: 1055555587}
+    - sentence: "(I don\u2019t like watching horror movies!)"
+      npc: {fileID: 1055555587}
+    - sentence: (they're too scary!)
+      npc: {fileID: 1055555587}
+    - sentence: "\xA1No seas gallina, Miguel!"
+      npc: {fileID: 1205612449}
+    - sentence: "(Don\u2019t be such a chicken Miguel!)"
+      npc: {fileID: 1205612449}
+    - sentence: "\xA1NO SOY GALLINA!"
+      npc: {fileID: 1055555587}
+    - sentence: "\xA1POR ALGO SE LLAMAN PEL\xCDCULAS DE TERROR!"
+      npc: {fileID: 1055555587}
+    - sentence: "(I\u2019M NOT A CHICKEN!)"
+      npc: {fileID: 1055555587}
+    - sentence: "(THEY\u2019RE CALLED HORROR MOVIES FOR A REASON!)"
+      npc: {fileID: 1055555587}
+  - dialogues:
+    - sentence: "\xBFY qu\xE9 te gusta hacer? "
+      npc: {fileID: 1874621045}
+  - dialogues:
+    - sentence: Me gusta nadar
+      npc: {fileID: 1055555587}
+    - sentence: "\xBFHay una piscina por aqu\xED? "
+      npc: {fileID: 1055555587}
+    - sentence: (Is there a pool around here?)
+      npc: {fileID: 1055555587}
+  - dialogues:
+    - sentence: No me gusta nadar.
+      npc: {fileID: 1205612449}
+    - sentence: 'Las piscinas son asquerosas. '
+      npc: {fileID: 1205612449}
+    - sentence: (Pools are gross.)
+      npc: {fileID: 1205612449}
+  dialogue2:
+  - dialogues:
+    - sentence: "\xBFA qui\xE9n le gustan los programas de juegos? "
+      npc: {fileID: 244483471}
+  - dialogues:
+    - sentence: "\xA1A mi me gustan los programas de juegos!"
+      npc: {fileID: 67243498}
+  - dialogues:
+    - sentence: "\xBFA todos les gustan los programas de juegos?"
+      npc: {fileID: 67243498}
+    - sentence: "\xA1S\xED!"
+      npc: {fileID: 1205612449}
+  - dialogues:
+    - sentence: "\xBFA qui\xE9n no le gustan los programas de juegos?"
+      npc: {fileID: 1874621045}
+    - sentence: Espera,
+      npc: {fileID: 1055555587}
+    - sentence: "\xBFPor qu\xE9 quieres saber si nos gustan los programas de juegos?"
+      npc: {fileID: 1055555587}
+    - sentence: (Wait,)
+      npc: {fileID: 1055555587}
+    - sentence: (why do you want to know if we like game shows?)
+      npc: {fileID: 1055555587}
+  - dialogues:
+    - sentence: "\xBFQui\xE9n eres?"
+      npc: {fileID: 1055555587}
+    - sentence: Mi llamo Dora,
+      npc: {fileID: 244483471}
+    - sentence: "y yo soy el presentador del nuevo programa de juegos, Friend or
+        Fake\u2122!"
+      npc: {fileID: 244483471}
+    - sentence: (My name's Dora,)
+      npc: {fileID: 244483471}
+    - sentence: "(and I\u2019m the host of the brand new game show, Friend or Fake\u2122!)"
+      npc: {fileID: 244483471}
+  - dialogues:
+    - sentence: "Me gusta ver la serie Friend or Fake\u2122"
+      npc: {fileID: 15146930}
+    - sentence: "Y \xBFqu\xE9 pasar\xEDa si estuvieras en el programa Friend or Fake
+        \u2122?\r"
+      npc: {fileID: 244483471}
+    - sentence: "(But what if you were on Friend or Fake \u2122?)"
+      npc: {fileID: 244483471}
+    - sentence: "\xA1\xBFPUEDO?! (CAN I?!)"
+      npc: {fileID: 15146930}
+    - sentence: "Todos pueden participar en Friend or Fake \u2122..."
+      npc: {fileID: 244483471}
+    - sentence: "\xA1EN ESTE MISMO INSTANTE!\r"
+      npc: {fileID: 244483471}
+    - sentence: "(You can all compete on Friend or Fake \u2122...)"
+      npc: {fileID: 244483471}
+    - sentence: (RIGHT NOW!)
+      npc: {fileID: 244483471}
+    - sentence: WOOOOOOOOOOOO!!
+      npc: {fileID: 1622645520}
+  dialogue3:
+  - dialogues:
+    - sentence: "\xBFde d\xF3nde conoces a estas personas?"
+      npc: {fileID: 244483471}
+  - dialogues:
+    - sentence: Ellos son mis amigos.
+      npc: {fileID: 67243498}
+    - sentence: "\xBFAh, s\xED? (Or are they?)"
+      npc: {fileID: 244483471}
+    - sentence: "Eso, damas y caballeros, es lo que aprenderemos en el episodio de
+        hoy de Friend or Fake \u2122 ! "
+      npc: {fileID: 244483471}
+    - sentence: "(That, ladies and gentlemen, is what we\u2019ll be learning on today\u2019s
+        episode of Friend or Fake \u2122 !)"
+      npc: {fileID: 244483471}
+    - sentence: "El juego es simple.\r (The game is simple)"
+      npc: {fileID: 244483471}
+    - sentence: "A [name] se le har\xE1n preguntas sobre sus 'amigos',"
+      npc: {fileID: 244483471}
+    - sentence: "y tendr\xE1 que responder sin ayuda mientras sus 'amigos' los juzgan
+        en silencio desde atr\xE1s"
+      npc: {fileID: 244483471}
+    - sentence: "([name] will be asked questions about their \u2018friends\u2019,)"
+      npc: {fileID: 244483471}
+    - sentence: "(and will have to answer without any help while their \u2018friends\u2019
+        silently judge them from behind.)"
+      npc: {fileID: 244483471}
+    - sentence: Si aciertas por lo menos el 80% de las preguntas,
+      npc: {fileID: 244483471}
+    - sentence: "demostrar\xE1s tu amistad y \xA1ganar\xE1s mil d\xF3lares!!!\r"
+      npc: {fileID: 244483471}
+    - sentence: (Get at least 80% of the questions correct,)
+      npc: {fileID: 244483471}
+    - sentence: (and you will prove your friendship and win $1,000!!!!!!)
+      npc: {fileID: 244483471}
+    - sentence: $1,000?!?!?!?!
+      npc: {fileID: 1874621045}
+    - sentence: "\xA1S\xED, mil d\xF3lares!\r"
+      npc: {fileID: 244483471}
+    - sentence: "\xBFLo entendieron? \xA1Empecemos!"
+      npc: {fileID: 244483471}
+    - sentence: "(We all got it? Great! Let\u2019s get started!)"
+      npc: {fileID: 244483471}
+  dialogue4:
+  - dialogues:
+    - sentence: "\xA1Maravilloso! Es hora de ver cu\xE1ntos puntos has anotado.\r"
+      npc: {fileID: 244483471}
+    - sentence: (Wonderful! Let's see how many points you got.)
+      npc: {fileID: 244483471}
+    - sentence: Beep Boop Beep
+      npc: {fileID: 2059767068}
+    - sentence: "\xA1Ya tenemos los resultados!\r"
+      npc: {fileID: 244483471}
+    - sentence: (The results are in!)
+      npc: {fileID: 244483471}
+    - sentence: "Un redoble, por favor.\r"
+      npc: {fileID: 244483471}
+    - sentence: (Drumroll please!)
+      npc: {fileID: 244483471}
+    - sentence: '*Drumroll*'
+      npc: {fileID: 1622645520}
+    - sentence: "Eres....un\u2026..\r"
+      npc: {fileID: 244483471}
+  WinDialogue:
+    dialogues:
+    - sentence: AMIGO!!!
+      npc: {fileID: 244483471}
+    - sentence: "\xA1Y has ganado mil d\xF3lares!\r"
+      npc: {fileID: 244483471}
+    - sentence: (AND YOU WIN ONE THOUSAND DOLLARS!)
+      npc: {fileID: 244483471}
+    - sentence: WOOOOOOOOOO!!!!!
+      npc: {fileID: 1622645520}
+    - sentence: "Que, despu\xE9s de descontar los impuestos son\u2026"
+      npc: {fileID: 244483471}
+    - sentence: "\xA1quinientos d\xF3lares!!!\r"
+      npc: {fileID: 244483471}
+    - sentence: "(Which minus taxes is\u2026)"
+      npc: {fileID: 244483471}
+    - sentence: (FIVE HUNDRED DOLLARS!)
+      npc: {fileID: 244483471}
+    - sentence: Wooooooo!!
+      npc: {fileID: 1622645520}
+    - sentence: "Que, dividido entre todos ustedes son\u2026\xA1cien d\xF3lares!"
+      npc: {fileID: 244483471}
+    - sentence: "(Which, when you split it between each other, is\u2026..$100!!)"
+      npc: {fileID: 244483471}
+    - sentence: oh.
+      npc: {fileID: 1622645520}
+    - sentence: "(unenthusiastic) yaaaaay\u2026"
+      npc: {fileID: 1622645520}
+  LoseDialogue:
+    dialogues:
+    - sentence: "\xA1FALSO!\r (FAKE!)"
+      npc: {fileID: 244483471}
+    - sentence: "\xA1NO GANAS NADA!"
+      npc: {fileID: 244483471}
+    - sentence: YOU WIN NOTHING!
+      npc: {fileID: 244483471}
+    - sentence: "\xA1ERES UN MAL AMIGO!\r"
+      npc: {fileID: 244483471}
+    - sentence: "\xBFC\xD3MO PUDISTE?!\r"
+      npc: {fileID: 244483471}
+    - sentence: (HOW COULD YOU?!)
+      npc: {fileID: 244483471}
+    - sentence: "\xBFESTAS PERSONAS NO SIGNIFICAN NADA PARA TI?\r"
+      npc: {fileID: 244483471}
+    - sentence: (DO THESE PEOPLE MEAN NOTHING TO YOU?!!?)
+      npc: {fileID: 244483471}
+    - sentence: "\xA1LO SIENTO! (I'M SORRY!)"
+      npc: {fileID: 67243498}
+    - sentence: "\xBFPERDONAS A [name]?"
+      npc: {fileID: 244483471}
+    - sentence: DO YOU FORGIVE [name]?
+      npc: {fileID: 244483471}
+    - sentence: No!
+      npc: {fileID: 1622645520}
+    - sentence: '*cries*'
+      npc: {fileID: 67243498}
+  question1:
+  - questions:
+    - question: 'Translate: Do you guys want to go bowling?'
+      answers:
+      - "\xBFQuiero ir a la playa?"
+      - "\xBFQuiere ir a la bolera?"
+      - "\xBFQuieren ir a la bolera?"
+      - "\xBFQuieren a bolera?"
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: I don\u2019t like bowling"
+      answers:
+      - No me gusta jugar a los bolos
+      - Me gusta jugar a los bolos
+      - No me gusta nadar
+      - Me gusta nadar
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: I don\u2019t like watching horror movies"
+      answers:
+      - No me gusta ir al cine
+      - "No me gusta ver pel\xEDculas de terror"
+      - "No me gusta terror pel\xEDculas "
+      - "Me gusta ver pel\xEDculas de terror"
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: \xBFy qu\xE9 te gusta hacer?"
+      answers:
+      - What is your favorite thing to do?
+      - What do you dislike doing?
+      - What do you like?
+      - What do you like to do?
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: 'Translate: I like to go swimming'
+      answers:
+      - Me gusta correr
+      - Me gusta ir a la piscina
+      - No me gusta nadar
+      - Me gusta nadar
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: 'Translate: I don''t like to go swimming'
+      answers:
+      - Me gusta correr
+      - No me gusta ir a la piscina
+      - No me gusta nadar
+      - Me gusta nadar
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  question2:
+  - questions:
+    - question: "Translate: \xBFA qui\xE9n le gustan los programas de juegos?"
+      answers:
+      - Do you like game shows?
+      - I like game shows
+      - Who likes game shows?
+      - Who doesn't like game shows?
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: \xA1A mi me gustan los programas de juegos!"
+      answers:
+      - Do you like game shows?
+      - I like game shows
+      - Who likes game shows?
+      - Who doesn't like game shows?
+      correctAnswer: 1
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: \xBFA todos les gustan los programas de juegos?"
+      answers:
+      - Do you like game shows?
+      - I like game shows
+      - Who likes game shows?
+      - Who doesn't like game shows?
+      correctAnswer: 0
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: "Translate: \xBFA qui\xE9n no le gustan los programas de juegos? "
+      answers:
+      - Do you like game shows?
+      - I like game shows
+      - Who likes game shows?
+      - Who doesn't like game shows?
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: 'Translate: Who are you? '
+      answers:
+      - "\xBFQui\xE9n su llamo?"
+      - "\xBFQui\xE9n usted?"
+      - "\xBFQui\xE9n tu?"
+      - "\xBFQui\xE9n eres?"
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  - questions:
+    - question: 'Translate: I like watching...'
+      answers:
+      - "\xBFQui\xE9n su llamo?"
+      - "\xBFQui\xE9n usted?"
+      - "\xBFQui\xE9n tu?"
+      - "\xBFQui\xE9n eres?"
+      correctAnswer: 3
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Me gusta ver...
+      - Me gusta ver
+      - Me gusta mirar
+      - Me gusta mirar...
+  question3:
+  - questions:
+    - question: 'Translate: They are my friends'
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - Ellos son mis amigos
+      - Ellos son mis amigos.
+      - Son mis amigos
+      - Son mis amigos.
+  question4:
+  - questions:
+    - question: "\xBFQu\xE9 le gusta hacer a Miguel? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Miguel le gusta nadar
+      - A el le gusta nadar
+      - A el le gusta nadar.
+      - A Miguel le gusta nadar.
+      - Le gusta nadar
+      - Le gusta nadar.
+    - question: "\xBFQu\xE9 le gusta hacer a Antonia? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Antonia le gusta ir de compras
+      - A ella le gusta ir de compras
+      - A ella le gusta ir de compras.
+      - A Antonia le gusta ir de compras.
+      - Le gusta ir de compras
+      - Le gusta ir de compras.
+    - question: "\xBFQu\xE9 no le gusta hacer a Maya? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Maya no le gusta ir de compras
+      - A ella no le gusta ir de compras
+      - A ella no le gusta ir de compras.
+      - A Maya no le gusta ir de compras.
+      - No le gusta ir de compras
+      - No le gusta ir de compras.
+    - question: "\xBFQu\xE9 le gusta hacer a Diego? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Diego le gusta jugar a los bolos
+      - A el le gusta jugar a los bolos
+      - A el le gusta jugar a los bolos.
+      - A Diego le gusta jugar a los bolos.
+      - Le gusta jugar a los bolos
+      - Le gusta jugar a los bolos.
+    - question: "\xBFQu\xE9 no le gusta hacer a Diego? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Diego no le gusta nadar
+      - A el no le gusta nadar
+      - A el no le gusta nadar.
+      - A Diego no le gusta nadar.
+      - No le gusta nadar
+      - No le gusta nadar.
+    - question: "\xBFQu\xE9 le gusta hacer a Maya?\r"
+      answers:
+      - A Maya le gusta nadar
+      - "A Maya no le gusta ver pel\xEDculas."
+      - "A Maya no le gusta ver pel\xEDculas de terror."
+      - A Maya le gusta ir al cine.
+      correctAnswer: 3
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+    - question: "\xBFQu\xE9 no le gusta hacer a Antonia? Answer in Spanish."
+      answers: []
+      correctAnswer: 0
+      isMultipleChoice: 0
+      correctAnswerTexts:
+      - A Antonia no le gusta jugar a los bolos
+      - A ella no le gusta jugar a los bolos
+      - A ella no le gusta jugar a los bolos.
+      - A Antonia no le gusta jugar a los bolos.
+      - No le gusta jugar a los bolos
+      - No le gusta jugar a los bolos.
+    - question: "\xBFQu\xE9 no le gusta hacer a Miguel?\r"
+      answers:
+      - A Miguel le gusta ir al cine
+      - A Miguel no le gusta ir de compras
+      - "A Miguel no le gustan las pel\xEDculas de terror."
+      - A Miguel no le gustan correr
+      correctAnswer: 2
+      isMultipleChoice: 1
+      correctAnswerTexts: []
+  doraDestination: {fileID: 520781535}
+--- !u!61 &2124190174
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124190172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3396139, y: -4.900143}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.412157, y: 7.3071165}
+  m_EdgeRadius: 0
+--- !u!4 &2124190175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124190172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.615601, y: 1.900495, z: 0.047378704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1642555829886351401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2020,7 +3732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2085,15 +3797,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.677214
+      value: -5.6901073
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2401998
+      value: -3.2402098
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2559,7 +4271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238913565857713630, guid: d832104b0bd926441ace7e2dd2b39b36, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7238913565857713630, guid: d832104b0bd926441ace7e2dd2b39b36, type: 3}
       propertyPath: m_AnchorMax.x

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -130,6 +131,11 @@ public class Events : MonoBehaviour
         if ((double)playerScore / totalScore >= .8)
             Holder.progress(1);
         GetComponent<SceneSwap>().SwapScene("Lessons");
+    }
+
+    public double returnScore()
+    {
+        return (double)playerScore / totalScore;
     }
 
 }

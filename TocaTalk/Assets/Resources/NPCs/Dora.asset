@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39748438df10d6f4d9ff44727505f9c0, type: 3}
-  m_Name: Miguel
+  m_Name: Dora
   m_EditorClassIdentifier: 
-  _name: Miguel
-  _sprite: {fileID: 21300000, guid: 154ee9650407a4f40a90a1fd8f8e1e50, type: 3}
+  _name: Dora
+  _sprite: {fileID: 21300000, guid: 19de5fd7e1ed58f46a6fdff2deefac13, type: 3}

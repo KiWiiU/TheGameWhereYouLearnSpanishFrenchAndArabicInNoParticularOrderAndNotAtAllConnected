@@ -18,6 +18,7 @@ public class EnterKitchen : MonoBehaviour
     public void OnEventsEnd()
     {
         eventManager.OnEventsEnd -= OnEventsEnd;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)

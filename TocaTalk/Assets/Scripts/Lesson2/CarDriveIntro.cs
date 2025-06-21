@@ -7,6 +7,7 @@ public class CarDriveIntro : MonoBehaviour
     GameObject player;
     public Transform carStop;
     public Transform carGo;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
