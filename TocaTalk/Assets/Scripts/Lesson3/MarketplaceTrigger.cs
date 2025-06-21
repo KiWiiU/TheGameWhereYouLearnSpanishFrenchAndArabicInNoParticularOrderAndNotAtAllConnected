@@ -17,6 +17,8 @@ public class MarketplaceTrigger : MonoBehaviour
     public GameObject momTrigger;
     public GameObject endTrigger;
 
+    public GameObject soupBowl;
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -29,6 +31,7 @@ public class MarketplaceTrigger : MonoBehaviour
             cart.GetComponent<ShoppingCart>().confirmationMenuObj = itemConfirmationMenu;
             momTrigger.SetActive(false);
             endTrigger.SetActive(true);
+            soupBowl.SetActive(true);
             Destroy(this);
         }
     }

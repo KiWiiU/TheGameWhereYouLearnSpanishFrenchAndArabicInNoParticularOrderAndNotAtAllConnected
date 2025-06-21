@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,9 +12,7 @@ public class Events : MonoBehaviour
 
     public DialogueManager dm;
     public QuizManager qm;
-
     public event Action OnEventsEnd;
-
     private Queue<object> eventQueue = new();
     public int playerScore;
     public int totalScore;
@@ -129,7 +128,9 @@ public class Events : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         if ((double)playerScore / totalScore >= .8)
-            Holder.progress(1);
+        {
+            Holder.progress(Int32.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value));
+        }
         GetComponent<SceneSwap>().SwapScene("Lessons");
     }
 

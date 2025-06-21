@@ -57,6 +57,7 @@ public class Holder : MonoBehaviour
             case 2 : 
                 return Aprogress;
         }
+        print("language isnt set properly");
         return -1;
     }
 
