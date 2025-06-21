@@ -7,12 +7,15 @@ public class MarketplaceTrigger : MonoBehaviour
 {
     public GameObject playerTeleportation;
 
-    public Cinemachine.CinemachineVirtualCamera houseCam;
-    public Cinemachine.CinemachineVirtualCamera marketplaceCam;
+    public CinemachineVirtualCamera houseCam;
+    public CinemachineVirtualCamera marketplaceCam;
 
     public GameObject itemConfirmationMenu;
 
     public GameObject shoppingCartPrefab;
+
+    public GameObject momTrigger;
+    public GameObject endTrigger;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,6 +27,9 @@ public class MarketplaceTrigger : MonoBehaviour
             GameObject cart = Instantiate(shoppingCartPrefab, other.gameObject.transform);
             cart.name = "ShoppingCart";
             cart.GetComponent<ShoppingCart>().confirmationMenuObj = itemConfirmationMenu;
+            momTrigger.SetActive(false);
+            endTrigger.SetActive(true);
+            Destroy(this);
         }
     }
 }

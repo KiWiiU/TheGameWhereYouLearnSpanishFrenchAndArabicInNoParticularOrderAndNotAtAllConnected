@@ -15,8 +15,8 @@ public class Events : MonoBehaviour
     public event Action OnEventsEnd;
 
     private Queue<object> eventQueue = new();
-    private int playerScore;
-    private int totalScore;
+    public int playerScore;
+    public int totalScore;
     private bool currentlyOpen;
     public void Start()
     {

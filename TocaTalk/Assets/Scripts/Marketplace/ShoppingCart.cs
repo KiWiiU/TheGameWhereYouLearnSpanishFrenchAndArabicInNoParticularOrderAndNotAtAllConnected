@@ -29,33 +29,38 @@ public class ShoppingCart : MonoBehaviour
         items = new List<MarketplaceItem>();
     }
 
-    public void confirmationMenu(GameObject obj) {
+    public void confirmationMenu(GameObject obj)
+    {
         Holder.canPlayerMove = false;
         MarketplaceItem item = obj.GetComponent<ItemBehavior>().item;
         confirmationMenuObj.GetComponent<Canvas>().enabled = true;
         confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", true);
-        confirmationMenuObj.transform.Find("Question").GetComponent<TMP_Text>().text = "Do you want buy " + item.Name + "???";
-        confirmationMenuObj.transform.Find("Yes").GetComponent<Button>().onClick.RemoveAllListeners();
-        confirmationMenuObj.transform.Find("No").GetComponent<Button>().onClick.RemoveAllListeners();
-        confirmationMenuObj.transform.Find("Yes").GetComponent<Button>().onClick.AddListener(() => {
+        confirmationMenuObj.transform.GetChild(0).Find("Question").GetComponent<TMP_Text>().text = "Do you want to buy " + item.Name + "?";
+        confirmationMenuObj.transform.GetChild(0).Find("Yes").GetComponent<Button>().onClick.RemoveAllListeners();
+        confirmationMenuObj.transform.GetChild(0).Find("No").GetComponent<Button>().onClick.RemoveAllListeners();
+        confirmationMenuObj.transform.GetChild(0).Find("Yes").GetComponent<Button>().onClick.AddListener(() =>
+        {
             confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
             Holder.canPlayerMove = true;
             addItem(item);
-            Destroy(obj);
+            // Destroy(obj);
         });
-        confirmationMenuObj.transform.Find("No").GetComponent<Button>().onClick.AddListener(() => {
+        confirmationMenuObj.transform.GetChild(0).Find("No").GetComponent<Button>().onClick.AddListener(() =>
+        {
             confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
             Holder.canPlayerMove = true;
         });
     }
-    public void addItem(MarketplaceItem item) {
+    public void addItem(MarketplaceItem item)
+    {
         items.Add(item);
         GameObject visual = Instantiate(visualPrefab, parent);
         visual.GetComponent<SpriteRenderer>().sprite = item.Sprite;
         visual.transform.localPosition = offset;
         offset.x += 3f;
         itemsInColumn++;
-        if(itemsInColumn >= numColumns) {
+        if (itemsInColumn >= numColumns)
+        {
             offset.y += 4.33f;
             numRows++;
             numColumns = 3 + Mathf.FloorToInt((numRows + 3) / cartSlope);
@@ -63,4 +68,14 @@ public class ShoppingCart : MonoBehaviour
             itemsInColumn = 0;
         }
     }
+
+    public void ClearCart()
+    {
+        items.Clear();
+        foreach (Transform child in transform.GetChild(0))
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
 }
