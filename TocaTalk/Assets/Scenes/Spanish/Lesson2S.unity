@@ -2643,6 +2643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 273681617}
   qm: {fileID: 516620498}
+  playerScore: 0
+  totalScore: 0
 --- !u!1 &1739773065 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6012892259376083068, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
@@ -3801,11 +3803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6901073
+      value: -5.68549
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2402098
+      value: -3.2401998
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z

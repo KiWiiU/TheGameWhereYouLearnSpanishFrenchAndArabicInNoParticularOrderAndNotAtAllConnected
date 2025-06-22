@@ -41,7 +41,7 @@ public class InitialTrigger : MonoBehaviour
             antoniaNPC.transform.position = MirrorAntonia.transform.position;
             mayaNPC.transform.position = MirrorMaya.transform.position;
             diegoNPC.transform.position = MirrorDiego.transform.position;
-
+        
             eventManager.EnqueuePingPong(dialogue3, question3);
             StartCoroutine(eventManager.NextEvent());
         }
