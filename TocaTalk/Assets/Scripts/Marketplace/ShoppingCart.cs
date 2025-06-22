@@ -40,16 +40,21 @@ public class ShoppingCart : MonoBehaviour
         confirmationMenuObj.transform.GetChild(0).Find("No").GetComponent<Button>().onClick.RemoveAllListeners();
         confirmationMenuObj.transform.GetChild(0).Find("Yes").GetComponent<Button>().onClick.AddListener(() =>
         {
-            confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
-            Holder.canPlayerMove = true;
+            StartCoroutine(closeMenu());
             addItem(item);
             // Destroy(obj);
         });
         confirmationMenuObj.transform.GetChild(0).Find("No").GetComponent<Button>().onClick.AddListener(() =>
         {
-            confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
-            Holder.canPlayerMove = true;
+            StartCoroutine(closeMenu());
         });
+    }
+
+    private IEnumerator closeMenu()
+    {
+        confirmationMenuObj.GetComponent<Animator>().SetBool("isOpen", false);
+        yield return new WaitForSeconds(0.5f);
+        Holder.canPlayerMove = true;
     }
     public void addItem(MarketplaceItem item)
     {

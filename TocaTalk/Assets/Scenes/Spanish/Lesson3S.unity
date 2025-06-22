@@ -796,13 +796,13 @@ MonoBehaviour:
       npc: {fileID: 787921338}
     - sentence: (I know!)
       npc: {fileID: 787921338}
-    - sentence: "\xBFTe gustar\xEDa comer la sopa \u201Cque lo tiene todo\u201D?"
+    - sentence: "\xBFTe gustar\xEDa comer la sopa 'que lo tiene todo' ?"
       npc: {fileID: 787921338}
-    - sentence: (What about the "everything soup"?)
+    - sentence: (What about the 'everything soup' ?)
       npc: {fileID: 787921338}
     - sentence: "\xBFEl qu\xE9?"
       npc: {fileID: 67243498}
-    - sentence: "La sopa \u201Cque lo tiene todo\u201D!"
+    - sentence: La sopa 'que lo tiene todo'!
       npc: {fileID: 787921338}
   questions:
   - questions:
@@ -890,7 +890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145369655
 GameObject:
@@ -1125,7 +1125,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238206625
 GameObject:
@@ -1617,7 +1617,7 @@ Transform:
   - {fileID: 1162554198}
   - {fileID: 414399201}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388253101
 GameObject:
@@ -1783,7 +1783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414399200
 GameObject:
@@ -1936,6 +1936,7 @@ MonoBehaviour:
   shoppingCartPrefab: {fileID: 305027082677713323, guid: ff369c77db82d564b8e6b82a8c10ce8e, type: 3}
   momTrigger: {fileID: 108453953}
   endTrigger: {fileID: 727442768}
+  soupBowl: {fileID: 1636431372}
 --- !u!61 &460832001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1975,7 +1976,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479676784
 GameObject:
@@ -2693,7 +2694,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 544606731
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3045,7 +3046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &727442769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3056,7 +3057,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -4.7851834, y: 1.1749339}
@@ -3085,7 +3086,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &727442771
 MonoBehaviour:
@@ -3101,10 +3102,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - dialogues:
-    - sentence: 
+    - sentence: "\xBFTienes lo que ped\xED?"
       npc: {fileID: 787921338}
-    - sentence: Oh, you got what I asked for?
+    - sentence: (You got what I asked for?)
       npc: {fileID: 787921338}
+    - sentence: "\xA1Oh, cari\xF1o, esto no es lo que ped\xED!"
+      npc: {fileID: 787921338}
+    - sentence: '(Oh honey, this is not what I asked for!)
+
+'
+      npc: {fileID: 787921338}
+  - dialogues:
+    - sentence: "\xA1Est\xE1s de vuelta!"
+      npc: {fileID: 787921338}
+    - sentence: (You're back!)
+      npc: {fileID: 787921338}
+    - sentence: "\xBFEstos son los ingredientes?"
+      npc: {fileID: 787921338}
+    - sentence: "Esto est\xE1 lo suficientemente cerca."
+      npc: {fileID: 787921338}
+  - dialogues:
+    - sentence: "\xA1Est\xE1s de vuelta!"
+      npc: {fileID: 787921338}
+    - sentence: (You're back!)
+      npc: {fileID: 787921338}
+    - sentence: "\xBFEstos son los ingredientes?"
+      npc: {fileID: 787921338}
+    - sentence: "\xA1Esto es perfecto! \xA1Bien hecho!"
+      npc: {fileID: 787921338}
+    - sentence: "\xA1Esto es delicioso!"
+      npc: {fileID: 919646907}
 --- !u!1001 &749846873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3130,7 +3157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5394546138208445177, guid: c400c9aeb1693bf419df5f141e303d75, type: 3}
       propertyPath: m_LocalScale.x
@@ -3340,7 +3367,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 3512837c9800ccd4ea64a24e609e4415, type: 3}
     - target: {fileID: 5513784199554347833, guid: a556514ddf606c44cb33e552a8a2b84f, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5513784199554347833, guid: a556514ddf606c44cb33e552a8a2b84f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4340,7 +4367,7 @@ RectTransform:
   - {fileID: 980081984}
   - {fileID: 886252028}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4775,8 +4802,8 @@ Transform:
   m_GameObject: {fileID: 1162554197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.79, y: -6.36, z: 0}
-  m_LocalScale: {x: 10.1, y: 10.1, z: 10.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 10.1, y: 10.1, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 375237809}
   m_RootOrder: 7
@@ -5190,9 +5217,8 @@ Transform:
   - {fileID: 787921337}
   - {fileID: 589440544}
   - {fileID: 919646906}
-  - {fileID: 1636431374}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272292912
 GameObject:
@@ -5630,7 +5656,7 @@ Transform:
   - {fileID: 1058896481}
   - {fileID: 1466350462}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1320458843
 PolygonCollider2D:
@@ -6254,7 +6280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1636431373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6295,7 +6321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 544606731
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 71561432e05ec87419d5ff32589b1f77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6315,12 +6341,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636431372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.586857, y: -4.6287827, z: 2.1989172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.21, y: -3.87, z: 0}
+  m_LocalScale: {x: 2.51, y: 2.51, z: 2.51}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1271272120}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1654234332
 GameObject:
@@ -6699,7 +6725,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1662897351
 MonoBehaviour:
@@ -7162,7 +7188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2019285725
 GameObject:
@@ -7789,7 +7815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1642555829779419270, guid: de5f92cabef825142b6650b478c43006, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7861,15 +7887,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.290495
+      value: 8.300592
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.53112
+      value: -0.53113997
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7906,6 +7932,10 @@ PrefabInstance:
     - target: {fileID: 2899723252027775238, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899723252027775239, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775239, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_CustomBlends
@@ -8347,7 +8377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238913565857713630, guid: d832104b0bd926441ace7e2dd2b39b36, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7238913565857713630, guid: d832104b0bd926441ace7e2dd2b39b36, type: 3}
       propertyPath: m_AnchorMax.x

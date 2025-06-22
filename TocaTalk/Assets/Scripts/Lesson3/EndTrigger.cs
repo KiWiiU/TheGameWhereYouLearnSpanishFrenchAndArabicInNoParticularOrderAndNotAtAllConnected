@@ -15,7 +15,7 @@ public class EndTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            double pct = eventManager.playerScore / eventManager.totalScore;
+            double pct = (double)eventManager.playerScore / eventManager.totalScore;
             if (pct <= .8)
             {
                 eventManager.EnqueueDialogue(dialogues[0]);

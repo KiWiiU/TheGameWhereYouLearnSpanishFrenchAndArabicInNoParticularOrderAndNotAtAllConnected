@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Cashier : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Cashier : MonoBehaviour
         eventManager = GameObject.FindWithTag("GameController").GetComponent<Events>();
         playerGroceries = new();
     }
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (triggered) return;
@@ -41,6 +43,7 @@ public class Cashier : MonoBehaviour
         eventManager.EnqueueDialogue(dialogues);
         StartCoroutine(eventManager.NextEvent());
         eventManager.OnEventsEnd += LeaveMarketplace;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void LeaveMarketplace()
@@ -88,7 +91,6 @@ public class Cashier : MonoBehaviour
 
         // check for incorrect items (checkitem removes the key from the dictionary)
         eventManager.totalScore += playerGroceries.Count;
-        print(eventManager.playerScore + "/" + eventManager.totalScore);
     }
 
     void CheckItem(string item, int count)
