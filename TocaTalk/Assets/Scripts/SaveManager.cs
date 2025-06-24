@@ -11,11 +11,11 @@ public class SaveManager : MonoBehaviour
     {
         float r, g, b;
         // Reads in the save file
-        if (!File.Exists("Assets/SaveFile.txt")) {
-            File.Create("Assets/SaveFile.txt").Close();
+        if (!File.Exists("SaveFile.txt")) {
+            File.Create("SaveFile.txt").Close();
         }
         bool exists = true;
-        using(StreamReader reader = new StreamReader("Assets/SaveFile.txt"))
+        using(StreamReader reader = new StreamReader("SaveFile.txt"))
         {
             if (!reader.EndOfStream)
             {
@@ -71,7 +71,7 @@ public class SaveManager : MonoBehaviour
                 Holder.volume = float.Parse(reader.ReadLine());
             } else {
                 exists = false;
-                Holder.Name = "";
+                Holder.Name = "Joseph";
                 Holder.Money = 0;
                 Holder.Sprogress = 0;
                 Holder.Fprogress = 0;
@@ -102,7 +102,7 @@ public class SaveManager : MonoBehaviour
     
     public static void Save()
     {
-        using(StreamWriter writer = new StreamWriter("Assets/SaveFile.txt"))
+        using(StreamWriter writer = new StreamWriter("SaveFile.txt"))
         {
             writer.WriteLine(Holder.Name);
             writer.WriteLine(Holder.Money);

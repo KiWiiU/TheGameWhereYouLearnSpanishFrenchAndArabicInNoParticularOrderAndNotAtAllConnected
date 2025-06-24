@@ -11,7 +11,9 @@ public class Music : MonoBehaviour
 
     void Awake()
     {
-        if(instance == null) {
+        gameObject.GetComponent<AudioSource>().volume = Holder.volume;
+        if (instance == null)
+        {
             playClip();
         }
         if(instance != null && instance != this) {
@@ -27,13 +29,11 @@ public class Music : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
-        
     }
     void Start()
     {
-        gameObject.GetComponent<AudioSource>().volume = Holder.volume;   
+        gameObject.GetComponent<AudioSource>().volume = Holder.volume;
     }
-
     public void playClip() {
         instance = this;
         GetComponent<AudioSource>().clip = audioClip;

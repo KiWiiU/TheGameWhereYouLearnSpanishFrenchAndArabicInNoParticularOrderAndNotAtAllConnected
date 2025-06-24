@@ -21,7 +21,7 @@ public class CarDriveIntro : MonoBehaviour
         yield return new WaitForSeconds(1f);
         while (Vector3.Distance(transform.position, carStop.position) > 0.05f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, carStop.position, 0.01f);
+            transform.position = Vector2.MoveTowards(transform.position, carStop.position, 0.2f);
             yield return null;
         }
         yield return new WaitForSeconds(1f);
@@ -32,7 +32,7 @@ public class CarDriveIntro : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         while (Vector3.Distance(transform.position, carGo.position) > 0.05f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, carGo.position, 0.015f);
+            transform.position = Vector2.MoveTowards(transform.position, carGo.position, 0.3f);
             yield return null;
         }
     }

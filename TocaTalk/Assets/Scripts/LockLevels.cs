@@ -31,7 +31,7 @@ public class LockLevels : MonoBehaviour
     StartCoroutine(check(level));
    }
    private IEnumerator check(int level) {
-    if(level-1 <= Holder.getProgress()) {
+    // if(level-1 <= Holder.getProgress()) { remove the lesson lock for demo / testing
         warning.SetActive(true);
         yield return new WaitUntil(() => userContinue); // wait until user continues
         string lesson = "Lesson" + level;
@@ -39,7 +39,7 @@ public class LockLevels : MonoBehaviour
         else if(Holder.currentLanguage == 1) lesson += "F";
         else if(Holder.currentLanguage == 2) lesson += "A";
         GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneSwap>().SwapScene(lesson);
-    }
+    // }
     yield break; // exit coroutine
    }
 

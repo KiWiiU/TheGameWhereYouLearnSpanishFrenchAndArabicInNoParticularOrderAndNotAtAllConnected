@@ -3352,7 +3352,7 @@ MonoBehaviour:
     - sentence: "(That, ladies and gentlemen, is what we\u2019ll be learning on today\u2019s
         episode of Friend or Fake \u2122 !)"
       npc: {fileID: 244483471}
-    - sentence: "El juego es simple.\r (The game is simple)"
+    - sentence: El juego es simple. (The game is simple).
       npc: {fileID: 244483471}
     - sentence: "A [name] se le har\xE1n preguntas sobre sus 'amigos',"
       npc: {fileID: 244483471}
@@ -3693,7 +3693,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3396139, y: -4.900143}
+  m_Offset: {x: 0.5738373, y: -4.900143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3704,7 +3704,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.412157, y: 7.3071165}
+  m_Size: {x: 2.1688156, y: 7.3071165}
   m_EdgeRadius: 0
 --- !u!4 &2124190175
 Transform:
@@ -3803,11 +3803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.68549
+      value: -7.159245
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2401998
+      value: -3.2439299
       objectReference: {fileID: 0}
     - target: {fileID: 2899723252027775234, guid: c440c3cc6b8ace342b44f2626c259559, type: 3}
       propertyPath: m_LocalPosition.z
