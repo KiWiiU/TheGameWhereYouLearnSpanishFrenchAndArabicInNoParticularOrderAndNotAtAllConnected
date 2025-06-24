@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
             return;
         if(type == 0) {// if user presses 'yes'
             Time.timeScale = 1;
+            Holder.canPlayerMove = true;
             GameObject.FindWithTag("GameController").GetComponent<SceneSwap>().SwapScene("Lessons");
         } else { // if user presses 'no'
             sure.gameObject.SetActive(false);
