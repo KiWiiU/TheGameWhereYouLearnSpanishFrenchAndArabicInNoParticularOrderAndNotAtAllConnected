@@ -72,6 +72,7 @@ public class QuizManager : MonoBehaviour
             {
                 buttons[i].gameObject.SetActive(false);
             }
+            EventSystem.current.SetSelectedGameObject(LTLField.gameObject);
             buttons[buttons.Length - 1].gameObject.SetActive(true);
             LTLField.gameObject.SetActive(true);
         }
